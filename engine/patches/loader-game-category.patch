@@ -1,0 +1,19 @@
+Sommelier: the Info.plist built into the Wine loader marks every program it runs as a game, so macOS Game Mode can
+engage for a game that runs from inside its shortcut app (gamepolicyd labels the process from the category it
+finds in the executable's Info.plist; without a category it ignores Wine processes). Programs started outside a
+shortcut app (Steam, launchers) stay "BackgroundOnly" in Launch Services and aren't affected. The app adds the same
+keys to engines built before this patch (SommelierKit's LoaderGameLabel).
+
+--- a/loader/wine_info.plist.in
++++ b/loader/wine_info.plist.in
+@@ -25,6 +25,10 @@
+     <key>NSPrincipalClass</key>
+     <string>WineApplication</string>
+     <key>LSUIElement</key>
+     <string>1</string>
++    <key>LSApplicationCategoryType</key>
++    <string>public.app-category.games</string>
++    <key>LSSupportsGameMode</key>
++    <true/>
+ </dict>
+ </plist>

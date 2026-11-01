@@ -1,0 +1,19 @@
+name: Game doesn't run
+description: A game that doesn't start, crashes or runs badly in Sommelier
+labels: [game]
+body:
+  - type: input
+    id: game
+    attributes: { label: Game and store, placeholder: "Elden Ring, Steam" }
+    validations: { required: true }
+  - type: textarea
+    id: what
+    attributes: { label: What happens, description: "What you did and what you saw. Attach the report from Fix Launch → Report a Problem if you have one." }
+    validations: { required: true }
+  - type: input
+    id: mac
+    attributes: { label: Mac and macOS, placeholder: "MacBook Pro M3 Pro, macOS 26.1" }
+    validations: { required: true }
+  - type: input
+    id: version
+    attributes: { label: Sommelier version, placeholder: "0.1.2" }

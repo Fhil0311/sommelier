@@ -1,0 +1,19 @@
+--- a/dlls/winemac.drv/systray.c
++++ b/dlls/winemac.drv/systray.c
+@@ -1,3 +1,4 @@
++/* Modified by the Sommelier project, 2026-10-22: SOMMELIER_NO_TRAY keeps tray icons out of the menu bar. */
+ /*
+  * Mac driver system tray management
+  *
+@@ -250,6 +251,11 @@
+ {
+     BOOL ret = FALSE;
+     struct tray_icon *icon;
++
++    /* Sommelier: with SOMMELIER_NO_TRAY=1 the environment's tray icons (Steam's, the EA app's…) don't go to the
++     * Mac's menu bar; the launchers are reached from Sommelier's Dock menu. The programs are told it worked. */
++    if (getenv("SOMMELIER_NO_TRAY") && !strcmp(getenv("SOMMELIER_NO_TRAY"), "1") && msg != NIM_DELETE)
++        return msg == NIM_ADD || msg == NIM_MODIFY || msg == NIM_SETVERSION;
+ 
+     switch (msg)
+     {

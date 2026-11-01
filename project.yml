@@ -1,0 +1,105 @@
+# Sommelier app project. Generate the Xcode project with `xcodegen` (Sommelier.xcodeproj is not committed).
+name: Sommelier
+options:
+  bundleIdPrefix: gg.sommelier
+  developmentLanguage: en
+  deploymentTarget:
+    macOS: "15.0"
+  createIntermediateGroups: true
+packages:
+  SommelierKit:
+    path: .
+  # App updates: checks our appcast, verifies the EdDSA signature, installs and relaunches (MIT License).
+  Sparkle:
+    url: https://github.com/sparkle-project/Sparkle
+    exactVersion: 2.9.6
+targets:
+  Sommelier:
+    type: application
+    platform: macOS
+    sources:
+      - path: App/Sommelier
+        excludes: ["Info.plist"]
+    # Signing: Config/Sommelier.xcconfig (ad-hoc unless Config/Signing.local.xcconfig names an identity).
+    configFiles:
+      Debug: Config/Sommelier.xcconfig
+      Release: Config/Sommelier.xcconfig
+    # Game art isn't ours to publish: the official builds take the covers of the signed-out wall and the store
+    # pages from a private pack beside the repository (or SOMMELIER_PRIVATE_ASSETS); a build without it shows the
+    # pages without them.
+    postCompileScripts:
+      - name: Private assets
+        basedOnDependencyAnalysis: false
+        script: |
+          PACK="${SOMMELIER_PRIVATE_ASSETS:-$SRCROOT/../sommelier-private-assets}"
+          [ -d "$PACK" ] || exit 0
+          cp -f "$PACK"/*.jpg "$PACK"/*.png "$PACK"/*.txt "$TARGET_BUILD_DIR/$UNLOCALIZED_RESOURCES_FOLDER_PATH/" 2>/dev/null || true
+    dependencies:
+      - package: SommelierKit
+        product: SommelierKit
+      - package: Sparkle
+        product: Sparkle
+    info:
+      path: App/Sommelier/Info.plist
+      properties:
+        CFBundleDisplayName: "$(SOMMELIER_DISPLAY_NAME)"
+        CFBundleName: "$(SOMMELIER_DISPLAY_NAME)"
+        CFBundleShortVersionString: "$(MARKETING_VERSION)"
+        CFBundleVersion: "$(CURRENT_PROJECT_VERSION)"
+        LSApplicationCategoryType: public.app-category.games
+        CFBundleDevelopmentRegion: en
+        CFBundleLocalizations: [en, ru, zh-Hans, ja, de, fr, es, pt-BR, it, nl, sv, pl, uk, be, tr, ko, zh-Hant]
+        LSMinimumSystemVersion: "$(MACOSX_DEPLOYMENT_TARGET)"
+        NSHumanReadableCopyright: "© 2026 the Sommelier project"
+        # Without it macOS closes a game that opens the microphone (voice chat) instead of asking; under Wine the
+        # game then hangs. Translated in InfoPlist.xcstrings.
+        NSMicrophoneUsageDescription: "Games with voice chat use the microphone."
+        # Clips: macOS shows this when Sommelier first records a game's window. Translated in InfoPlist.xcstrings.
+        NSScreenCaptureUsageDescription: "Sommelier records the game’s window for clips. Only the game is recorded, and nothing leaves this Mac."
+        # Clips: the game's sound is taken straight from the game's process (a Core Audio tap). Translated in InfoPlist.xcstrings.
+        # Controller Mode: speaking a search. Translated in InfoPlist.xcstrings.
+        NSSpeechRecognitionUsageDescription: "Sommelier turns what you say into a search for your games."
+        NSAudioCaptureUsageDescription: "Sommelier records the game’s sound for clips. Only the game is recorded, and nothing leaves this Mac."
+        # Where engines come from. Debug builds use the ones built in this checkout (engine/dist).
+        SommelierEngineManifestURL: "$(SOMMELIER_ENGINE_MANIFEST_URL)"
+        # Updates (Sparkle): the list of versions, and the public half of the key that signs them
+        # (scripts/update-signing-key.swift; the private half is in the release machine's keychain).
+        SUFeedURL: "$(SOMMELIER_UPDATE_FEED_URL)"
+        SUPublicEDKey: Arew6CWJjp7cUWoAO+JR05TRe5snh+jSXGqFDTl3eEY=
+        # Checked daily, always (not a setting); downloaded and installed only when the player chooses "Update".
+        SUEnableAutomaticChecks: true
+        SUAutomaticallyUpdate: false
+        SUAllowsAutomaticUpdates: false
+        CFBundleURLTypes:
+          - CFBundleURLName: gg.sommelier.play
+            CFBundleURLSchemes: ["$(SOMMELIER_URL_SCHEME)"]
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: gg.sommelier.app
+        PRODUCT_NAME: Sommelier
+        MARKETING_VERSION: 0.1.2
+        CURRENT_PROJECT_VERSION: 3
+        SWIFT_VERSION: "6.0"
+        SWIFT_EMIT_LOC_STRINGS: YES
+        LOCALIZATION_PREFERS_STRING_CATALOGS: YES
+        # Wine needs to start other programs and map memory freely: no App Sandbox.
+        ENABLE_APP_SANDBOX: NO
+        ENABLE_HARDENED_RUNTIME: NO
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+      configs:
+        Debug:
+          # A build of this checkout runs beside the released Sommelier: own identifier, name, folder (Sommelier Dev,
+          # see BuildFlavor), link scheme and shortcuts, so neither touches the other's games, settings or links.
+          PRODUCT_BUNDLE_IDENTIFIER: gg.sommelier.app.dev
+          SOMMELIER_DISPLAY_NAME: Sommelier Dev
+          SOMMELIER_URL_SCHEME: sommelier-dev
+          # The API running locally (server/api: `npx wrangler@4 dev --port 8788`): engines as
+          # scripts/publish-engine.sh put them there, updates as scripts/release-app.sh did.
+          SOMMELIER_ENGINE_MANIFEST_URL: "http://127.0.0.1:8788/v1/engines/engine-manifest.json"
+          SOMMELIER_UPDATE_FEED_URL: "http://127.0.0.1:8788/v1/appcast.xml"
+        Release:
+          SOMMELIER_DISPLAY_NAME: Sommelier
+          SOMMELIER_URL_SCHEME: sommelier
+          SOMMELIER_ENGINE_MANIFEST_URL: "https://api.playsommelier.com/v1/engines/engine-manifest.json"
+          SOMMELIER_UPDATE_FEED_URL: "https://api.playsommelier.com/v1/appcast.xml"

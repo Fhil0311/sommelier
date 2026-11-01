@@ -1,0 +1,40 @@
+--- a/dlls/ntdll/loader.c
++++ b/dlls/ntdll/loader.c
+@@ -2086,6 +2086,28 @@
+ /******************************************************************
+  *		LdrGetProcedureAddress  (NTDLL.@)
+  */
++/* Sommelier: with SOMMELIER_HIDE_WINE=1 in a program's environment, ntdll's exports that tell Wine apart from Windows
++ * are not found by name, as on Windows. Some games switch features off when they find them (The Witcher 3 5.x skips
++ * NVIDIA Streamline, so DLSS, when GetProcAddress(ntdll, "wine_get_version") succeeds). Imports Wine's own modules
++ * link to are resolved elsewhere and still work. */
++extern IMAGE_DOS_HEADER __ImageBase;     /* this module: ntdll */
++
++static BOOL hides_wine_export( HMODULE module, const ANSI_STRING *name )
++{
++    static int hide = -1;
++    if (!name || !name->Buffer || module != (HMODULE)&__ImageBase) return FALSE;
++    if (hide < 0)
++    {
++        UNICODE_STRING var = RTL_CONSTANT_STRING( L"SOMMELIER_HIDE_WINE" ), value;
++        WCHAR buffer[8];
++        value.Buffer = buffer;
++        value.MaximumLength = sizeof(buffer);
++        hide = !RtlQueryEnvironmentVariable_U( NULL, &var, &value ) && value.Length && buffer[0] == '1';
++    }
++    return hide && (!strcmp( name->Buffer, "wine_get_version" ) || !strcmp( name->Buffer, "wine_get_build_id" )
++                    || !strcmp( name->Buffer, "wine_get_host_version" ));
++}
++
+ NTSTATUS WINAPI LdrGetProcedureAddress(HMODULE module, const ANSI_STRING *name,
+                                        ULONG ord, PVOID *address)
+ {
+@@ -2094,6 +2116,8 @@
+     DWORD exp_size;
+     NTSTATUS ret = STATUS_PROCEDURE_NOT_FOUND;
+ 
++    if (hides_wine_export( module, name )) return STATUS_PROCEDURE_NOT_FOUND;
++
+     RtlEnterCriticalSection( &loader_section );
+ 
+     /* check if the module itself is invalid to return the proper error */

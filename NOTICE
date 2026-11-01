@@ -1,0 +1,29 @@
+Sommelier
+Copyright 2026 the Sommelier project
+
+Sommelier is free software: you can redistribute it and/or modify it under the terms of the GNU General Public
+License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later
+version (see LICENSE). The small programs in engine/ that run inside Wine and the games (engine/d3d12-stub,
+engine/dll-path-shim, engine/steamwebhelper-wrapper) are under the GNU Lesser General Public License, version 2.1 or
+later (engine/licenses/LGPL-2.1.txt), as Wine itself is.
+
+Name and logo. "Sommelier" and the grape logo identify the project's own builds and are not covered by the licenses
+above. You may build, change and share this code, but a version you distribute must use another name and icon; see
+TRADEMARKS.md. Official builds are signed with the project's Developer ID and update key; nothing in this repository
+lets another build present itself as one.
+
+Game art. The covers on the signed-out wall and the store pages belong to their publishers and are not in this
+repository: the project's builds add them from a private pack (see project.yml), and a build without it shows those
+pages without the covers. Store names and logos in Assets.xcassets are trademarks of their owners, used to name the
+stores the app works with.
+
+Third-party software in the game engines (Wine, DXMT, the runtime libraries and others) is listed with its licenses
+in engine/licenses/THIRD-PARTY-NOTICES.md. Our changes to Wine are published as patches in engine/patches, and our
+version of DXMT at https://github.com/Fhil0311/sommelier-dxmt. Apple's D3DMetal is not in this repository; its
+license is App/Sommelier/AppleD3DMetalLicense.rtf.
+
+Data. The recipes list includes knowledge re-expressed from the protonfixes database (Open-Wine-Components/
+umu-protonfixes, BSD-2-Clause, Copyright (c) 2018 Chris Simons and contributors): which fix a game needs, in
+Sommelier's own form; none of its code is included. server/recipes/highball.json and server/verdicts/highball.json come
+from highball-db's curated entries (CC0-1.0). server/saves uses the ludusavi manifest (MIT,
+server/saves/LICENSE-ludusavi-manifest). Controller silhouettes are Kenney's Input Prompts (CC0).

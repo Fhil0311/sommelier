@@ -1,0 +1,2058 @@
+{
+ "source": "https://gethighball.com/data/games.json",
+ "license": "CC0-1.0",
+ "games": {
+  "steam:10": {
+   "backend": "dxmt",
+   "title": "Counter-Strike",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:10090": {
+   "backend": "dxmt",
+   "title": "Call of Duty: World at War",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1016950": {
+   "backend": "dxmt",
+   "title": "Blood Bowl 3",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1025600": {
+   "backend": "dxmt",
+   "title": "Battle Realms: Zen Edition",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1044720": {
+   "backend": "d3dMetal",
+   "title": "Farthest Frontier",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1057090": {
+   "backend": "dxmt",
+   "title": "Ori and the Will of the Wisps",
+   "status": "reported-upstream",
+   "lastVerified": null
+  },
+  "steam:1071140": {
+   "backend": "dxmt",
+   "title": "ORX",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1086940": {
+   "backend": "d3dMetal",
+   "title": "Baldur's Gate 3",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1088850": {
+   "backend": "d3dMetal",
+   "title": "Marvel's Guardians of the Galaxy",
+   "status": "verified-local",
+   "lastVerified": "2026-09-13"
+  },
+  "steam:1091500": {
+   "backend": "d3dMetal",
+   "title": "Cyberpunk 2077",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1101120": {
+   "backend": "d3dMetal",
+   "title": "Gunsmith Simulator",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1113560": {
+   "backend": "dxmt",
+   "title": "NieR Replicant ver.1.22474487139...",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1115050": {
+   "backend": "d3dMetal",
+   "title": "Will You Snail?",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1122720": {
+   "backend": "dxmt",
+   "title": "Sayonara Wild Hearts",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1139900": {
+   "backend": "dxmt",
+   "title": "Ghostrunner",
+   "status": "reported-upstream",
+   "lastVerified": null
+  },
+  "steam:1145350": {
+   "backend": "dxmt",
+   "title": "Hades II",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1148590": {
+   "backend": "dxmt",
+   "title": "DOOM 64",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1150690": {
+   "backend": "dxvk",
+   "title": "OMORI",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1151640": {
+   "backend": "d3dMetal",
+   "title": "Horizon Zero Dawn",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1158310": {
+   "backend": "dxvk",
+   "title": "Crusader Kings III",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1159090": {
+   "backend": "d3dMetal",
+   "title": "Zoria: Age of Shattering",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1167630": {
+   "backend": "dxmt",
+   "title": "Teardown",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1174180": {
+   "backend": "dxmt",
+   "title": "Red Dead Redemption 2",
+   "status": "verified-local",
+   "lastVerified": "2026-10-05"
+  },
+  "steam:1180660": {
+   "backend": "dxmt",
+   "title": "Tell Me Why",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1189490": {
+   "backend": "dxmt",
+   "title": "觅长生",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1190460": {
+   "backend": "d3dMetal",
+   "title": "Death Stranding",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1196590": {
+   "backend": "d3dMetal",
+   "title": "Resident Evil Village",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1201240": {
+   "backend": "d3dMetal",
+   "title": "BLEACH Brave Souls",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1210320": {
+   "backend": "d3dMetal",
+   "title": "Potion Craft: Alchemist Simulator",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1211020": {
+   "backend": "dxmt",
+   "title": "Wobbly Life",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:12120": {
+   "backend": "wined3d",
+   "title": "Grand Theft Auto: San Andreas",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:12210": {
+   "backend": "dxvk",
+   "title": "Grand Theft Auto IV: The Complete Edition",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1221540": {
+   "backend": "dxmt",
+   "title": "KUUKIYOMI: Consider It",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1222670": {
+   "backend": "dxmt",
+   "title": "The Sims 4",
+   "status": "verified-local",
+   "lastVerified": "2026-09-06"
+  },
+  "steam:1229490": {
+   "backend": "dxvk",
+   "title": "ULTRAKILL",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1237970": {
+   "backend": "dxmt",
+   "title": "Titanfall 2",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1240440": {
+   "backend": "d3dMetal",
+   "title": "Halo Infinite",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1244460": {
+   "backend": "d3dMetal",
+   "title": "Jurassic World Evolution 2",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1245620": {
+   "backend": "d3dMetal",
+   "title": "Elden Ring",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1265920": {
+   "backend": "d3dMetal",
+   "title": "Life is Strange Remastered",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1265930": {
+   "backend": "d3dMetal",
+   "title": "Life is Strange: Before the Storm Remastered",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1271700": {
+   "backend": "d3dMetal",
+   "title": "HOT WHEELS UNLEASHED",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1282590": {
+   "backend": "d3dMetal",
+   "title": "Train Sim World 2",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1286580": {
+   "backend": "dxmt",
+   "title": "Ship of Fools",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1290000": {
+   "backend": "dxmt",
+   "title": "PowerWash Simulator",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1293830": {
+   "backend": "d3dMetal",
+   "title": "Forza Horizon 4",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1295920": {
+   "backend": "dxmt",
+   "title": "The Mortuary Assistant",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1332010": {
+   "backend": "dxmt",
+   "title": "Stray",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1363080": {
+   "backend": "d3dMetal",
+   "title": "Manor Lords",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1374490": {
+   "backend": "dxmt",
+   "title": "RuneScape: Dragonwilds",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1382070": {
+   "backend": "wined3d",
+   "title": "Viewfinder",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1386780": {
+   "backend": "dxmt",
+   "title": "City of Gangsters",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1406990": {
+   "backend": "wined3d",
+   "title": "NEKOPARA Vol. 4",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1422450": {
+   "backend": "dxmt",
+   "title": "Deadlock",
+   "status": "reported-upstream",
+   "lastVerified": null
+  },
+  "steam:1422630": {
+   "backend": "d3dMetal",
+   "title": "Active Neurons - Wonders Of The World",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1426210": {
+   "backend": "dxmt",
+   "title": "It Takes Two",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1446780": {
+   "backend": "d3dMetal",
+   "title": "Monster Hunter Rise",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1449850": {
+   "backend": "dxmt",
+   "title": "Yu-Gi-Oh! Master Duel",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1462040": {
+   "backend": "d3dMetal",
+   "title": "FINAL FANTASY VII REMAKE INTERGRADE",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1477590": {
+   "backend": "dxvk",
+   "title": "EZ2ON REBOOT : R",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1478500": {
+   "backend": "dxmt",
+   "title": "Big Walk",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1486920": {
+   "backend": "dxmt",
+   "title": "Tempest Rising",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1549970": {
+   "backend": "dxmt",
+   "title": "Aliens: Fireteam Elite",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1551360": {
+   "backend": "d3dMetal",
+   "title": "Forza Horizon 5",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1577120": {
+   "backend": "dxvk",
+   "title": "The Quarry",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1585220": {
+   "backend": "dxmt",
+   "title": "Melatonin",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1588550": {
+   "backend": "d3dMetal",
+   "title": "Cairn",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1590910": {
+   "backend": "dxmt",
+   "title": "Forgive Me Father",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1593030": {
+   "backend": "dxmt",
+   "title": "Terra Nil",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1593500": {
+   "backend": "dxmt",
+   "title": "God of War",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1602080": {
+   "backend": "dxmt",
+   "title": "Soulstice",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1623730": {
+   "backend": "d3dMetal",
+   "title": "Palworld",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1659420": {
+   "backend": "d3dMetal",
+   "title": "UNCHARTED: Legacy of Thieves Collection",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1677280": {
+   "backend": "d3dMetal",
+   "title": "Company of Heroes 3",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1687950": {
+   "backend": "d3dMetal",
+   "title": "Persona 5 Royal",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1710820": {
+   "backend": "d3dMetal",
+   "title": "Cleared Hot",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1716740": {
+   "backend": "d3dMetal",
+   "title": "Starfield",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1732430": {
+   "backend": "dxmt",
+   "title": "Neighbors: Suburban Warfare",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1733240": {
+   "backend": "dxmt",
+   "title": "Phantom Fury",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1766060": {
+   "backend": "d3dMetal",
+   "title": "HumanitZ",
+   "status": "community",
+   "lastVerified": "2026-09-17"
+  },
+  "steam:1782120": {
+   "backend": "d3dMetal",
+   "title": "ZERO Sievert",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1782460": {
+   "backend": "dxmt",
+   "title": "Hell Clock",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1783560": {
+   "backend": "d3dMetal",
+   "title": "The Last Caretaker",
+   "status": "community",
+   "lastVerified": "2026-09-19"
+  },
+  "steam:1794680": {
+   "backend": "dxmt",
+   "title": "Vampire Survivors",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1805320": {
+   "backend": "dxmt",
+   "title": "Romestead",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1817190": {
+   "backend": "d3dMetal",
+   "title": "Marvel's Spider-Man: Miles Morales",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1827180": {
+   "backend": "dxvk",
+   "title": "Toram Online",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1830970": {
+   "backend": "dxmt",
+   "title": "The Last Flame",
+   "status": "verified-local",
+   "lastVerified": "2026-09-20"
+  },
+  "steam:1850510": {
+   "backend": "dxmt",
+   "title": "TRIANGLE STRATEGY",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1876890": {
+   "backend": "dxmt",
+   "title": "Wandering Sword",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1888160": {
+   "backend": "d3dMetal",
+   "title": "Armored Core VI",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1902490": {
+   "backend": "dxvk",
+   "title": "Aperture Desk Job",
+   "status": "verified-local",
+   "lastVerified": "2026-09-10"
+  },
+  "steam:1903340": {
+   "backend": "d3dMetal",
+   "title": "Clair Obscur: Expedition 33",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1933840": {
+   "backend": "dxmt",
+   "title": "Moon Mystery",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1934680": {
+   "backend": "d3dMetal",
+   "title": "Age of Mythology: Retold",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1943950": {
+   "backend": "d3dMetal",
+   "title": "Escape the Backrooms",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1948980": {
+   "backend": "dxmt",
+   "title": "Hero's Adventure: Road to Passion",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1966720": {
+   "backend": "dxmt",
+   "title": "Lethal Company",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1966900": {
+   "backend": "dxmt",
+   "title": "20 Minutes Till Dawn",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:1973530": {
+   "backend": "d3dMetal",
+   "title": "Limbus Company",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:2005010": {
+   "backend": "dxmt",
+   "title": "Warhammer 40,000: Boltgun",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:2019300": {
+   "backend": "d3dMetal",
+   "title": "Dokimon Quest",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:203160": {
+   "backend": "dxmt",
+   "title": "Tomb Raider Game of the Year Edition",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:203750": {
+   "backend": "d3dMetal",
+   "title": "Binary Domain",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:2050650": {
+   "backend": "d3dMetal",
+   "title": "Resident Evil 4",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:205100": {
+   "backend": "dxmt",
+   "title": "Dishonored",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:2084000": {
+   "backend": "d3dMetal",
+   "title": "Shogun Showdown",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:2098790": {
+   "backend": "dxmt",
+   "title": "群侠传，启动！",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:211500": {
+   "backend": "dxvk",
+   "title": "RaceRoom Racing Experience",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:213670": {
+   "backend": "dxmt",
+   "title": "South Park: The Stick of Truth",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:2141730": {
+   "backend": "d3dMetal",
+   "title": "Backrooms: Escape Together",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:2144740": {
+   "backend": "dxvk",
+   "title": "Ghostrunner 2",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:214490": {
+   "backend": "dxmt",
+   "title": "Alien: Isolation",
+   "status": "reported-upstream",
+   "lastVerified": null
+  },
+  "steam:2161700": {
+   "backend": "wined3d",
+   "title": "Persona 3 Reload",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:2178480": {
+   "backend": "dxmt",
+   "title": "Shiren the Wanderer: The Mystery Dungeon of Serpentcoil Island",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:2195910": {
+   "backend": "dxmt",
+   "title": "Darkenstein 3D",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:220": {
+   "backend": "wined3d",
+   "title": "Half-Life 2",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:2225070": {
+   "backend": "dxmt",
+   "title": "Trackmania",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:2239710": {
+   "backend": "d3dMetal",
+   "title": "Into the Dead: Our Darkest Days",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:225080": {
+   "backend": "dxmt",
+   "title": "Brothers - A Tale of Two Sons",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:227300": {
+   "backend": "dxmt",
+   "title": "Euro Truck Simulator 2",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:230410": {
+   "backend": "dxmt",
+   "title": "Warframe",
+   "status": "verified-local",
+   "lastVerified": "2026-09-10"
+  },
+  "steam:231430": {
+   "backend": "dxmt",
+   "title": "Company of Heroes 2",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:2320": {
+   "backend": "dxmt",
+   "title": "Quake II",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:2322010": {
+   "backend": "d3dMetal",
+   "title": "God of War Ragnarök",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:2333000": {
+   "backend": "dxmt",
+   "title": "Silver Pines",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:233450": {
+   "backend": "dxvk",
+   "title": "Prison Architect",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:2338140": {
+   "backend": "wined3d",
+   "title": "Dokapon Kingdom: Connect",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:2340650": {
+   "backend": "dxmt",
+   "title": "古龙风云录",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:2353250": {
+   "backend": "dxmt",
+   "title": "Astrometica",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:2357570": {
+   "backend": "dxmt",
+   "title": "Overwatch 2",
+   "status": "reported-upstream",
+   "lastVerified": null
+  },
+  "steam:237310": {
+   "backend": "dxmt",
+   "title": "Elsword",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:2379780": {
+   "backend": "dxmt",
+   "title": "Balatro",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:24010": {
+   "backend": "dxmt",
+   "title": "Train Simulator Classic",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:2402680": {
+   "backend": "dxmt",
+   "title": "Dimraeth",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:2406770": {
+   "backend": "d3dMetal",
+   "title": "Bodycam",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:2416450": {
+   "backend": "dxmt",
+   "title": "MOUSE: P.I. For Hire",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:2420510": {
+   "backend": "dxmt",
+   "title": "HoloCure - Save the Fans!",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:2437570": {
+   "backend": "dxmt",
+   "title": "Golden Chambers",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:244210": {
+   "backend": "d3dMetal",
+   "title": "Assetto Corsa",
+   "status": "verified-local",
+   "lastVerified": "2026-10-05"
+  },
+  "steam:246070": {
+   "backend": "dxmt",
+   "title": "Hack 'n' Slash",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:2475460": {
+   "backend": "dxmt",
+   "title": "SOS OPS!",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:24790": {
+   "backend": "dxmt",
+   "title": "Command & Conquer 3: Tiberium Wars",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:2483190": {
+   "backend": "d3dMetal",
+   "title": "Forza Horizon 6",
+   "status": "verified-local",
+   "lastVerified": "2026-10-05"
+  },
+  "steam:2499860": {
+   "backend": "dxmt",
+   "title": "DRAGON QUEST VII Reimagined",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:250320": {
+   "backend": "dxmt",
+   "title": "The Wolf Among Us",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:250900": {
+   "backend": "dxmt",
+   "title": "The Binding of Isaac: Rebirth (Repentance+)",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:2521630": {
+   "backend": "dxmt",
+   "title": "Mini Settlers",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:2524850": {
+   "backend": "dxmt",
+   "title": "Denshattack!",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:2525310": {
+   "backend": "dxmt",
+   "title": "Drop Duchy",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:2536520": {
+   "backend": "d3dMetal",
+   "title": "Diablo II: Resurrected",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:253750": {
+   "backend": "dxmt",
+   "title": "Ikaruga",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:2553040": {
+   "backend": "dxmt",
+   "title": "Nested Lands",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:255710": {
+   "backend": "dxmt",
+   "title": "Cities: Skylines",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:2567870": {
+   "backend": "dxmt",
+   "title": "Chained Together",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:261550": {
+   "backend": "dxmt",
+   "title": "Mount & Blade II: Bannerlord",
+   "status": "reported-upstream",
+   "lastVerified": null
+  },
+  "steam:262060": {
+   "backend": "dxmt",
+   "title": "Darkest Dungeon",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:2622380": {
+   "backend": "d3dMetal",
+   "title": "ELDEN RING NIGHTREIGN",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:2634950": {
+   "backend": "d3dMetal",
+   "title": "Tokyo Xtreme Racer",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:2638370": {
+   "backend": "dxmt",
+   "title": "Five Nights at Freddy's: Into the Pit",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:2643980": {
+   "backend": "dxmt",
+   "title": "Emberward",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:264710": {
+   "backend": "dxmt",
+   "title": "Subnautica",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:2679460": {
+   "backend": "dxmt",
+   "title": "Metaphor: ReFantazio",
+   "status": "verified-local",
+   "lastVerified": "2026-09-12"
+  },
+  "steam:2688950": {
+   "backend": "d3dMetal",
+   "title": "Planet Coaster 2",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:2693730": {
+   "backend": "dxmt",
+   "title": "Dawnsbury Days",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:2694490": {
+   "backend": "d3dMetal",
+   "title": "Path of Exile 2",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:2697940": {
+   "backend": "dxmt",
+   "title": "Ascend to ZERO",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:2698780": {
+   "backend": "dxmt",
+   "title": "ContractVille",
+   "status": "verified-local",
+   "lastVerified": "2026-10-05"
+  },
+  "steam:2707930": {
+   "backend": "dxmt",
+   "title": "Palia",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:270880": {
+   "backend": "dxmt",
+   "title": "American Truck Simulator",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:271590": {
+   "backend": "dxmt",
+   "title": "Grand Theft Auto V (Legacy)",
+   "status": "verified-local",
+   "lastVerified": "2026-10-05"
+  },
+  "steam:2772750": {
+   "backend": "dxvk",
+   "title": "Age of History 3",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:281990": {
+   "backend": "dxmt",
+   "title": "Stellaris",
+   "status": "reported-upstream",
+   "lastVerified": null
+  },
+  "steam:282070": {
+   "backend": "dxmt",
+   "title": "This War of Mine",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:2823140": {
+   "backend": "d3dMetal",
+   "title": "WHERE SAFETY ENDS *Remake*",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:2837600": {
+   "backend": "dxmt",
+   "title": "The Alto Collection",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:284160": {
+   "backend": "d3dMetal",
+   "title": "BeamNG.drive",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:287390": {
+   "backend": "dxmt",
+   "title": "Metro: Last Light Redux",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:289070": {
+   "backend": "dxmt",
+   "title": "Civilization VI",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:2893570": {
+   "backend": "dxmt",
+   "title": "DRAGON QUEST I & II HD-2D Remake",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:2902720": {
+   "backend": "dxmt",
+   "title": "SPAM",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:291550": {
+   "backend": "dxmt",
+   "title": "Brawlhalla",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:292030": {
+   "backend": "dxmt",
+   "title": "The Witcher 3: Wild Hunt",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:292120": {
+   "backend": "wined3d",
+   "title": "FINAL FANTASY XIII",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:2925280": {
+   "backend": "dxmt",
+   "title": "Tlatoani: Aztec Cities Demo",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:2929250": {
+   "backend": "dxmt",
+   "title": "over the hill",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:2988580": {
+   "backend": "d3dMetal",
+   "title": "Yakuza 0 Director's Cut",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:304240": {
+   "backend": "d3dMetal",
+   "title": "Resident Evil",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:304430": {
+   "backend": "dxmt",
+   "title": "INSIDE",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:306910": {
+   "backend": "d3dMetal",
+   "title": "Vaultbreakers",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:307780": {
+   "backend": "dxmt",
+   "title": "Mortal Kombat X",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:310560": {
+   "backend": "dxmt",
+   "title": "DiRT Rally",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:310950": {
+   "backend": "dxmt",
+   "title": "Street Fighter V",
+   "status": "reported-upstream",
+   "lastVerified": null
+  },
+  "steam:312520": {
+   "backend": "dxmt",
+   "title": "Rain World",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:3164500": {
+   "backend": "dxvk",
+   "title": "Schedule I",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:3191030": {
+   "backend": "dxmt",
+   "title": "Nubby's Number Factory",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:3191050": {
+   "backend": "dxmt",
+   "title": "BRAZILIAN DRUG DEALER 3: I OPENED A PORTAL TO HELL IN THE FAVELA TRYING TO REVIVE MIT AIA I NEED TO CLOSE IT",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:319510": {
+   "backend": "dxvk",
+   "title": "Five Nights at Freddy's",
+   "status": "verified-local",
+   "lastVerified": "2026-10-05"
+  },
+  "steam:320140": {
+   "backend": "dxmt",
+   "title": "Absolute Drift",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:3224770": {
+   "backend": "dxmt",
+   "title": "Umamusume: Pretty Derby",
+   "status": "reported-upstream",
+   "lastVerified": "2026-09-30"
+  },
+  "steam:323190": {
+   "backend": "dxmt",
+   "title": "Frostpunk",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:3241660": {
+   "backend": "dxmt",
+   "title": "R.E.P.O.",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:32470": {
+   "backend": "dxmt",
+   "title": "STAR WARS Empire at War: Gold Pack",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:329050": {
+   "backend": "dxmt",
+   "title": "Devil May Cry 4 Special Edition",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:3314060": {
+   "backend": "dxvk",
+   "title": "The Sims Legacy Collection",
+   "status": "verified-local",
+   "lastVerified": "2026-10-05"
+  },
+  "steam:3314070": {
+   "backend": "wined3d",
+   "title": "The Sims 2 Legacy Collection",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:3314790": {
+   "backend": "dxmt",
+   "title": "CloverPit",
+   "status": "verified-local",
+   "lastVerified": "2026-09-25"
+  },
+  "steam:3320": {
+   "backend": "dxmt",
+   "title": "Insaniquarium Deluxe",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:332800": {
+   "backend": "dxvk",
+   "title": "Five Nights at Freddy's 2",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:3357650": {
+   "backend": "d3dMetal",
+   "title": "PRAGMATA",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:3450310": {
+   "backend": "dxvk",
+   "title": "Europa Universalis 5",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:345390": {
+   "backend": "dxmt",
+   "title": "King's Quest",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:345610": {
+   "backend": "wined3d",
+   "title": "The Fruit of Grisaia",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:3489700": {
+   "backend": "d3dMetal",
+   "title": "Stellar Blade",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:349040": {
+   "backend": "d3dMetal",
+   "title": "NARUTO SHIPPUDEN: Ultimate Ninja STORM 4",
+   "status": "verified-local",
+   "lastVerified": "2026-09-10"
+  },
+  "steam:3527290": {
+   "backend": "dxvk",
+   "title": "PEAK",
+   "status": "verified-local",
+   "lastVerified": "2026-09-15"
+  },
+  "steam:356040": {
+   "backend": "dxmt",
+   "title": "Sheltered",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:356190": {
+   "backend": "dxmt",
+   "title": "Middle-earth: Shadow of War",
+   "status": "reported-upstream",
+   "lastVerified": null
+  },
+  "steam:3564740": {
+   "backend": "dxmt",
+   "title": "Where Winds Meet",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:3576350": {
+   "backend": "dxmt",
+   "title": "Sex, Secrets & Used Tech",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:359320": {
+   "backend": "d3dMetal",
+   "title": "Elite Dangerous (Odyssey)",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:3606890": {
+   "backend": "dxmt",
+   "title": "Upload Labs",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:3626940": {
+   "backend": "d3dMetal",
+   "title": "Gold Mining Simulator 2 Demo",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:3649940": {
+   "backend": "dxmt",
+   "title": "Bloodbreaker: Labyrinth of the Witch Demo",
+   "status": "community",
+   "lastVerified": "2026-10-06"
+  },
+  "steam:365590": {
+   "backend": "dxmt",
+   "title": "Tom Clancy's The Division",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:3656800": {
+   "backend": "dxmt",
+   "title": "Train Sim World 6",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:3676940": {
+   "backend": "d3dMetal",
+   "title": "Hubert Demo",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:3699590": {
+   "backend": "dxmt",
+   "title": "Well Dweller",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:3722330": {
+   "backend": "dxmt",
+   "title": "Shift At Midnight",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:374320": {
+   "backend": "d3dMetal",
+   "title": "Dark Souls III",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:3751260": {
+   "backend": "d3dMetal",
+   "title": "The Blood of Dawnwalker",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:376680": {
+   "backend": "d3dMetal",
+   "title": "Splendor",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:377160": {
+   "backend": "dxmt",
+   "title": "Fallout 4",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:377530": {
+   "backend": "dxmt",
+   "title": "Tale of Wuxia",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:378540": {
+   "backend": "dxmt",
+   "title": "The Surge",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:383980": {
+   "backend": "dxmt",
+   "title": "Rivals of Aether",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:384190": {
+   "backend": "dxmt",
+   "title": "ABZU",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:388090": {
+   "backend": "dxmt",
+   "title": "Five Nights at Freddy's 4",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:389730": {
+   "backend": "d3dMetal",
+   "title": "TEKKEN 7",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:391540": {
+   "backend": "wined3d",
+   "title": "Undertale",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:392260": {
+   "backend": "dxvk",
+   "title": "Rogue Wizards",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:3949040": {
+   "backend": "d3dMetal",
+   "title": "RV There Yet?",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:3974650": {
+   "backend": "d3dMetal",
+   "title": "Onimusha: Way of the Sword Demo",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:400": {
+   "backend": "dxvk",
+   "title": "Portal",
+   "status": "verified-local",
+   "lastVerified": "2026-10-07"
+  },
+  "steam:4000": {
+   "backend": "dxmt",
+   "title": "Garry's Mod",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:4001890": {
+   "backend": "dxmt",
+   "title": "How to Fish",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:4003800": {
+   "backend": "d3dMetal",
+   "title": "PRAGMATA Sketchbook (Demo)",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:403640": {
+   "backend": "dxmt",
+   "title": "Dishonored 2",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:4072240": {
+   "backend": "dxmt",
+   "title": "Woman Simulator",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:40800": {
+   "backend": "wined3d",
+   "title": "Super Meat Boy",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:4126040": {
+   "backend": "dxmt",
+   "title": "Aniimo",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:418530": {
+   "backend": "d3dMetal",
+   "title": "Spelunky 2",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:4196100": {
+   "backend": "d3dMetal",
+   "title": "Onimusha: Way of the Sword Benchmark",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:427410": {
+   "backend": "d3dMetal",
+   "title": "Abiotic Factor",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:427520": {
+   "backend": "dxmt",
+   "title": "Factorio",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:4317790": {
+   "backend": "dxmt",
+   "title": "Last Pirates: Die Together",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:4358690": {
+   "backend": "d3dMetal",
+   "title": "Graveyard Keeper 2",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:4399150": {
+   "backend": "dxmt",
+   "title": "Might & Mushroom Playtest",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:440": {
+   "backend": "dxmt",
+   "title": "Team Fortress 2",
+   "status": "community",
+   "lastVerified": "2026-09-08"
+  },
+  "steam:4465480": {
+   "backend": "dxmt",
+   "title": "Counter-Strike: Global Offensive (Legacy)",
+   "status": "verified-local",
+   "lastVerified": "2026-10-05"
+  },
+  "steam:447040": {
+   "backend": "dxmt",
+   "title": "Watch_Dogs® 2",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:4557380": {
+   "backend": "dxmt",
+   "title": "Batomon Showdown",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:460920": {
+   "backend": "dxmt",
+   "title": "Steep",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:461040": {
+   "backend": "dxvk",
+   "title": "PICO PARK:Classic Edition",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:4623570": {
+   "backend": "dxmt",
+   "title": "Deskrawl",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:4704690": {
+   "backend": "d3dMetal",
+   "title": "MECCHA CHAMELEON",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:473950": {
+   "backend": "dxmt",
+   "title": "Manifold Garden",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:4758450": {
+   "backend": "dxmt",
+   "title": "RippleLoop Demo",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:480490": {
+   "backend": "dxmt",
+   "title": "Prey (2017)",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:484900": {
+   "backend": "dxmt",
+   "title": "Aven Colony",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:4894830": {
+   "backend": "d3dMetal",
+   "title": "Sandcastle",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:489830": {
+   "backend": "dxvk",
+   "title": "The Elder Scrolls V: Skyrim Special Edition",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:496300": {
+   "backend": "dxvk",
+   "title": "Kingdom: New Lands",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:4995030": {
+   "backend": "dxmt",
+   "title": "Folded Fables: Tidy Up The Dragon Hoard",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:500": {
+   "backend": "wined3d",
+   "title": "Left 4 Dead",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:5000760": {
+   "backend": "d3dMetal",
+   "title": "Castlevania: Belmont's Curse Demo",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:502500": {
+   "backend": "dxmt",
+   "title": "ACE COMBAT™ 7: SKIES UNKNOWN",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:5149020": {
+   "backend": "dxmt",
+   "title": "Word Link",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:516750": {
+   "backend": "dxmt",
+   "title": "My Summer Car",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:517630": {
+   "backend": "dxmt",
+   "title": "Just Cause 4",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:521890": {
+   "backend": "dxmt",
+   "title": "Hello Neighbor",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:524220": {
+   "backend": "dxmt",
+   "title": "NieR: Automata",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:526870": {
+   "backend": "d3dMetal",
+   "title": "Satisfactory",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:548430": {
+   "backend": "dxmt",
+   "title": "Deep Rock Galactic",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:550320": {
+   "backend": "dxmt",
+   "title": "art of rally",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:553540": {
+   "backend": "dxmt",
+   "title": "Phantom Brigade",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:553850": {
+   "backend": "d3dMetal",
+   "title": "HELLDIVERS 2",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:570940": {
+   "backend": "dxmt",
+   "title": "Dark Souls: Remastered",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:579180": {
+   "backend": "dxmt",
+   "title": "Ys VIII: Lacrimosa of Dana",
+   "status": "reported-upstream",
+   "lastVerified": null
+  },
+  "steam:582010": {
+   "backend": "d3dMetal",
+   "title": "Monster Hunter: World",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:584400": {
+   "backend": "dxmt",
+   "title": "Sonic Mania",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:585420": {
+   "backend": "dxmt",
+   "title": "Trailmakers",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:589360": {
+   "backend": "dxmt",
+   "title": "Ni no Kuni: Wrath of the White Witch",
+   "status": "reported-upstream",
+   "lastVerified": null
+  },
+  "steam:589370": {
+   "backend": "dxmt",
+   "title": "Ni no Kuni II: Revenant Kingdom",
+   "status": "reported-upstream",
+   "lastVerified": null
+  },
+  "steam:601150": {
+   "backend": "dxmt",
+   "title": "Devil May Cry 5",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:601840": {
+   "backend": "dxmt",
+   "title": "Griftlands",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:613830": {
+   "backend": "dxmt",
+   "title": "CHRONO TRIGGER",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:620": {
+   "backend": "dxvk",
+   "title": "Portal 2",
+   "status": "verified-local",
+   "lastVerified": "2026-10-07"
+  },
+  "steam:622650": {
+   "backend": "dxmt",
+   "title": "Bendy and the Ink Machine",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:632360": {
+   "backend": "dxmt",
+   "title": "Risk of Rain 2",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:632470": {
+   "backend": "d3dMetal",
+   "title": "Disco Elysium - The Final Cut",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:632950": {
+   "backend": "dxmt",
+   "title": "SiN Reloaded",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:636480": {
+   "backend": "dxmt",
+   "title": "Ravenfield",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:646570": {
+   "backend": "dxmt",
+   "title": "Slay the Spire",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:675010": {
+   "backend": "dxmt",
+   "title": "MudRunner",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:688420": {
+   "backend": "dxmt",
+   "title": "Bad North: Jotunn Edition",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:690040": {
+   "backend": "dxmt",
+   "title": "Outcast: A New Beginning",
+   "status": "reported-upstream",
+   "lastVerified": null
+  },
+  "steam:690790": {
+   "backend": "dxmt",
+   "title": "DiRT Rally 2.0",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:70": {
+   "backend": "dxvk",
+   "title": "Half-Life",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:701160": {
+   "backend": "dxmt",
+   "title": "Kingdom Two Crowns",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:710700": {
+   "backend": "dxmt",
+   "title": "Paperback: The Game",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:730": {
+   "backend": "dxmt",
+   "title": "Counter-Strike 2",
+   "status": "verified-local",
+   "lastVerified": "2026-10-05"
+  },
+  "steam:739630": {
+   "backend": "dxvk",
+   "title": "Phasmophobia",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:742520": {
+   "backend": "d3dMetal",
+   "title": "Astrologaster",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:743890": {
+   "backend": "dxmt",
+   "title": "Mega Man X Legacy Collection",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:750920": {
+   "backend": "dxmt",
+   "title": "Shadow of the Tomb Raider",
+   "status": "reported-upstream",
+   "lastVerified": null
+  },
+  "steam:751780": {
+   "backend": "dxmt",
+   "title": "Forager",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:753640": {
+   "backend": "dxvk",
+   "title": "Outer Wilds",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:767560": {
+   "backend": "dxmt",
+   "title": "War Robots",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:774801": {
+   "backend": "dxmt",
+   "title": "Crab Champions",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:782330": {
+   "backend": "dxvk",
+   "title": "DOOM Eternal",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:784150": {
+   "backend": "dxmt",
+   "title": "Workers & Resources: Soviet Republic",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:805550": {
+   "backend": "dxmt",
+   "title": "Assetto Corsa Competizione",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:813780": {
+   "backend": "dxmt",
+   "title": "Age of Empires II: Definitive Edition",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:814380": {
+   "backend": "dxmt",
+   "title": "Sekiro: Shadows Die Twice",
+   "status": "reported-upstream",
+   "lastVerified": null
+  },
+  "steam:815370": {
+   "backend": "dxmt",
+   "title": "Green Hell",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:835960": {
+   "backend": "d3dMetal",
+   "title": "The Talos Principle 2",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:870780": {
+   "backend": "dxmt",
+   "title": "Control",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:871720": {
+   "backend": "wined3d",
+   "title": "Ultimate Custom Night",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:894020": {
+   "backend": "dxmt",
+   "title": "Death's Door",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:920210": {
+   "backend": "dxvk",
+   "title": "LEGO Star Wars: The Skywalker Saga",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:934700": {
+   "backend": "d3dMetal",
+   "title": "Dead Island 2",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:945360": {
+   "backend": "dxmt",
+   "title": "Among Us",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:952060": {
+   "backend": "d3dMetal",
+   "title": "Resident Evil 3",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:952860": {
+   "backend": "dxmt",
+   "title": "河洛群俠傳 (Ho Tu Lo Shu ： The Books of Dragon)",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:960090": {
+   "backend": "dxmt",
+   "title": "Bloons TD 6",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:960170": {
+   "backend": "dxvk",
+   "title": "DJMAX RESPECT V",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:960990": {
+   "backend": "dxmt",
+   "title": "Beyond: Two Souls",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:978780": {
+   "backend": "dxmt",
+   "title": "STORY OF SEASONS: Friends of Mineral Town",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:985890": {
+   "backend": "d3dMetal",
+   "title": "Streets of Rage 4",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:990080": {
+   "backend": "d3dMetal",
+   "title": "Hogwarts Legacy",
+   "status": "community",
+   "lastVerified": null
+  },
+  "steam:992300": {
+   "backend": "d3dMetal",
+   "title": "Bloody Spell",
+   "status": "community",
+   "lastVerified": null
+  }
+ }
+}

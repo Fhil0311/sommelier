@@ -1,0 +1,132 @@
+--- a/dlls/ntdll/unix/process.c
++++ b/dlls/ntdll/unix/process.c
+@@ -1,3 +1,4 @@
++/* Modified by the Sommelier project, 2026-10-22: a recipe may start one program in place of another (sommelier_redirect). */
+ /*
+  * NT process handling
+  *
+@@ -1172,6 +1173,79 @@
+ /**********************************************************************
+  *           NtCreateUserProcess  (NTDLL.@)
+  */
++/* Sommelier: a program Sommelier's recipes start in place of another (a game instead of its launcher). The table
++ * named by SOMMELIER_EXE_REDIRECTS has one "C:\Games\BL2<TAB>Launcher.exe<TAB>Borderlands2.exe" per line: the
++ * game's folder, the end of the launcher's path under it, and the program to start, relative to the launcher's
++ * folder (".." allowed). Paths compare without case. Read at each process creation, so a change needs no restart
++ * of the store that starts the programs. Returns the new image path (NT form) to use, or NULL. */
++static WCHAR *sommelier_redirect( const UNICODE_STRING *image )
++{
++    const char *table = getenv( "SOMMELIER_EXE_REDIRECTS" );
++    char line[2048], *path, *folder, *instead, *run, *end, *name, *target = NULL, *p;
++    WCHAR *ret = NULL;
++    size_t len, folder_len, instead_len, name_len;
++    FILE *f;
++
++    if (!table || !*table || !image->Buffer || !image->Length) return NULL;
++    if (!(f = fopen( table, "r" ))) return NULL;
++    len = image->Length / sizeof(WCHAR) * 3 + 1;
++    if (!(path = malloc( len ))) { fclose( f ); return NULL; }
++    len = ntdll_wcstoumbs( image->Buffer, image->Length / sizeof(WCHAR), path, len - 1, FALSE );
++    path[len] = 0;
++    name = path;
++    if (!strncmp( name, "\\??\\", 4 )) name += 4;
++    name_len = strlen( name );
++    while (!target && fgets( line, sizeof(line), f ))
++    {
++        folder = line;
++        if (!(instead = strchr( folder, '\t' ))) continue;
++        *instead++ = 0;
++        if (!(run = strchr( instead, '\t' ))) continue;
++        *run++ = 0;
++        if ((end = strpbrk( run, "\r\n" ))) *end = 0;
++        folder_len = strlen( folder );
++        instead_len = strlen( instead );
++        if (!folder_len || !instead_len || !*run) continue;
++        if (name_len < folder_len + 1 + instead_len) continue;
++        if (strncasecmp( name, folder, folder_len ) || name[folder_len] != '\\') continue;
++        if (name[name_len - instead_len - 1] != '\\' || strcasecmp( name + name_len - instead_len, instead )) continue;
++        /* the launcher's folder, then `run` on top of it, segment by segment */
++        if (!(target = malloc( name_len + strlen( run ) + 2 ))) break;
++        memcpy( target, name, name_len - instead_len - 1 );
++        target[name_len - instead_len - 1] = 0;
++        for (p = run; p && *p; )
++        {
++            char *next = strpbrk( p, "\\/" ), *seg_end = next ? next : p + strlen( p );
++            size_t seg = seg_end - p;
++            if (seg == 2 && !strncmp( p, "..", 2 ))
++            {
++                char *slash = strrchr( target, '\\' );
++                if (slash && slash > strchr( target, '\\' )) *slash = 0;   /* never above the drive's root */
++            }
++            else if (seg && !(seg == 1 && *p == '.'))
++            {
++                strcat( target, "\\" );
++                strncat( target, p, seg );
++            }
++            p = next ? next + 1 : NULL;
++        }
++    }
++    fclose( f );
++    free( path );
++    if (target)
++    {
++        len = strlen( target );
++        if ((ret = malloc( (len + 5) * sizeof(WCHAR) )))
++        {
++            size_t n = ntdll_umbstowcs( "\\??\\", 4, ret, 4 );
++            n += ntdll_umbstowcs( target, len, ret + n, len );
++            ret[n] = 0;
++        }
++        free( target );
++    }
++    return ret;
++}
++
+ NTSTATUS WINAPI NtCreateUserProcess( HANDLE *process_handle_ptr, HANDLE *thread_handle_ptr,
+                                      ACCESS_MASK process_access, ACCESS_MASK thread_access,
+                                      OBJECT_ATTRIBUTES *process_attr, OBJECT_ATTRIBUTES *thread_attr,
+@@ -1194,6 +1268,7 @@
+     USHORT machine = 0;
+     HANDLE parent = 0, debug = 0, token = 0;
+     UNICODE_STRING nt_name, path = {0};
++    WCHAR *redirected = NULL, *redirected_dir = NULL;  /* Sommelier */
+     OBJECT_ATTRIBUTES attr, empty_attr = { sizeof(empty_attr) };
+     SIZE_T i, attr_count = (ps_attr->TotalLength - sizeof(ps_attr->TotalLength)) / sizeof(PS_ATTRIBUTE);
+     const PS_ATTRIBUTE *handles_attr = NULL, *jobs_attr = NULL;
+@@ -1249,6 +1324,27 @@
+            debugstr_us( &params->ImagePathName ), debugstr_us( &params->CommandLine ), parent, machine );
+ 
+     unixdir = get_unix_curdir( params );
++
++    /* Sommelier: start the program a recipe names instead of this one (a game instead of its launcher), from its
++     * own folder, as if it had been started from there (The Witcher 3's witcher3.exe dies at once from the game's
++     * root, where its launcher lives). */
++    if ((redirected = sommelier_redirect( &path )))
++    {
++        WCHAR *slash;
++        path.Buffer = redirected;
++        path.Length = wcslen( redirected ) * sizeof(WCHAR);
++        path.MaximumLength = path.Length + sizeof(WCHAR);
++        if ((slash = wcsrchr( redirected + 4, '\\' )) && (redirected_dir = malloc( path.Length )))
++        {
++            size_t len = slash - (redirected + 4);
++            memcpy( redirected_dir, redirected + 4, len * sizeof(WCHAR) );
++            redirected_dir[len] = 0;
++            params->CurrentDirectory.DosPath.Buffer = redirected_dir;
++            params->CurrentDirectory.DosPath.Length = len * sizeof(WCHAR);
++            params->CurrentDirectory.DosPath.MaximumLength = (len + 1) * sizeof(WCHAR);
++        }
++        TRACE( "Sommelier: redirected to %s in %s\n", debugstr_us( &path ), debugstr_us( &params->CurrentDirectory.DosPath ) );
++    }
+ 
+     InitializeObjectAttributes( &attr, &path, OBJ_CASE_INSENSITIVE, 0, 0 );
+     if ((status = get_pe_file_info( &attr, &nt_name, &unix_name, &file_handle, &pe_info )))
+@@ -1438,6 +1534,8 @@
+     status = STATUS_SUCCESS;
+ 
+ done:
++    free( redirected );  /* Sommelier */
++    free( redirected_dir );
+     if (file_handle) NtClose( file_handle );
+     if (process_info) NtClose( process_info );
+     if (process_handle) NtClose( process_handle );

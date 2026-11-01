@@ -1,0 +1,42 @@
+--- a/dlls/winecoreaudio.drv/coreaudio.c	2026-10-23 15:03:30
++++ b/dlls/winecoreaudio.drv/coreaudio.c	2026-10-23 15:03:30
+@@ -223,6 +223,15 @@
+     return STATUS_SUCCESS;
+ }
+ 
++/* Sommelier: with SOMMELIER_NO_MIC=1 the process sees no microphone. Sommelier sets it for store clients and
++ * launchers (Steam's web helper looks at the microphone now and then) and unsets it for games, so macOS only asks
++ * for the microphone when a game opens it (voice chat), not on the store's behalf. */
++static BOOL sommelier_no_mic(void)
++{
++    const char *value = getenv("SOMMELIER_NO_MIC");
++    return value && value[0] == '1';
++}
++
+ static NTSTATUS unix_get_endpoint_ids(void *args)
+ {
+     struct get_endpoint_ids_params *params = args;
+@@ -243,6 +252,11 @@
+     params->num = 0;
+     params->default_idx = 0;
+ 
++    if(params->flow == eCapture && sommelier_no_mic()){
++        params->result = S_OK;
++        return STATUS_SUCCESS;
++    }
++
+     addr.mScope = kAudioObjectPropertyScopeGlobal;
+     addr.mElement = kAudioObjectPropertyElementMain;
+     if(params->flow == eRender) addr.mSelector = kAudioHardwarePropertyDefaultOutputDevice;
+@@ -744,6 +758,11 @@
+ 
+     stream->period = params->period;
+     stream->period_frames = muldiv(params->period, stream->fmt->nSamplesPerSec, 10000000);
++    if(params->flow == eCapture && sommelier_no_mic()){
++        params->result = AUDCLNT_E_DEVICE_INVALIDATED;
++        goto end;
++    }
++
+     stream->dev_id = dev_id_from_device(params->device);
+     stream->flow = params->flow;
+     stream->flags = params->flags;

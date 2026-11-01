@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Copyright 2026 the Sommelier project. SPDX-License-Identifier: GPL-3.0-or-later.
+     The release build runs with Apple's hardened runtime (needed to notarize). Games run as their own processes
+     (Wine), but macOS asks for the microphone on Sommelier's behalf: without this the request is refused, and
+     games with voice chat hang (see NSMicrophoneUsageDescription). Nothing else is needed: no App Sandbox. -->
+<plist version="1.0">
+<dict>
+	<key>com.apple.security.device.audio-input</key>
+	<true/>
+</dict>
+</plist>

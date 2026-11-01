@@ -1,0 +1,5510 @@
+{
+  "version": 1,
+  "from": "umu-protonfixes",
+  "license": "BSD-2-Clause",
+  "candidates": [
+    {
+      "game": "steam:1017900",
+      "actions": [
+        {
+          "addArguments": {
+            "_0": [
+              "-NoStartup"
+            ]
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Changes the proton argument from the launcher to the game"
+    },
+    {
+      "game": "steam:10220",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "corefonts"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "component lucida",
+        "component tahoma"
+      ],
+      "note": "Postal III"
+    },
+    {
+      "game": "steam:1030830",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "physx"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Enable NVIDIA PhysX support."
+    },
+    {
+      "game": "steam:105400",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "component xliveless",
+        "rmtree"
+      ],
+      "note": "Game fix for Fable III"
+    },
+    {
+      "game": "steam:105450",
+      "actions": [
+        {
+          "installVCRuntime": {}
+        },
+        {
+          "installComponent": {
+            "_0": "corefonts"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "component l3codecx",
+        "windows version winxp (needs the game's exe)"
+      ],
+      "note": "Installs corefonts, l3codecx, mfc42, winxp"
+    },
+    {
+      "game": "steam:1056640",
+      "actions": [
+        {
+          "setEnvironment": {
+            "_0": {
+              "WINE_NO_OPEN_FILE_SEARCH": "pso2_bin/data"
+            }
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Game fix for Phantasy Star Online 2"
+    },
+    {
+      "game": "steam:1062040",
+      "actions": [
+        {
+          "overrideDLL": {
+            "_0": "xactengine3_7",
+            "_1": "n"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Dragon Star Varnir fix"
+    },
+    {
+      "game": "steam:108710",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Installs d3dcompiler_47"
+    },
+    {
+      "game": "steam:1097150",
+      "actions": [
+        {
+          "setEnvironment": {
+            "_0": {
+              "DOTNET_BUNDLE_EXTRACT_BASE_DIR": ""
+            }
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Create symlink of eac so at the right location",
+      "skipped": [
+        "linux-only install_eac_runtime"
+      ]
+    },
+    {
+      "game": "steam:1105510",
+      "actions": [
+        {
+          "setEnvironment": {
+            "_0": {
+              "WINE_DISABLE_SFN": "1"
+            }
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Needs WINE_DISABLE_SFN set from this patch: https://github.com/ValveSoftware/wine/pull/205"
+    },
+    {
+      "game": "steam:110800",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        },
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        },
+        {
+          "addArguments": {
+            "_0": [
+              "-dx11"
+            ]
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Installs d3dx9_43, d3dcompiler_43, d3dx11_43, d3dcompiler_47 forces dx11 (enables intro cinematics) without editing settings.ini"
+    },
+    {
+      "game": "steam:1112400",
+      "actions": [
+        {
+          "installDotNet": {}
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "windows version win10 (needs the game's exe)"
+      ],
+      "note": "Game needs dotnet35 to launch",
+      "skipped": [
+        "linux env PROTON_USE_XALIA skipped"
+      ]
+    },
+    {
+      "game": "steam:1144400",
+      "actions": [
+        {
+          "addArguments": {
+            "_0": [
+              "-vomstyle=layer"
+            ]
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Game fix for Senren*Banka"
+    },
+    {
+      "game": "steam:1151440",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "import saves folder"
+      ],
+      "note": "Can't find saves for Mask of Deception."
+    },
+    {
+      "game": "steam:1151640",
+      "actions": [
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Game fix for Horizon Zero Dawn"
+    },
+    {
+      "game": "steam:1174180",
+      "actions": [
+        {
+          "addArguments": {
+            "_0": [
+              "-fullscreen",
+              "-vulkan"
+            ]
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Sometimes game will not launch if -fullscreen -vulkan is not specified"
+    },
+    {
+      "game": "steam:1175730",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        },
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "https://forum.treeofsavior.com/t/linux-the-graphic-card-does-not-support-directx11-13ep/418073/13"
+    },
+    {
+      "game": "steam:1222370",
+      "actions": [
+        {
+          "runExecutable": {
+            "instead": "Necromunda.exe",
+            "run": "Necromunda/Binaries/Win64/Necromunda-Win64-Shipping.exe"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Necromunda: Hired Gun"
+    },
+    {
+      "game": "steam:1222700",
+      "actions": [
+        {
+          "setEnvironment": {
+            "_0": {
+              "OPENSSL_ia32cap": ":~0x20000000"
+            }
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Work around UE4 OpenSSL crash on Intel 10th-gen and newer CPUs."
+    },
+    {
+      "game": "steam:1239520",
+      "actions": [
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Madden NFL 21 needs vcrun2019 for online mode to work"
+    },
+    {
+      "game": "steam:1240440",
+      "actions": [
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Halo Infinite needs vcrun2019"
+    },
+    {
+      "game": "steam:1250410",
+      "actions": [
+        {
+          "addArguments": {
+            "_0": [
+              "-FastLaunch"
+            ]
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Needs fastlaunch option"
+    },
+    {
+      "game": "steam:1259970",
+      "actions": [
+        {
+          "installVCRuntime": {}
+        },
+        {
+          "installDotNet": {}
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "component allfonts"
+      ],
+      "note": "Game fix for Pes 2021"
+    },
+    {
+      "game": "steam:1266220",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "cpu topology"
+      ],
+      "note": "Fixes performance and random crashings"
+    },
+    {
+      "game": "steam:1277510",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Game fix for Re:ZERO -Starting Life in Another World- The Prophecy of the Throne"
+    },
+    {
+      "game": "steam:12810",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "physx"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Overlord II"
+    },
+    {
+      "game": "steam:12840",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "component xliveless"
+      ],
+      "note": "This game uses GFWL, which causes it to fail to launch. xliveless is needed to get this working."
+    },
+    {
+      "game": "steam:1284190",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "import saves folder"
+      ],
+      "note": "Imports demo saves into the full game."
+    },
+    {
+      "game": "steam:1284210",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "drop argument -provider"
+      ],
+      "note": "GW2 add NOSTEAM option."
+    },
+    {
+      "game": "steam:1284410",
+      "actions": [
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Installs mfc140 mfc140 is necessary to start the game up. GOG login happens inside the Steam overlay. vcrun2019 enables full support of the prelauncher interface. GOG login inside the prelauncher. This prelauncher is not necessary for the Game. If only mfc is present, it's skipped."
+    },
+    {
+      "game": "steam:1286880",
+      "actions": [
+        {
+          "overrideDLL": {
+            "_0": "vulkan-1",
+            "_1": "b"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Needs builtin vulkan-1"
+    },
+    {
+      "game": "steam:1293830",
+      "actions": [
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Forza Horizon 4"
+    },
+    {
+      "game": "steam:1346400",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "dsound"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Game needs DirectSound dlls to fix looping and overlapping sound in menus and ingame"
+    },
+    {
+      "game": "steam:1361210",
+      "actions": [
+        {
+          "runExecutable": {
+            "instead": "launcher/Launcher.exe",
+            "run": "binaries/Darktide.exe"
+          }
+        },
+        {
+          "addArguments": {
+            "_0": [
+              "-eac-untrusted",
+              "--bundle-dir",
+              "../bundle",
+              "--ini",
+              "settings"
+            ]
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Bypass the launcher to prevent bug: the game would launch as a background process with audio only."
+    },
+    {
+      "game": "steam:1361510",
+      "actions": [
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Teenage Mutant Ninja Turtles Shredders Revenge"
+    },
+    {
+      "game": "steam:1392960",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        },
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Game fix for STORY OF SEASONS: Pioneers of Olive Town"
+    },
+    {
+      "game": "steam:1434950",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        },
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Installs d3dcompiler, d3dx11_43"
+    },
+    {
+      "game": "steam:1449110",
+      "actions": [
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Game fix for The Outer Worlds 2"
+    },
+    {
+      "game": "steam:1467450",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directmusic"
+          }
+        },
+        {
+          "overrideDLL": {
+            "_0": "*dsound",
+            "_1": "b"
+          }
+        },
+        {
+          "overrideDLL": {
+            "_0": "ddraw",
+            "_1": "n,b"
+          }
+        },
+        {
+          "overrideDLL": {
+            "_0": "dinput",
+            "_1": "n,b"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "game config edit"
+      ],
+      "note": "Game fix for Gothic 1 Classic Game fix for Gothic II: Gold Classic Game fix for The Chronicles Of Myrtana: Archolos (mod of Gothic II: Gold Classic)",
+      "skipped": [
+        "linux env PULSE_LATENCY_MSEC skipped"
+      ]
+    },
+    {
+      "game": "steam:1500540",
+      "actions": [
+        {
+          "overrideDLL": {
+            "_0": "dinput",
+            "_1": "n,b"
+          }
+        },
+        {
+          "overrideDLL": {
+            "_0": "winmm",
+            "_1": "n,b"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Hardwar"
+    },
+    {
+      "game": "steam:15100",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "cpu topology"
+      ],
+      "note": "Assassin's Creed 1"
+    },
+    {
+      "game": "steam:15130",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "dsound"
+          }
+        },
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        },
+        {
+          "installComponent": {
+            "_0": "corefonts"
+          }
+        },
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "registry HKLM\\Software\\Wow6432Node\\Ubisoft",
+        "registry HKLM\\Software\\Wow6432Node\\Ubisoft\\Beyond Good & Evil"
+      ],
+      "note": "Installs dsound d3dx9 arial d3dcompiler_47"
+    },
+    {
+      "game": "steam:1532190",
+      "actions": [
+        {
+          "installVCRuntime": {}
+        },
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "component msxml3"
+      ],
+      "note": "Game fix for Halo CE mod tools"
+    },
+    {
+      "game": "steam:1544020",
+      "actions": [
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "The Callisto Protocol"
+    },
+    {
+      "game": "steam:1557480",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Needs native d3dcompiler_47"
+    },
+    {
+      "game": "steam:15750",
+      "actions": [
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Oddworld: Stranger's Wrath HD"
+    },
+    {
+      "game": "steam:1613450",
+      "actions": [
+        {
+          "installVCRuntime": {}
+        },
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "component msxml3"
+      ],
+      "note": "Game fix for Halo 2 mod tools"
+    },
+    {
+      "game": "steam:1659420",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "cpu topology"
+      ],
+      "note": "The game chokes on more than 16 cores"
+    },
+    {
+      "game": "steam:1662840",
+      "actions": [
+        {
+          "addArguments": {
+            "_0": [
+              "-vomstyle=layer"
+            ]
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Game fix for Parquet"
+    },
+    {
+      "game": "steam:1664350",
+      "actions": [
+        {
+          "overrideDLL": {
+            "_0": "vulkan-1",
+            "_1": "b"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Needs builtin vulkan-1"
+    },
+    {
+      "game": "steam:16700",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directplay"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Installs directplay"
+    },
+    {
+      "game": "steam:1671210",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "import saves folder"
+      ],
+      "note": "Imports demo saves into the full game."
+    },
+    {
+      "game": "steam:16730",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "windows version winxp (needs the game's exe)"
+      ],
+      "note": "Fixes broken textures issue"
+    },
+    {
+      "game": "steam:1677280",
+      "actions": [
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Company Of Heroes 3"
+    },
+    {
+      "game": "steam:16810",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "corefonts"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "component oleaut32",
+        "component msxml3"
+      ],
+      "note": "Civilization IV: Colonization"
+    },
+    {
+      "game": "steam:1695791",
+      "actions": [
+        {
+          "installVCRuntime": {}
+        },
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "component msxml3"
+      ],
+      "note": "Game fix for Halo 3 mod tools"
+    },
+    {
+      "game": "steam:1695793",
+      "actions": [
+        {
+          "installDotNet": {}
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Game fix for the Halo Reach mod tools Foundation gamemode. Standalone and Sapien seem to work just fine without d3dcompiler_47 and msxml3, although might be required at some deeper level. I just playtested it. - Oro, @orowith2os"
+    },
+    {
+      "game": "steam:1695794",
+      "actions": [
+        {
+          "installVCRuntime": {}
+        },
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "component msxml3"
+      ],
+      "note": "Game fix Halo 3: ODST mod tools"
+    },
+    {
+      "game": "steam:1711950",
+      "actions": [
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Installs mfc140 mfc140 is necessary to start the game up. GOG login happens inside the Steam overlay. vcrun2019 enables full support of the prelauncher interface. GOG login inside the prelauncher. This prelauncher is not necessary for the Game. If only mfc is present, it's skipped."
+    },
+    {
+      "game": "steam:1715130",
+      "actions": [
+        {
+          "installVCRuntime": {}
+        },
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Crysis Remastered"
+    },
+    {
+      "game": "steam:1795390",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "replace 'CarnageCross/CarnageCross' with 'CarnageCross/CarnageCross/Binaries/Win64/CarnageCross-Win64-Shipping.exe'"
+      ],
+      "note": "Game fix for Carnage Cross Proton issue: https://github.com/ValveSoftware/Proton/issues/6645"
+    },
+    {
+      "game": "steam:1873170",
+      "actions": [
+        {
+          "runExecutable": {
+            "instead": "CTB.exe",
+            "run": "nw.exe"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "copytree",
+        "rmtree"
+      ],
+      "note": "Cease to Breathe Replace included nwjs (0.71) - which doesn't work - with 0.86 Fix cursor hitbox (set frame=false in package.json) Updated from 0.85 that didn't display custom cursors."
+    },
+    {
+      "game": "steam:1876280",
+      "actions": [
+        {
+          "installDotNet": {}
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Crashes unless dotnet48 is installed."
+    },
+    {
+      "game": "steam:1930",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Two Worlds Epic Edition - ID 1930 https://www.protondb.com/app/1930"
+    },
+    {
+      "game": "steam:1971650",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "import saves folder"
+      ],
+      "note": "Imports demo saves into the full game's prefix"
+    },
+    {
+      "game": "steam:1971870",
+      "actions": [
+        {
+          "setEnvironment": {
+            "_0": {
+              "SteamDeck": "0"
+            }
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Game fix for Mortal Kombat 1 Will not launch without SteamDeck=0"
+    },
+    {
+      "game": "steam:200940",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "component mdx"
+      ],
+      "note": "Installs d3dcompiler_43, d3dx9_43, mdx. Locks fps to 60."
+    },
+    {
+      "game": "steam:201480",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directmusic"
+          }
+        },
+        {
+          "installComponent": {
+            "_0": "dsound"
+          }
+        },
+        {
+          "installComponent": {
+            "_0": "directplay"
+          }
+        },
+        {
+          "overrideDLL": {
+            "_0": "streamci",
+            "_1": "n"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Installs directmusic and directplay"
+    },
+    {
+      "game": "steam:205650",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "physx"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Needs to have PhysX installed to work, even for systems not using Nvidia."
+    },
+    {
+      "game": "steam:206480",
+      "actions": [
+        {
+          "overrideDLL": {
+            "_0": "libglesv2",
+            "_1": ""
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Disable libglesv2"
+    },
+    {
+      "game": "steam:206500",
+      "actions": [
+        {
+          "addArguments": {
+            "_0": [
+              "/dx11"
+            ]
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Game fix for AirMech Strike"
+    },
+    {
+      "game": "steam:2074920",
+      "actions": [
+        {
+          "setEnvironment": {
+            "_0": {
+              "WINE_BLOCK_HOSTS": "modules-cdn.eac-prod.on.epicgames.com"
+            }
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Game Currently has some funkyness where it doesnt properly detect eac, works fine after game is started without connecting. Star Citizen used to need this too"
+    },
+    {
+      "game": "steam:208650",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "physx"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "NVIDIA PhysX support."
+    },
+    {
+      "game": "steam:2111630",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        },
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Add misc. fixes"
+    },
+    {
+      "game": "steam:211420",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "dll override dinput8 (mode unknown)",
+        "registry ?"
+      ],
+      "note": "Use native dinput8 only for the optional DSfix proxy DLL."
+    },
+    {
+      "game": "steam:212500",
+      "actions": [
+        {
+          "overrideDLL": {
+            "_0": "libglesv2",
+            "_1": ""
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Disable libglesv2"
+    },
+    {
+      "game": "steam:2129370",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "component dotnetdesktop10"
+      ],
+      "note": "Installs dotnetdesktop10 for the S\\&box editor"
+    },
+    {
+      "game": "steam:213330",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Installs d3dx9_41"
+    },
+    {
+      "game": "steam:2135150",
+      "actions": [
+        {
+          "overrideDLL": {
+            "_0": "winhttp",
+            "_1": "n,b"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Fixes Steam Workshop modding."
+    },
+    {
+      "game": "steam:2138710",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "game config edit"
+      ],
+      "note": "Stops the game from freezing."
+    },
+    {
+      "game": "steam:214510",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Installs d3dx9_41"
+    },
+    {
+      "game": "steam:214950",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        },
+        {
+          "installComponent": {
+            "_0": "directplay"
+          }
+        },
+        {
+          "setEnvironment": {
+            "_0": {
+              "WINEESYNC": "0"
+            }
+          }
+        },
+        {
+          "setEnvironment": {
+            "_0": {
+              "WINEMSYNC": "0"
+            }
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Installs d3dcompiler_42, directplay Disable esync and fsync"
+    },
+    {
+      "game": "steam:215280",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Game fix for Secret World Legends"
+    },
+    {
+      "game": "steam:2161700",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "import saves folder"
+      ],
+      "note": "Imports demo saves into the full game."
+    },
+    {
+      "game": "steam:2167580",
+      "actions": [
+        {
+          "setEnvironment": {
+            "_0": {
+              "SteamDeck": "0"
+            }
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Game fix for Summoners War: Chronicles Will not launch without SteamDeck=0"
+    },
+    {
+      "game": "steam:2167850",
+      "actions": [
+        {
+          "setEnvironment": {
+            "_0": {
+              "SteamDeck": "0"
+            }
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Game fix Summoner's War Chronicles"
+    },
+    {
+      "game": "steam:21680",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "physx"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Installs physx"
+    },
+    {
+      "game": "steam:219990",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Game fix for Grim Dawn"
+    },
+    {
+      "game": "steam:220240",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "cpu topology"
+      ],
+      "note": "FarCry 3 chokes on more than 24 cores"
+    },
+    {
+      "game": "steam:2229850",
+      "actions": [
+        {
+          "runExecutable": {
+            "instead": "Ra2.exe",
+            "run": "CnCNetYRLauncher.exe"
+          }
+        },
+        {
+          "runExecutable": {
+            "instead": "RA2MD.exe",
+            "run": "CnCNetYRLauncher.exe"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "component cnc_ddraw",
+        "component cncnet_ra2"
+      ],
+      "note": "Install and launch the CnCNet Launcher It fixes several issues, allows multiplayer and provides a working UI, while the game has sometimes problems like missing or shifted buttons. The game will just show a black screen without cnc-ddraw or the patch in place."
+    },
+    {
+      "game": "steam:223750",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        },
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        },
+        {
+          "overrideDLL": {
+            "_0": "wbemprox",
+            "_1": "n"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Fixes for DCS World Steam Edition"
+    },
+    {
+      "game": "steam:2246340",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "import saves folder"
+      ],
+      "note": "Import Monster Hunter: World saves for every local Steam account."
+    },
+    {
+      "game": "steam:224960",
+      "actions": [
+        {
+          "addArguments": {
+            "_0": [
+              "-conf"
+            ]
+          }
+        },
+        {
+          "addArguments": {
+            "_0": [
+              "glide_fix.conf"
+            ]
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Enable Glide emulation in dosbox config",
+      "skipped": [
+        "linux-only create_dosbox_conf"
+      ]
+    },
+    {
+      "game": "steam:225640",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "physx"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Install physx"
+    },
+    {
+      "game": "steam:227320",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "corefonts"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Installs corefonts"
+    },
+    {
+      "game": "steam:2277560",
+      "actions": [
+        {
+          "overrideDLL": {
+            "_0": "dwmapi",
+            "_1": "n,b"
+          }
+        },
+        {
+          "overrideDLL": {
+            "_0": "dsound",
+            "_1": "n,b"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Mod support for Wuchang"
+    },
+    {
+      "game": "steam:228260",
+      "actions": [
+        {
+          "installVCRuntime": {}
+        },
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        },
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        },
+        {
+          "overrideDLL": {
+            "_0": "SDNXLFonts",
+            "_1": ""
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "component usp10"
+      ],
+      "note": "Game fix for Fallen Enchantress: Legendary Heroes"
+    },
+    {
+      "game": "steam:230410",
+      "actions": [
+        {
+          "setEnvironment": {
+            "_0": {
+              "SteamDeck": "0"
+            }
+          }
+        },
+        {
+          "setEnvironment": {
+            "_0": {
+              "SOMMELIER_HIDE_WINE": "1"
+            }
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Game fix for Warframe Will not launch without SteamDeck=0 Hide Wine exports to allow DX11 flip-model and HDR detection."
+    },
+    {
+      "game": "steam:231430",
+      "actions": [
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Company Of Heroes 2"
+    },
+    {
+      "game": "steam:231990",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Installs d3dx9_43, xact"
+    },
+    {
+      "game": "steam:2322010",
+      "actions": [
+        {
+          "setEnvironment": {
+            "_0": {
+              "SteamDeck": "1"
+            }
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Game needs SteamDeck=1 to avoid PlayStation SDK install error."
+    },
+    {
+      "game": "steam:23300",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Works around a Wine bug causing the game to crash."
+    },
+    {
+      "game": "steam:233270",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "cpu topology"
+      ],
+      "note": "dx11 version is broken"
+    },
+    {
+      "game": "steam:23460",
+      "actions": [
+        {
+          "installDotNet": {}
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Ceville Works with dotnet35sp1 only, now without needing Proton5 Videos still don't work.",
+      "skipped": [
+        "linux env PROTON_USE_XALIA skipped"
+      ]
+    },
+    {
+      "game": "steam:240600",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Game fix for MotorGP"
+    },
+    {
+      "game": "steam:241990",
+      "actions": [
+        {
+          "installVCRuntime": {}
+        },
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        },
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        },
+        {
+          "overrideDLL": {
+            "_0": "SDNXLFonts",
+            "_1": ""
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "component usp10"
+      ],
+      "note": "Game fix for Sorcerer King"
+    },
+    {
+      "game": "steam:2426960",
+      "actions": [
+        {
+          "setEnvironment": {
+            "_0": {
+              "SteamDeck": "0"
+            }
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Game fix for Summoners War Will not launch without SteamDeck=0"
+    },
+    {
+      "game": "steam:242760",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "cpu topology"
+      ],
+      "note": "If SMT/HT is enabled, The Forest runs with extremely choppy. Just bad. We can fix it by setting the topology to the physical cores / core count. TODO: This fix was not tested with more than 10 physical cores yet."
+    },
+    {
+      "game": "steam:2437170",
+      "actions": [
+        {
+          "setEnvironment": {
+            "_0": {
+              "SteamDeck": "0"
+            }
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Game fix for Smite 2 Will not launch without SteamDeck=0"
+    },
+    {
+      "game": "steam:244210",
+      "actions": [
+        {
+          "installDotNet": {}
+        },
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        },
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        },
+        {
+          "overrideDLL": {
+            "_0": "dwrite",
+            "_1": "n,b"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "windows version win10 (needs the game's exe)"
+      ],
+      "note": "Fixes default launcher and ACM.",
+      "skipped": [
+        "linux env PULSE_LATENCY_MSEC skipped"
+      ]
+    },
+    {
+      "game": "steam:244850",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        },
+        {
+          "installDotNet": {}
+        },
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "game config edit"
+      ],
+      "note": "Game fix for Space Engineers"
+    },
+    {
+      "game": "steam:245050",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directplay"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Needs DirectPlay for multiplayer functionality"
+    },
+    {
+      "game": "steam:245450",
+      "actions": [
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Needs mfc42 for settings dialog functionality"
+    },
+    {
+      "game": "steam:2457540",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "import saves folder"
+      ],
+      "note": "Imports player cards from Cardfight!! Vanguard Dear Days. Yes that save path is indeed VG2 no idea why"
+    },
+    {
+      "game": "steam:2475980",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "game config edit"
+      ],
+      "note": "Gobliiins 5 (and Demo - 2505910) Setup doesn't work and language is default to french"
+    },
+    {
+      "game": "steam:2505910",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "game config edit"
+      ],
+      "note": "Gobliiins 5 (and Demo - 2505910) Setup doesn't work and language is default to french"
+    },
+    {
+      "game": "steam:252430",
+      "actions": [
+        {
+          "installVCRuntime": {}
+        },
+        {
+          "installComponent": {
+            "_0": "dsound"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Install vcrun2010"
+    },
+    {
+      "game": "steam:252950",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "component eossdk"
+      ],
+      "note": "Rocket League"
+    },
+    {
+      "game": "steam:253430",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "component xna40"
+      ],
+      "note": "Installs xna40 to fix Main Menu music, missing graphics, keyboard input, and high GPU usage"
+    },
+    {
+      "game": "steam:254840",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "corefonts"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Game fix for Ground Control 2"
+    },
+    {
+      "game": "steam:2552430",
+      "actions": [
+        {
+          "setEnvironment": {
+            "_0": {
+              "SteamDeck": "1"
+            }
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Game needs SteamDeck=1 for cutscenes to work."
+    },
+    {
+      "game": "steam:2561580",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "import saves folder"
+      ],
+      "note": "Game allows playing saves from the original Complete Edition, but by default it can't find them."
+    },
+    {
+      "game": "steam:256330",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "WRC 4"
+    },
+    {
+      "game": "steam:261510",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "corefonts"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Install corefonts"
+    },
+    {
+      "game": "steam:261640",
+      "actions": [
+        {
+          "runExecutable": {
+            "instead": "Launcher.exe",
+            "run": "BorderlandsPreSequel.exe"
+          }
+        },
+        {
+          "addArguments": {
+            "_0": [
+              "-NoSplash"
+            ]
+          }
+        },
+        {
+          "setEnvironment": {
+            "_0": {
+              "WINEESYNC": "0"
+            }
+          }
+        },
+        {
+          "installComponent": {
+            "_0": "physx"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Launcherfix and NVIDIA PhysX support."
+    },
+    {
+      "game": "steam:266840",
+      "actions": [
+        {
+          "runExecutable": {
+            "instead": "Launcher.exe",
+            "run": "aomx.exe"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Changes the proton argument from the launcher to the game"
+    },
+    {
+      "game": "steam:2679460",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "import saves folder"
+      ],
+      "note": "Imports demo saves into the full game."
+    },
+    {
+      "game": "steam:268050",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "windows version win7 (needs the game's exe)"
+      ],
+      "note": "Changes the proton argument from the launcher to the game",
+      "skipped": [
+        "linux env PULSE_LATENCY_MSEC skipped"
+      ]
+    },
+    {
+      "game": "steam:269330",
+      "actions": [
+        {
+          "installDotNet": {}
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Add dotnet"
+    },
+    {
+      "game": "steam:2699660",
+      "actions": [
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Needs vcrun2019 to fix 'Visual C++ Runtime' required error"
+    },
+    {
+      "game": "steam:271590",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "registry HKLM\\System\\CurrentControlSet\\Services\\winebus"
+      ],
+      "note": "Game fix for GTAV"
+    },
+    {
+      "game": "steam:281280",
+      "actions": [
+        {
+          "addArguments": {
+            "_0": [
+              "-VS0",
+              "-CS0"
+            ]
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "windows version winxp (needs the game's exe)"
+      ],
+      "note": "Mashed needs win xp otherwise cars may fall through the ground"
+    },
+    {
+      "game": "steam:282140",
+      "actions": [
+        {
+          "setEnvironment": {
+            "_0": {
+              "WINEMSYNC": "0"
+            }
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Game fix for SOMA"
+    },
+    {
+      "game": "steam:283310",
+      "actions": [
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Game fix for Soulbringer"
+    },
+    {
+      "game": "steam:284160",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        },
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Installs d3dx9_43, d3dcompiler_43, d3dx11_43, d3dcompiler_47"
+    },
+    {
+      "game": "steam:286360",
+      "actions": [
+        {
+          "runExecutable": {
+            "instead": "SotV_Launcher.exe",
+            "run": "hd/SotV1.exe"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Shadows on the Vatican - Act I: Greed Launcher keeps it's process running in the background but nothing shows up"
+    },
+    {
+      "game": "steam:287310",
+      "actions": [
+        {
+          "overrideDLL": {
+            "_0": "ddraw",
+            "_1": "n"
+          }
+        },
+        {
+          "overrideDLL": {
+            "_0": "dinput",
+            "_1": "n"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Sets the necessary dll overrides for the wrappers that are shipped with the game"
+    },
+    {
+      "game": "steam:287450",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directmusic"
+          }
+        },
+        {
+          "installComponent": {
+            "_0": "directplay"
+          }
+        },
+        {
+          "runExecutable": {
+            "instead": "patriots.exe",
+            "run": "riseofnations.exe"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "component crypt32"
+      ],
+      "note": "Installs crypt32 and and bypasses launcher",
+      "skipped": [
+        "linux sound=alsa skipped"
+      ]
+    },
+    {
+      "game": "steam:289130",
+      "actions": [
+        {
+          "addArguments": {
+            "_0": [
+              "-useembedded"
+            ]
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Enable -useembedded to get past loading hang"
+    },
+    {
+      "game": "steam:2909400",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "import saves folder"
+      ],
+      "note": "Grants bonus items to players with save data for Final Fantasy VII Remake Intergrade"
+    },
+    {
+      "game": "steam:292030",
+      "actions": [
+        {
+          "setEnvironment": {
+            "_0": {
+              "SOMMELIER_HIDE_WINE": "1"
+            }
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Game fix for The Witcher 3: Wild Hunt The 5.0 update looks up wine_get_version. When it finds it, the game never initializes Streamline (DLSS SR/RR, DLSS-G, Reflex) and turns off ray tracing, path tracing and FSR frame generation. Hide the Wine exports so it takes the same path as on Windows."
+    },
+    {
+      "game": "steam:292820",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "create dos device",
+        "registry HKLM\\System\\MountedDevices"
+      ],
+      "note": "The game doesn't run unless there is a CD-ROM drive attached."
+    },
+    {
+      "game": "steam:294700",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "create dos device",
+        "registry HKLM\\System\\MountedDevices"
+      ],
+      "note": "The game doesn't run unless there is a CD-ROM drive attached."
+    },
+    {
+      "game": "steam:298030",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directplay"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Multiplayer requires directplay for full functionality"
+    },
+    {
+      "game": "steam:298110",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        },
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "FarCry 4 chokes on more than 24 cores"
+    },
+    {
+      "game": "steam:307780",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Game fix for Mortal Kombat X"
+    },
+    {
+      "game": "steam:311240",
+      "actions": [
+        {
+          "overrideDLL": {
+            "_0": "libglesv2",
+            "_1": ""
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Game fix for Zero Escape: Zero Time Dilemma"
+    },
+    {
+      "game": "steam:311730",
+      "actions": [
+        {
+          "setEnvironment": {
+            "_0": {
+              "WINEESYNC": "0"
+            }
+          }
+        },
+        {
+          "setEnvironment": {
+            "_0": {
+              "WINEMSYNC": "0"
+            }
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Disables esync"
+    },
+    {
+      "game": "steam:312060",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "drop argument -issteam"
+      ],
+      "note": "FFXIV add NOSTEAM option."
+    },
+    {
+      "game": "steam:312450",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "corefonts"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Install corefonts"
+    },
+    {
+      "game": "steam:312670",
+      "actions": [
+        {
+          "runExecutable": {
+            "instead": "StrangeBrigade.exe",
+            "run": "StrangeBrigade_Vulkan.exe"
+          }
+        },
+        {
+          "addArguments": {
+            "_0": [
+              "-skipdrivercheck",
+              "-noHDR"
+            ]
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "This bypasses Strange Brigade's Launcher, which renders all black."
+    },
+    {
+      "game": "steam:312780",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Use the native compiler for legacy D3D9 effects."
+    },
+    {
+      "game": "steam:321040",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "component openal"
+      ],
+      "note": "Installs openal as redistributable install script is borked."
+    },
+    {
+      "game": "steam:329380",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "dsound"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Dsound is needed for audio"
+    },
+    {
+      "game": "steam:33390",
+      "actions": [
+        {
+          "installDotNet": {}
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Needs dotnet48 installed to avoid crashing."
+    },
+    {
+      "game": "steam:333980",
+      "actions": [
+        {
+          "setEnvironment": {
+            "_0": {
+              "SOMMELIER_HIDE_WINE": "1"
+            }
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Game fix for Akiba's Trip: Undead & Undressed"
+    },
+    {
+      "game": "steam:33460",
+      "actions": [
+        {
+          "setEnvironment": {
+            "_0": {
+              "WINEESYNC": "0"
+            }
+          }
+        },
+        {
+          "setEnvironment": {
+            "_0": {
+              "WINEMSYNC": "0"
+            }
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Game will get stuck on initial loading screen unless these are disabled"
+    },
+    {
+      "game": "steam:34330",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Total War: Shogun 2"
+    },
+    {
+      "game": "steam:3489700",
+      "actions": [
+        {
+          "overrideDLL": {
+            "_0": "dwmapi",
+            "_1": "n,b"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Enable modding and fixes"
+    },
+    {
+      "game": "steam:35000",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "component openal"
+      ],
+      "note": "Game needs OpenAL library for audio to work, but the game doesn't include it by default, leading to missing audio in-game, even on Windows."
+    },
+    {
+      "game": "steam:3513350",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "corefonts"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "component sourcehansans",
+        "component fakechinese"
+      ],
+      "note": "Font fixes for in-game resources, if any."
+    },
+    {
+      "game": "steam:3556750",
+      "actions": [
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Warhammer 40,000: Dawn of War - Definitive Edition"
+    },
+    {
+      "game": "steam:356500",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directplay"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "component icodecs"
+      ],
+      "note": "Game fix for STAR WARS Galactic Battlegrounds Saga"
+    },
+    {
+      "game": "steam:3590",
+      "actions": [
+        {
+          "addArguments": {
+            "_0": [
+              "-changedir"
+            ]
+          }
+        },
+        {
+          "runExecutable": {
+            "instead": "PlantsVsZombies.exe",
+            "run": "PlantsVsZombies_good.exe"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "copy2"
+      ],
+      "note": "Changes the proton argument from the launcher to the game"
+    },
+    {
+      "game": "steam:366250",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Metal Slug"
+    },
+    {
+      "game": "steam:3669060",
+      "actions": [
+        {
+          "setEnvironment": {
+            "_0": {
+              "SOMMELIER_HIDE_WINE": "1"
+            }
+          }
+        },
+        {
+          "installDotNet": {}
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Game fix for Blade & Soul NEO"
+    },
+    {
+      "game": "steam:367500",
+      "actions": [
+        {
+          "setEnvironment": {
+            "_0": {
+              "SDL_JOYSTICK_HIDAPI": "0"
+            }
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Dragon's Dogma: Dark Arisen (umu-367500, gog) requires SDL_JOYSTICK_HIDAPI=\"0\", otherwise it becomes confused by the special inputs of a Dualsense 4 controller and will oscillate between Playstation, Xbox, Keyboard, and a Generic Gamepad layout mid-gameplay (it's very frustrating)."
+    },
+    {
+      "game": "steam:3681810",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "windows version win7 (needs the game's exe)"
+      ],
+      "note": "Setting prefix to Windows 7 is needed for videos to play correctly"
+    },
+    {
+      "game": "steam:368500",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "disable nvapi"
+      ],
+      "note": "Game ships with outdated UPlay launcher, which impedes normal initialization"
+    },
+    {
+      "game": "steam:371660",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "cpu topology"
+      ],
+      "note": "Chokes on more than 31 cores"
+    },
+    {
+      "game": "steam:372000",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        },
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "https://forum.treeofsavior.com/t/linux-the-graphic-card-does-not-support-directx11-13ep/418073/13"
+    },
+    {
+      "game": "steam:378630",
+      "actions": [
+        {
+          "runExecutable": {
+            "instead": "SotV_Launcher.exe",
+            "run": "hd/SotV2.exe"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Shadows on the Vatican - Act II: Wrath Launcher keeps it's process running in the background but nothing shows up"
+    },
+    {
+      "game": "steam:379720",
+      "actions": [
+        {
+          "addArguments": {
+            "_0": [
+              "+r_renderAPI",
+              "1"
+            ]
+          }
+        },
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "move"
+      ],
+      "note": "Enable preload options"
+    },
+    {
+      "game": "steam:390710",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "component d3dxof"
+      ],
+      "note": "Installs d3dxof"
+    },
+    {
+      "game": "steam:39190",
+      "actions": [
+        {
+          "addArguments": {
+            "_0": [
+              "Zonematch=true"
+            ]
+          }
+        },
+        {
+          "installComponent": {
+            "_0": "directplay"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Enable Multiplayer and protontricks directplay for full functionality"
+    },
+    {
+      "game": "steam:39200",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directplay"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Apply protontricks directplay for full multiplayer functionality"
+    },
+    {
+      "game": "steam:39210",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "drop argument -issteam"
+      ],
+      "note": "FFXIV add NOSTEAM option."
+    },
+    {
+      "game": "steam:3932890",
+      "actions": [
+        {
+          "installDotNet": {}
+        },
+        {
+          "addArguments": {
+            "_0": [
+              "--disable-software-rasterizer"
+            ]
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "registry HKLM\\System\\CurrentControlSet\\Services\\BEService",
+        "copytree",
+        "drop argument -LaunchFromSteam"
+      ],
+      "note": "Escape From Tarkov Install BattlEye Service - does not permit online play",
+      "skipped": [
+        "linux-only install_battleye_runtime"
+      ]
+    },
+    {
+      "game": "steam:39500",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "game config edit"
+      ],
+      "note": "Modify ge3.ini"
+    },
+    {
+      "game": "steam:3950020",
+      "actions": [
+        {
+          "overrideDLL": {
+            "_0": "dcomp",
+            "_1": ""
+          }
+        },
+        {
+          "overrideDLL": {
+            "_0": "libGLESv2",
+            "_1": ""
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "CEF tries to use dcomp by default which only has stubs, this triggers a fallback to a different backend",
+      "skipped": [
+        "linux env PROTON_SET_GAME_DRIVE skipped",
+        "linux env PROTON_ENABLE_INT3_HACK skipped"
+      ]
+    },
+    {
+      "game": "steam:39510",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directmusic"
+          }
+        },
+        {
+          "overrideDLL": {
+            "_0": "*dsound",
+            "_1": "b"
+          }
+        },
+        {
+          "overrideDLL": {
+            "_0": "ddraw",
+            "_1": "n,b"
+          }
+        },
+        {
+          "overrideDLL": {
+            "_0": "dinput",
+            "_1": "n,b"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "game config edit"
+      ],
+      "note": "Game fix for Gothic 1 Classic Game fix for Gothic II: Gold Classic Game fix for The Chronicles Of Myrtana: Archolos (mod of Gothic II: Gold Classic)",
+      "skipped": [
+        "linux env PULSE_LATENCY_MSEC skipped"
+      ]
+    },
+    {
+      "game": "steam:39540",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directplay"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Needs DirectPlay for multiplayer functionality"
+    },
+    {
+      "game": "steam:39550",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directplay"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Needs DirectPlay for multiplayer functionality"
+    },
+    {
+      "game": "steam:397540",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        },
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Borderlands 3"
+    },
+    {
+      "game": "steam:40800",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        },
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Installs d3dcompiler, xact"
+    },
+    {
+      "game": "steam:409090",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "component dgvoodoo2",
+        "copy"
+      ],
+      "note": "The Big Secret of a Small Town No cursor or double cursor selecting custom cursor in options PROTON_USE_WINED3D=1 fixes the problem but removes the antialising dgvoodoo2 fixes the cursors and keeps the antialising copy dgvoodoo2 d3d9.dll every time otherwise it gets overwritten"
+    },
+    {
+      "game": "steam:40950",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directplay"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Installs directplay"
+    },
+    {
+      "game": "steam:40970",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directplay"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Installs directplay"
+    },
+    {
+      "game": "steam:409710",
+      "actions": [
+        {
+          "setEnvironment": {
+            "_0": {
+              "WINEESYNC": "0"
+            }
+          }
+        },
+        {
+          "setEnvironment": {
+            "_0": {
+              "WINEMSYNC": "0"
+            }
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "registry HKLM\\System\\CurrentControlSet\\Services\\winebus"
+      ],
+      "note": "Disable ESYNC and FSYNC"
+    },
+    {
+      "game": "steam:409720",
+      "actions": [
+        {
+          "setEnvironment": {
+            "_0": {
+              "WINEESYNC": "0"
+            }
+          }
+        },
+        {
+          "setEnvironment": {
+            "_0": {
+              "WINEMSYNC": "0"
+            }
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "registry HKLM\\System\\CurrentControlSet\\Services\\winebus"
+      ],
+      "note": "Disable ESYNC and FSYNC"
+    },
+    {
+      "game": "steam:410900",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "component ole32"
+      ],
+      "note": "Uses winetricks to install the ole32 verb"
+    },
+    {
+      "game": "steam:424840",
+      "actions": [
+        {
+          "addArguments": {
+            "_0": [
+              "-onethread"
+            ]
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Add launch parameter"
+    },
+    {
+      "game": "steam:428660",
+      "actions": [
+        {
+          "runExecutable": {
+            "instead": "MoonMan.exe",
+            "run": "MoonMan/Binaries/Win64/MoonMan-Win64-Shipping.exe"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Deliver us the Moon fix"
+    },
+    {
+      "game": "steam:42890",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Installs d3dcompiler_42"
+    },
+    {
+      "game": "steam:43110",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Installs d3dcompiler_42"
+    },
+    {
+      "game": "steam:440900",
+      "actions": [
+        {
+          "runExecutable": {
+            "instead": "FuncomLauncher.exe",
+            "run": "../ConanSandbox/Binaries/Win64/ConanSandbox_BE.exe"
+          }
+        },
+        {
+          "addArguments": {
+            "_0": [
+              "-BattlEye"
+            ]
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Launcher workaround",
+      "skipped": [
+        "linux-only install_battleye_runtime"
+      ]
+    },
+    {
+      "game": "steam:44690",
+      "actions": [
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Installs mfc42"
+    },
+    {
+      "game": "steam:447040",
+      "actions": [
+        {
+          "addArguments": {
+            "_0": [
+              "-eac_launcher",
+              "-nosplash"
+            ]
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Disable Easy Anti-Cheat and online play"
+    },
+    {
+      "game": "steam:452440",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "copy"
+      ],
+      "note": "Game fix for Flowers - Le Volume Sur Printemps This fix installs the font that should be bundled with the game in case it does not get installed during the setup process. Without this fix, the default font will be used which doesn't wrap correctly, resulting in the text breaking outside its text box"
+    },
+    {
+      "game": "steam:4560",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "physx"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Installs physx library, without it the game simply won't launch"
+    },
+    {
+      "game": "steam:45750",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "component xliveless",
+        "cpu topology"
+      ],
+      "note": "Game fix for Lost Planet 2 (2010) This game requires two fixes to work: 1. A mocked xlive.dll for GFWL (multiplayer will not work, but the single player does) 2. No more than 12 CPU cores (on PCGamingWiki is described as 6, but on my personal test I was able to set until 12 of 16) [source: https://w"
+    },
+    {
+      "game": "steam:465280",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "windows version win7 (needs the game's exe)"
+      ],
+      "note": "Set to win7"
+    },
+    {
+      "game": "steam:465840",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "The Last Blade"
+    },
+    {
+      "game": "steam:4730",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Outrun 2006: Coast 2 Coast"
+    },
+    {
+      "game": "steam:48190",
+      "actions": [
+        {
+          "addArguments": {
+            "_0": [
+              "-playoffline"
+            ]
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Game fix for Assassin's Creed: Brotherhood Game uses an old customized Ubisoft launcher that's currently not working with Proton."
+    },
+    {
+      "game": "steam:49520",
+      "actions": [
+        {
+          "runExecutable": {
+            "instead": "Launcher.exe",
+            "run": "Borderlands2.exe"
+          }
+        },
+        {
+          "addArguments": {
+            "_0": [
+              "-NoSplash"
+            ]
+          }
+        },
+        {
+          "setEnvironment": {
+            "_0": {
+              "WINEESYNC": "0"
+            }
+          }
+        },
+        {
+          "installComponent": {
+            "_0": "physx"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Launcherfix and NVIDIA PhysX support."
+    },
+    {
+      "game": "steam:495420",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "windows version win7 (needs the game's exe)"
+      ],
+      "note": "Fix game crashes with d3dcompiler_47 and multiplayer crashes with win7"
+    },
+    {
+      "game": "steam:497360",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "create dos device",
+        "registry HKCU\\Software\\Sierra On-Line",
+        "registry HKCU\\Software\\Sierra On-Line\\Gabriel Knight 3",
+        "registry HKCU\\Software\\Sierra On-Line\\Gabriel Knight 3\\App",
+        "registry HKCU\\Software\\Sierra On-Line\\Gabriel Knight 3\\Engine",
+        "registry HKCU\\Software\\Sierra On-Line\\Gabriel Knight 3\\Engine\\Hardware"
+      ],
+      "note": "Gabriel Knight 3: Blood of the Sacred, Blood of the Damned Fix for Insert CD Fixes graphical issues Widescreen supported (16:9/21:9, 32:9 not tested)"
+    },
+    {
+      "game": "steam:49900",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "component xna31"
+      ],
+      "note": "Installs XNA 3.1 to avoid crash when loading levels"
+    },
+    {
+      "game": "steam:50620",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        },
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Add d3dcompiler fixes"
+    },
+    {
+      "game": "steam:506510",
+      "actions": [
+        {
+          "overrideDLL": {
+            "_0": "dcomp",
+            "_1": ""
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Fixes game getting stuck on a white screen."
+    },
+    {
+      "game": "steam:518790",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "disable nvapi"
+      ],
+      "note": "Requires nvapi disabled."
+    },
+    {
+      "game": "steam:559620",
+      "actions": [
+        {
+          "overrideDLL": {
+            "_0": "ddraw",
+            "_1": "n,b"
+          }
+        },
+        {
+          "overrideDLL": {
+            "_0": "winmm",
+            "_1": "n,b"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Game fix for Outlaws + A Handful of Missions"
+    },
+    {
+      "game": "steam:570940",
+      "actions": [
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Game fix Dark Souls Remastered"
+    },
+    {
+      "game": "steam:582660",
+      "actions": [
+        {
+          "setEnvironment": {
+            "_0": {
+              "WINE_DISABLE_KERNEL_WRITEWATCH": "1"
+            }
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "drop argument --steam"
+      ],
+      "note": "Black Desert Online add NOSTEAM option."
+    },
+    {
+      "game": "steam:593600",
+      "actions": [
+        {
+          "overrideDLL": {
+            "_0": "mprapi",
+            "_1": "n"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Overrides the mprapi.dll to native."
+    },
+    {
+      "game": "steam:601510",
+      "actions": [
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Yu-Gi-Oh Duel Links needs vcrun2019"
+    },
+    {
+      "game": "steam:61500",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "component icodecs"
+      ],
+      "note": "Game fix for Age of Wonders"
+    },
+    {
+      "game": "steam:6270",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "component icodecs"
+      ],
+      "note": "Ducati World Championship"
+    },
+    {
+      "game": "steam:627270",
+      "actions": [
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Game fix Injustice 2"
+    },
+    {
+      "game": "steam:63110",
+      "actions": [
+        {
+          "runExecutable": {
+            "instead": "AlterEgo.exe",
+            "run": "./RunDev.exe"
+          }
+        },
+        {
+          "addArguments": {
+            "_0": [
+              "AlterEgo.ebr"
+            ]
+          }
+        },
+        {
+          "setEnvironment": {
+            "_0": {
+              "SDL_VIDEO_MINIMIZE_ON_FOCUS_LOSS": "0"
+            }
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Alter Ego Launcher crashes immediately without displaying any windows"
+    },
+    {
+      "game": "steam:633230",
+      "actions": [
+        {
+          "runExecutable": {
+            "instead": "NARUTO.exe",
+            "run": "NARUTO/Binaries/Win64/NARUTO-Win64-Shipping.exe"
+          }
+        },
+        {
+          "addArguments": {
+            "_0": [
+              "-eac-nop-loaded"
+            ]
+          }
+        },
+        {
+          "setEnvironment": {
+            "_0": {
+              "SOMMELIER_HIDE_WINE": "1"
+            }
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Game fix for Naruto To Boruto"
+    },
+    {
+      "game": "steam:63700",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Game fix for BIT.TRIP BEAT"
+    },
+    {
+      "game": "steam:63710",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        },
+        {
+          "overrideDLL": {
+            "_0": "d3dx9_43",
+            "_1": "n"
+          }
+        },
+        {
+          "overrideDLL": {
+            "_0": "d3dcompiler_43",
+            "_1": "n"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "component openal"
+      ],
+      "note": "Wine's builtin d3dx9_43 stubs ID3DXEffectCompiler::CompileShader. That produces \"shader: failed to compile vertex shader\". The game also exits if OpenAL32.dll is missing. Native D3DX9 / D3DCompiler from the June 2010 redistributable is required; installing the winetricks verbs without a native overr"
+    },
+    {
+      "game": "steam:638970",
+      "actions": [
+        {
+          "setEnvironment": {
+            "_0": {
+              "WINEMSYNC": "0"
+            }
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Disable FSYNC"
+    },
+    {
+      "game": "steam:644930",
+      "actions": [
+        {
+          "setEnvironment": {
+            "_0": {
+              "WINE_MONO_HIDETYPES": "1"
+            }
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "component gdiplus"
+      ],
+      "note": "They Are Billions"
+    },
+    {
+      "game": "steam:647830",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "cpu topology"
+      ],
+      "note": "Arena mode is unstable and likely to crash with more than 4 cores."
+    },
+    {
+      "game": "steam:65530",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directplay"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Needs DirectPlay for multiplayer functionality"
+    },
+    {
+      "game": "steam:65540",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directmusic"
+          }
+        },
+        {
+          "overrideDLL": {
+            "_0": "*dsound",
+            "_1": "b"
+          }
+        },
+        {
+          "overrideDLL": {
+            "_0": "ddraw",
+            "_1": "n,b"
+          }
+        },
+        {
+          "overrideDLL": {
+            "_0": "dinput",
+            "_1": "n,b"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "game config edit"
+      ],
+      "note": "Game fix for Gothic 1 Classic Game fix for Gothic II: Gold Classic Game fix for The Chronicles Of Myrtana: Archolos (mod of Gothic II: Gold Classic)",
+      "skipped": [
+        "linux env PULSE_LATENCY_MSEC skipped"
+      ]
+    },
+    {
+      "game": "steam:65600",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "game config edit"
+      ],
+      "note": "Modify ge3.ini"
+    },
+    {
+      "game": "steam:658150",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Fixes shader compilation error"
+    },
+    {
+      "game": "steam:65930",
+      "actions": [
+        {
+          "setEnvironment": {
+            "_0": {
+              "WINEESYNC": "0"
+            }
+          }
+        },
+        {
+          "setEnvironment": {
+            "_0": {
+              "WINEMSYNC": "0"
+            }
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Disables esync and fsync"
+    },
+    {
+      "game": "steam:678950",
+      "actions": [
+        {
+          "runExecutable": {
+            "instead": "DBFighterZ.exe",
+            "run": "RED/Binaries/Win64/RED-Win64-Shipping.exe"
+          }
+        },
+        {
+          "addArguments": {
+            "_0": [
+              "-eac-nop-loaded"
+            ]
+          }
+        },
+        {
+          "setEnvironment": {
+            "_0": {
+              "SOMMELIER_HIDE_WINE": "1"
+            }
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Game fix for DRAGON BALL FighterZ"
+    },
+    {
+      "game": "steam:6920",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "dsound"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Deus Ex: Invisible War"
+    },
+    {
+      "game": "steam:700600",
+      "actions": [
+        {
+          "runExecutable": {
+            "instead": "eg2.exe",
+            "run": "../bin/evilgenius_vulkan.exe"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Launcher workaround"
+    },
+    {
+      "game": "steam:70400",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directmusic"
+          }
+        },
+        {
+          "installComponent": {
+            "_0": "dsound"
+          }
+        },
+        {
+          "overrideDLL": {
+            "_0": "streamci",
+            "_1": "n"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Install directsound libraries",
+      "skipped": [
+        "linux sound=alsa skipped",
+        "linux env PULSE_LATENCY_MSEC skipped"
+      ]
+    },
+    {
+      "game": "steam:70420",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directmusic"
+          }
+        },
+        {
+          "installComponent": {
+            "_0": "dsound"
+          }
+        },
+        {
+          "overrideDLL": {
+            "_0": "streamci",
+            "_1": "n"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Install directsound libraries",
+      "skipped": [
+        "linux sound=alsa skipped",
+        "linux env PULSE_LATENCY_MSEC skipped"
+      ]
+    },
+    {
+      "game": "steam:70650",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directmusic"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Installs directmusic to fix menu and game music"
+    },
+    {
+      "game": "steam:729040",
+      "actions": [
+        {
+          "runExecutable": {
+            "instead": "Launcher.exe",
+            "run": "BorderlandsGOTY.exe"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Borderlands GOTY"
+    },
+    {
+      "game": "steam:730830",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "component dgvoodoo2"
+      ],
+      "note": "Escape From Monkey Island dgvoodoo2 to force anti-aliasing and higher resolution"
+    },
+    {
+      "game": "steam:750920",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Shadow of the Tomb Raider"
+    },
+    {
+      "game": "steam:7510",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "replace 'launcher\\\\.exe$' with 'xblades.exe'"
+      ],
+      "note": "The launcher won't start the game, so it needs to be skipped for the game to run."
+    },
+    {
+      "game": "steam:7670",
+      "actions": [
+        {
+          "setEnvironment": {
+            "_0": {
+              "WINEESYNC": "0"
+            }
+          }
+        },
+        {
+          "setEnvironment": {
+            "_0": {
+              "WINEMSYNC": "0"
+            }
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "registry HKLM\\System\\CurrentControlSet\\Services\\winebus"
+      ],
+      "note": "Disable ESYNC and FSYNC"
+    },
+    {
+      "game": "steam:773370",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Requires d3dcompiler_47"
+    },
+    {
+      "game": "steam:782330",
+      "actions": [
+        {
+          "addArguments": {
+            "_0": [
+              "+com_skipSignInManager",
+              "1"
+            ]
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "DOOM Eternal"
+    },
+    {
+      "game": "steam:7850",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "physx"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Uses physx"
+    },
+    {
+      "game": "steam:813780",
+      "actions": [
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Game fix Age of Empires II: DE"
+    },
+    {
+      "game": "steam:816020",
+      "actions": [
+        {
+          "runExecutable": {
+            "instead": "JUMP_FORCE.exe",
+            "run": "JUMP_FORCE/Binaries/Win64/JUMP_FORCE-Win64-Shipping.exe"
+          }
+        },
+        {
+          "addArguments": {
+            "_0": [
+              "-eac-nop-loaded"
+            ]
+          }
+        },
+        {
+          "setEnvironment": {
+            "_0": {
+              "SOMMELIER_HIDE_WINE": "1"
+            }
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Game fix for JUMP FORCE"
+    },
+    {
+      "game": "steam:8190",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        },
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        },
+        {
+          "addArguments": {
+            "_0": [
+              "-borderless"
+            ]
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Requires seccomp"
+    },
+    {
+      "game": "steam:834530",
+      "actions": [
+        {
+          "setEnvironment": {
+            "_0": {
+              "WINEMSYNC": "0"
+            }
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Disable FSYNC"
+    },
+    {
+      "game": "steam:8850",
+      "actions": [
+        {
+          "setEnvironment": {
+            "_0": {
+              "WINEESYNC": "0"
+            }
+          }
+        },
+        {
+          "setEnvironment": {
+            "_0": {
+              "WINEMSYNC": "0"
+            }
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "registry HKLM\\System\\CurrentControlSet\\Services\\winebus"
+      ],
+      "note": "Disable ESYNC and FSYNC"
+    },
+    {
+      "game": "steam:893180",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        },
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Game fix Catherine Classic"
+    },
+    {
+      "game": "steam:895870",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Requires d3dcompiler_47"
+    },
+    {
+      "game": "steam:906510",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Installs d3dcompiler_47"
+    },
+    {
+      "game": "steam:910830",
+      "actions": [
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Installs mfc42"
+    },
+    {
+      "game": "steam:913740",
+      "actions": [
+        {
+          "setEnvironment": {
+            "_0": {
+              "WINEESYNC": "0"
+            }
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Disable esync"
+    },
+    {
+      "game": "steam:9350",
+      "actions": [
+        {
+          "setEnvironment": {
+            "_0": {
+              "WINEESYNC": "0"
+            }
+          }
+        },
+        {
+          "setEnvironment": {
+            "_0": {
+              "WINEMSYNC": "0"
+            }
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Bad performance unless Esync and Fsync are disabled."
+    },
+    {
+      "game": "steam:9420",
+      "actions": [
+        {
+          "setEnvironment": {
+            "_0": {
+              "WINEESYNC": "0"
+            }
+          }
+        },
+        {
+          "setEnvironment": {
+            "_0": {
+              "WINEMSYNC": "0"
+            }
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Bad performance unless Esync and Fsync are disabled."
+    },
+    {
+      "game": "steam:950670",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "game config edit"
+      ],
+      "note": "Performance fixes and cleanup of excessive logs"
+    },
+    {
+      "game": "steam:955050",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "disable nvapi"
+      ],
+      "note": "Requires nvapi disabled."
+    },
+    {
+      "game": "steam:959880",
+      "actions": [
+        {
+          "setEnvironment": {
+            "_0": {
+              "LC_ALL": "C.UTF-8"
+            }
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "registry ?"
+      ],
+      "note": "Game fix for Dungeon Town. The game loads Source Han Sans but requests it by PostScript name. Alias that name to the family name used by Wine. Force Wine's font-name selection to use its English fallback because regional English locales can discard the Japanese family aliases embedded in the game's "
+    },
+    {
+      "game": "steam:963930",
+      "actions": [
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Contractors VR"
+    },
+    {
+      "game": "steam:968370",
+      "actions": [
+        {
+          "overrideDLL": {
+            "_0": "d3d9",
+            "_1": ""
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "component segoe_script"
+      ],
+      "note": "The Blind Prophet garbled fonts & No cursive font (Segoe Script)"
+    },
+    {
+      "game": "steam:976310",
+      "actions": [
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Game fix Mortal Kombat 11"
+    },
+    {
+      "game": "steam:976730",
+      "actions": [
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Game fix Halo:MCC"
+    },
+    {
+      "game": "steam:9900",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Ensure d3dcompiler_47 is installed so the launcher window content is visible"
+    },
+    {
+      "game": "steam:990050",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "cpu topology"
+      ],
+      "note": "Fixes performance and random crashings"
+    },
+    {
+      "game": "steam:997070",
+      "actions": [
+        {
+          "installVCRuntime": {}
+        },
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Game fix Marvel's Avengers"
+    },
+    {
+      "game": "gog:umu-1030840",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "registry HKLM\\Software\\Wow6432Node\\GOG.com\\GalaxyClient"
+      ],
+      "note": "Game fix for Mafia: Definitive Edition"
+    },
+    {
+      "game": "gog:umu-1105510",
+      "actions": [
+        {
+          "setEnvironment": {
+            "_0": {
+              "WINE_DISABLE_SFN": "1"
+            }
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Needs WINE_DISABLE_SFN set from this patch: https://github.com/ValveSoftware/wine/pull/205"
+    },
+    {
+      "game": "gog:umu-1141086411",
+      "actions": [
+        {
+          "overrideDLL": {
+            "_0": "d3d8",
+            "_1": "n,b"
+          }
+        },
+        {
+          "overrideDLL": {
+            "_0": "dsound",
+            "_1": "n,b"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Silent Hill 4: The Room"
+    },
+    {
+      "game": "gog:umu-1144400",
+      "actions": [
+        {
+          "addArguments": {
+            "_0": [
+              "-vomstyle=layer"
+            ]
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Game fix for Senren*Banka"
+    },
+    {
+      "game": "gog:umu-1151640",
+      "actions": [
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Game fix for Horizon Zero Dawn"
+    },
+    {
+      "game": "gog:umu-1207658752",
+      "actions": [
+        {
+          "overrideDLL": {
+            "_0": "winmm",
+            "_1": "n,b"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "registry HKEY_CURRENT_USER\\Software\\Wine"
+      ],
+      "note": "Game fix for Tom Clancy's Rainbow Six"
+    },
+    {
+      "game": "gog:umu-1207658861",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Two Worlds Epic Edition"
+    },
+    {
+      "game": "gog:umu-1207659009",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "create dos device"
+      ],
+      "note": "Fix for The Journeyman Project 3: Legacy of Time"
+    },
+    {
+      "game": "gog:umu-1266220",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "cpu topology"
+      ],
+      "note": "Fixes performance and random crashings"
+    },
+    {
+      "game": "gog:umu-1445591825",
+      "actions": [
+        {
+          "installVCRuntime": {}
+        },
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        },
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        },
+        {
+          "overrideDLL": {
+            "_0": "SDNXLFonts",
+            "_1": ""
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "component usp10"
+      ],
+      "note": "Game fix for Fallen Enchantress: Legendary Heroes"
+    },
+    {
+      "game": "gog:umu-15130",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "dsound"
+          }
+        },
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        },
+        {
+          "installComponent": {
+            "_0": "corefonts"
+          }
+        },
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "registry HKLM\\Software\\Wow6432Node\\Ubisoft",
+        "registry HKLM\\Software\\Wow6432Node\\Ubisoft\\Beyond Good & Evil"
+      ],
+      "note": "Installs dsound d3dx9 arial d3dcompiler_47"
+    },
+    {
+      "game": "gog:umu-15750",
+      "actions": [
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Oddworld: Stranger's Wrath HD"
+    },
+    {
+      "game": "gog:umu-1580232252",
+      "actions": [
+        {
+          "overrideDLL": {
+            "_0": "ddraw",
+            "_1": "n,b"
+          }
+        },
+        {
+          "overrideDLL": {
+            "_0": "dinput",
+            "_1": "n,b"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Resident Evil (1997)"
+    },
+    {
+      "game": "gog:umu-1584652180",
+      "actions": [
+        {
+          "overrideDLL": {
+            "_0": "ddraw",
+            "_1": "n,b"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "The Wheel of Time"
+    },
+    {
+      "game": "gog:umu-1587885678",
+      "actions": [
+        {
+          "overrideDLL": {
+            "_0": "ddraw",
+            "_1": "n,b"
+          }
+        },
+        {
+          "overrideDLL": {
+            "_0": "dinput",
+            "_1": "n,b"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Load shipped dlls"
+    },
+    {
+      "game": "gog:umu-1597741823",
+      "actions": [
+        {
+          "overrideDLL": {
+            "_0": "ddraw",
+            "_1": "n,b"
+          }
+        },
+        {
+          "overrideDLL": {
+            "_0": "dinput",
+            "_1": "n,b"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Dino Crisis 2"
+    },
+    {
+      "game": "gog:umu-1661434114",
+      "actions": [
+        {
+          "overrideDLL": {
+            "_0": "ddraw",
+            "_1": "n,b"
+          }
+        },
+        {
+          "overrideDLL": {
+            "_0": "dinput",
+            "_1": "n,b"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Dino Crisis"
+    },
+    {
+      "game": "gog:umu-1662840",
+      "actions": [
+        {
+          "addArguments": {
+            "_0": [
+              "-vomstyle=layer"
+            ]
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Game fix for Parquet"
+    },
+    {
+      "game": "gog:umu-1685981342",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "copy"
+      ],
+      "note": "Game fix for Flowers - Le Volume Sur Printemps This fix installs the font that should be bundled with the game in case it does not get installed during the setup process. Without this fix, the default font will be used which doesn't wrap correctly, resulting in the text breaking outside its text box"
+    },
+    {
+      "game": "gog:umu-1697970811",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "copy"
+      ],
+      "note": "Game fix for Flowers - Le Volume Sur Printemps This fix installs the font that should be bundled with the game in case it does not get installed during the setup process. Without this fix, the default font will be used which doesn't wrap correctly, resulting in the text breaking outside its text box"
+    },
+    {
+      "game": "gog:umu-1771973390",
+      "actions": [
+        {
+          "overrideDLL": {
+            "_0": "ddraw",
+            "_1": "n,b"
+          }
+        },
+        {
+          "overrideDLL": {
+            "_0": "dinput",
+            "_1": "n,b"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Override for wrapper shipped with the game"
+    },
+    {
+      "game": "gog:umu-2044697588",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "copy"
+      ],
+      "note": "Game fix for Flowers - Le Volume Sur Printemps This fix installs the font that should be bundled with the game in case it does not get installed during the setup process. Without this fix, the default font will be used which doesn't wrap correctly, resulting in the text breaking outside its text box"
+    },
+    {
+      "game": "gog:umu-219990",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Game fix for Grim Dawn"
+    },
+    {
+      "game": "gog:umu-22610",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "physx"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Alien Breed: Impact"
+    },
+    {
+      "game": "gog:umu-22650",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "physx"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Alien Breed 2: Assault"
+    },
+    {
+      "game": "gog:umu-22670",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "physx"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Alien Breed 3: Descent"
+    },
+    {
+      "game": "gog:umu-2310",
+      "actions": [
+        {
+          "overrideDLL": {
+            "_0": "winmm",
+            "_1": "n,b"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Game fix for Quake",
+      "skipped": [
+        "linux env PROTON_OLD_GL_STRING skipped"
+      ]
+    },
+    {
+      "game": "gog:umu-2320",
+      "actions": [
+        {
+          "overrideDLL": {
+            "_0": "winmm",
+            "_1": "n,b"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Game fix for Quake II (Original)",
+      "skipped": [
+        "linux env PROTON_OLD_GL_STRING skipped"
+      ]
+    },
+    {
+      "game": "gog:umu-245050",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directplay"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Needs DirectPlay for multiplayer functionality"
+    },
+    {
+      "game": "gog:umu-245450",
+      "actions": [
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Needs mfc42 for settings dialog functionality"
+    },
+    {
+      "game": "gog:umu-254840",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "corefonts"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Game fix for Ground Control 2"
+    },
+    {
+      "game": "gog:umu-269330",
+      "actions": [
+        {
+          "installDotNet": {}
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Add dotnet"
+    },
+    {
+      "game": "gog:umu-28000",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "registry HKLM\\Software\\Wow6432Node\\GOG.com\\GalaxyClient"
+      ],
+      "note": "Game fix for Kane & Lynch 2: Dog Days"
+    },
+    {
+      "game": "gog:umu-283310",
+      "actions": [
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Game fix for Soulbringer"
+    },
+    {
+      "game": "gog:umu-311770",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Game fix for LEGO® Pirates of the Caribbean"
+    },
+    {
+      "game": "gog:umu-333980",
+      "actions": [
+        {
+          "setEnvironment": {
+            "_0": {
+              "SOMMELIER_HIDE_WINE": "1"
+            }
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Game fix for Akiba's Trip: Undead & Undressed"
+    },
+    {
+      "game": "gog:umu-3556750",
+      "actions": [
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Warhammer 40,000: Dawn of War - Definitive Edition"
+    },
+    {
+      "game": "gog:umu-356190",
+      "actions": [
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Game fix for Middle-earth: Shadow of War"
+    },
+    {
+      "game": "gog:umu-360430",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "registry HKLM\\Software\\Wow6432Node\\GOG.com\\GalaxyClient"
+      ],
+      "note": "Game fix for Mafia III: Definitive Edition"
+    },
+    {
+      "game": "gog:umu-367500",
+      "actions": [
+        {
+          "setEnvironment": {
+            "_0": {
+              "SDL_JOYSTICK_HIDAPI": "0"
+            }
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Dragon's Dogma: Dark Arisen (umu-367500, gog) requires SDL_JOYSTICK_HIDAPI=\"0\", otherwise it becomes confused by the special inputs of a Dualsense 4 controller and will oscillate between Playstation, Xbox, Keyboard, and a Generic Gamepad layout mid-gameplay (it's very frustrating)."
+    },
+    {
+      "game": "gog:umu-379720",
+      "actions": [
+        {
+          "addArguments": {
+            "_0": [
+              "+r_renderAPI",
+              "1"
+            ]
+          }
+        },
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "move"
+      ],
+      "note": "Enable preload options"
+    },
+    {
+      "game": "gog:umu-39190",
+      "actions": [
+        {
+          "addArguments": {
+            "_0": [
+              "Zonematch=true"
+            ]
+          }
+        },
+        {
+          "installComponent": {
+            "_0": "directplay"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Enable Multiplayer and protontricks directplay for full functionality"
+    },
+    {
+      "game": "gog:umu-39200",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directplay"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Apply protontricks directplay for full multiplayer functionality"
+    },
+    {
+      "game": "gog:umu-39510",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directmusic"
+          }
+        },
+        {
+          "overrideDLL": {
+            "_0": "*dsound",
+            "_1": "b"
+          }
+        },
+        {
+          "overrideDLL": {
+            "_0": "ddraw",
+            "_1": "n,b"
+          }
+        },
+        {
+          "overrideDLL": {
+            "_0": "dinput",
+            "_1": "n,b"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "game config edit"
+      ],
+      "note": "Game fix for Gothic 1 Classic Game fix for Gothic II: Gold Classic Game fix for The Chronicles Of Myrtana: Archolos (mod of Gothic II: Gold Classic)",
+      "skipped": [
+        "linux env PULSE_LATENCY_MSEC skipped"
+      ]
+    },
+    {
+      "game": "gog:umu-39540",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directplay"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Needs DirectPlay for multiplayer functionality"
+    },
+    {
+      "game": "gog:umu-39550",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directplay"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Needs DirectPlay for multiplayer functionality"
+    },
+    {
+      "game": "gog:umu-409710",
+      "actions": [
+        {
+          "setEnvironment": {
+            "_0": {
+              "WINEESYNC": "0"
+            }
+          }
+        },
+        {
+          "setEnvironment": {
+            "_0": {
+              "WINEMSYNC": "0"
+            }
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "registry HKLM\\System\\CurrentControlSet\\Services\\winebus"
+      ],
+      "note": "Disable ESYNC and FSYNC"
+    },
+    {
+      "game": "gog:umu-409720",
+      "actions": [
+        {
+          "setEnvironment": {
+            "_0": {
+              "WINEESYNC": "0"
+            }
+          }
+        },
+        {
+          "setEnvironment": {
+            "_0": {
+              "WINEMSYNC": "0"
+            }
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "registry HKLM\\System\\CurrentControlSet\\Services\\winebus"
+      ],
+      "note": "Disable ESYNC and FSYNC"
+    },
+    {
+      "game": "gog:umu-50620",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        },
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Add d3dcompiler fixes"
+    },
+    {
+      "game": "gog:umu-61500",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "component icodecs"
+      ],
+      "note": "Game fix for Age of Wonders"
+    },
+    {
+      "game": "gog:umu-644930",
+      "actions": [
+        {
+          "setEnvironment": {
+            "_0": {
+              "WINE_MONO_HIDETYPES": "1"
+            }
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "component gdiplus"
+      ],
+      "note": "They Are Billions"
+    },
+    {
+      "game": "gog:umu-65530",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directplay"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Needs DirectPlay for multiplayer functionality"
+    },
+    {
+      "game": "gog:umu-65540",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directmusic"
+          }
+        },
+        {
+          "overrideDLL": {
+            "_0": "*dsound",
+            "_1": "b"
+          }
+        },
+        {
+          "overrideDLL": {
+            "_0": "ddraw",
+            "_1": "n,b"
+          }
+        },
+        {
+          "overrideDLL": {
+            "_0": "dinput",
+            "_1": "n,b"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "game config edit"
+      ],
+      "note": "Game fix for Gothic 1 Classic Game fix for Gothic II: Gold Classic Game fix for The Chronicles Of Myrtana: Archolos (mod of Gothic II: Gold Classic)",
+      "skipped": [
+        "linux env PULSE_LATENCY_MSEC skipped"
+      ]
+    },
+    {
+      "game": "gog:umu-7670",
+      "actions": [
+        {
+          "setEnvironment": {
+            "_0": {
+              "WINEESYNC": "0"
+            }
+          }
+        },
+        {
+          "setEnvironment": {
+            "_0": {
+              "WINEMSYNC": "0"
+            }
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "registry HKLM\\System\\CurrentControlSet\\Services\\winebus"
+      ],
+      "note": "Disable ESYNC and FSYNC"
+    },
+    {
+      "game": "gog:umu-8190",
+      "actions": [
+        {
+          "addArguments": {
+            "_0": [
+              "-borderless"
+            ]
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "registry HKLM\\Software\\Wow6432Node\\GOG.com\\GalaxyClient"
+      ],
+      "note": "Game fix for Just Cause 2"
+    },
+    {
+      "game": "gog:umu-8850",
+      "actions": [
+        {
+          "setEnvironment": {
+            "_0": {
+              "WINEESYNC": "0"
+            }
+          }
+        },
+        {
+          "setEnvironment": {
+            "_0": {
+              "WINEMSYNC": "0"
+            }
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "registry HKLM\\System\\CurrentControlSet\\Services\\winebus"
+      ],
+      "note": "Disable ESYNC and FSYNC"
+    },
+    {
+      "game": "gog:umu-9060",
+      "actions": [
+        {
+          "overrideDLL": {
+            "_0": "winmm",
+            "_1": "n,b"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Game fix for Hexen II",
+      "skipped": [
+        "linux env PROTON_OLD_GL_STRING skipped"
+      ]
+    },
+    {
+      "game": "gog:umu-910830",
+      "actions": [
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Installs mfc42"
+    },
+    {
+      "game": "gog:umu-955050",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "disable nvapi"
+      ],
+      "note": "Requires nvapi disabled."
+    },
+    {
+      "game": "gog:umu-990050",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "cpu topology"
+      ],
+      "note": "Fixes performance and random crashings"
+    },
+    {
+      "game": "epic:umu-1174180",
+      "actions": [
+        {
+          "addArguments": {
+            "_0": [
+              "-fullscreen",
+              "-vulkan"
+            ]
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Sometimes game will not launch if -fullscreen -vulkan is not specified"
+    },
+    {
+      "game": "epic:umu-1284210",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "drop argument -provider"
+      ],
+      "note": "GW2 add NOSTEAM option."
+    },
+    {
+      "game": "epic:umu-15100",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "cpu topology"
+      ],
+      "note": "Assassin's Creed 1"
+    },
+    {
+      "game": "epic:umu-1659420",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "cpu topology"
+      ],
+      "note": "The game chokes on more than 16 cores"
+    },
+    {
+      "game": "epic:umu-220240",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "cpu topology"
+      ],
+      "note": "FarCry 3 chokes on more than 24 cores"
+    },
+    {
+      "game": "epic:umu-233270",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "cpu topology"
+      ],
+      "note": "dx11 version is broken"
+    },
+    {
+      "game": "epic:umu-2552430",
+      "actions": [
+        {
+          "setEnvironment": {
+            "_0": {
+              "SteamDeck": "1"
+            }
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Game needs SteamDeck=1 for cutscenes to work."
+    },
+    {
+      "game": "epic:umu-271590",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "registry HKLM\\System\\CurrentControlSet\\Services\\winebus"
+      ],
+      "note": "Game fix for GTAV"
+    },
+    {
+      "game": "epic:umu-2767030",
+      "actions": [
+        {
+          "runExecutable": {
+            "instead": "epic_launch_helper.exe",
+            "run": "MarvelRivals_Launcher.exe"
+          }
+        },
+        {
+          "setEnvironment": {
+            "_0": {
+              "SteamDeck": "1"
+            }
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Game fix for Marvel Rivals"
+    },
+    {
+      "game": "epic:umu-286690",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Metro 2033 Redux"
+    },
+    {
+      "game": "epic:umu-287390",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Metro Last Light Redux"
+    },
+    {
+      "game": "epic:umu-298110",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        },
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "FarCry 4 chokes on more than 24 cores"
+    },
+    {
+      "game": "epic:umu-306130",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "component webview2"
+      ],
+      "note": "Fix for the Elder Scrolls Online"
+    },
+    {
+      "game": "epic:umu-3513350",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "corefonts"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "component sourcehansans",
+        "component fakechinese"
+      ],
+      "note": "Font fixes for in-game resources, if any."
+    },
+    {
+      "game": "epic:umu-371660",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "cpu topology"
+      ],
+      "note": "Chokes on more than 31 cores"
+    },
+    {
+      "game": "epic:umu-3950020",
+      "actions": [
+        {
+          "overrideDLL": {
+            "_0": "dcomp",
+            "_1": ""
+          }
+        },
+        {
+          "overrideDLL": {
+            "_0": "libGLESv2",
+            "_1": ""
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "CEF tries to use dcomp by default which only has stubs, this triggers a fallback to a different backend",
+      "skipped": [
+        "linux env PROTON_SET_GAME_DRIVE skipped",
+        "linux env PROTON_ENABLE_INT3_HACK skipped"
+      ]
+    },
+    {
+      "game": "epic:umu-397540",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        },
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Borderlands 3"
+    },
+    {
+      "game": "epic:umu-40800",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        },
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Installs d3dcompiler, xact"
+    },
+    {
+      "game": "epic:umu-409710",
+      "actions": [
+        {
+          "setEnvironment": {
+            "_0": {
+              "WINEESYNC": "0"
+            }
+          }
+        },
+        {
+          "setEnvironment": {
+            "_0": {
+              "WINEMSYNC": "0"
+            }
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "registry HKLM\\System\\CurrentControlSet\\Services\\winebus"
+      ],
+      "note": "Disable ESYNC and FSYNC"
+    },
+    {
+      "game": "epic:umu-409720",
+      "actions": [
+        {
+          "setEnvironment": {
+            "_0": {
+              "WINEESYNC": "0"
+            }
+          }
+        },
+        {
+          "setEnvironment": {
+            "_0": {
+              "WINEMSYNC": "0"
+            }
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "registry HKLM\\System\\CurrentControlSet\\Services\\winebus"
+      ],
+      "note": "Disable ESYNC and FSYNC"
+    },
+    {
+      "game": "epic:umu-50620",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        },
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Add d3dcompiler fixes"
+    },
+    {
+      "game": "epic:umu-675010",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "MudRunner"
+    },
+    {
+      "game": "epic:umu-7580986b33344aeb8fd733caa7457a72",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "Fix for Asphalt 8"
+    },
+    {
+      "game": "epic:umu-825cd0b5286c404289d456d47561cc1a",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "set game drive"
+      ],
+      "note": "By default umu runs games on start.exe outside steam. However, Zenless's AC needs the game to be run from steam.exe to run on Linux.",
+      "skipped": [
+        "linux env UMU_USE_STEAM skipped",
+        "linux env WINE_DISABLE_VULKAN_OPWR skipped"
+      ]
+    },
+    {
+      "game": "ubisoft:umu-220240",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "cpu topology"
+      ],
+      "note": "FarCry 3 chokes on more than 24 cores"
+    },
+    {
+      "game": "ubisoft:umu-233270",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "cpu topology"
+      ],
+      "note": "dx11 version is broken"
+    },
+    {
+      "game": "ubisoft:umu-298110",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        },
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "enabled": false,
+      "note": "FarCry 4 chokes on more than 24 cores"
+    },
+    {
+      "game": "ubisoft:umu-368500",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "disable nvapi"
+      ],
+      "note": "Game ships with outdated UPlay launcher, which impedes normal initialization"
+    },
+    {
+      "game": "ubisoft:umu-371660",
+      "actions": [],
+      "source": "protonfixes",
+      "enabled": false,
+      "needs": [
+        "cpu topology"
+      ],
+      "note": "Chokes on more than 31 cores"
+    }
+  ]
+}

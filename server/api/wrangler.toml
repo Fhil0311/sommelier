@@ -1,0 +1,56 @@
+name = "sommelier-api"
+main = "src/index.js"
+compatibility_date = "2026-10-01"
+# The shader service, for the admin page's shader section (owner.js).
+services = [{ binding = "DECANTER", service = "sommelier-decanter" }]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "sommelier"
+database_id = "00000000-0000-0000-0000-000000000000"   # set when the Cloudflare account exists
+migrations_dir = "migrations"
+
+# App releases: the appcast (appcast.xml) and the update archives, put there by scripts/release-app.sh.
+[[r2_buckets]]
+binding = "RELEASES"
+bucket_name = "sommelier-releases"
+
+# Daily: refresh the anti-cheat list, the most-played games, and stale Steam details.
+[triggers]
+crons = ["17 4 * * *", "30 3 * * 1"]     # daily refresh; Mondays: database backup
+
+[vars]
+# Salt for hashing player ids and addresses. Production sets it as a secret (`wrangler secret put SALT`).
+SALT = "dev-only-salt"
+# The owner's token for /v1/stats. Production sets it as a secret (`wrangler secret put ADMIN_TOKEN`).
+ADMIN_TOKEN = "dev-only-admin"
+# Sommelier's mod.io key for the catalogue proxy (/v1/mods/modio/…) is only ever a secret (`wrangler secret put
+# MODIO_API_KEY`); without it the proxy answers 503 and the rest of the service is unaffected.
+
+# Workers Logs: errors and requests of the deployed service in Cloudflare's dashboard.
+[observability]
+enabled = true
+
+# `wrangler deploy --env production`: the real service at api.playsommelier.com. Its SALT and ADMIN_TOKEN are
+# secrets (`wrangler secret put … --env production`); the service refuses to answer with the development values.
+[env.production]
+name = "sommelier-api"
+routes = [{ pattern = "api.playsommelier.com", custom_domain = true }]
+workers_dev = false
+preview_urls = false
+vars = { ENVIRONMENT = "production", LIST_PUBLIC_KEY = "Arew6CWJjp7cUWoAO+JR05TRe5snh+jSXGqFDTl3eEY=" }   # the update key's public half (project.yml SUPublicEDKey)
+triggers = { crons = ["17 4 * * *", "30 3 * * 1"] }
+d1_databases = [{ binding = "DB", database_name = "sommelier", database_id = "00000000-0000-0000-0000-000000000001", migrations_dir = "migrations" }]
+r2_buckets = [{ binding = "RELEASES", bucket_name = "sommelier-releases" }]
+services = [{ binding = "DECANTER", service = "sommelier-decanter" }]
+
+# `wrangler deploy --env staging`: a copy on workers.dev with its own database and bucket, to try a change or a list
+# before players get it. Secrets as for production.
+[env.staging]
+name = "sommelier-api-staging"
+workers_dev = true
+vars = { ENVIRONMENT = "staging", LIST_PUBLIC_KEY = "Arew6CWJjp7cUWoAO+JR05TRe5snh+jSXGqFDTl3eEY=" }
+d1_databases = [{ binding = "DB", database_name = "sommelier-staging", database_id = "00000000-0000-0000-0000-000000000002", migrations_dir = "migrations" }]
+r2_buckets = [{ binding = "RELEASES", bucket_name = "sommelier-releases-staging" }]
+services = [{ binding = "DECANTER", service = "sommelier-decanter-staging" }]
+

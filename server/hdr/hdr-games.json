@@ -1,0 +1,1116 @@
+{
+  "version": 1,
+  "researched": "2026-10-22",
+  "games": [
+    {
+      "steam": "251570",
+      "title": "7 Days to Die",
+      "hdr": null,
+      "directx": [
+        "11",
+        "Vulkan"
+      ],
+      "source": null,
+      "note": "Boot config has an hdr-display-enabled line (community guide), no official in-game HDR confirmation found"
+    },
+    {
+      "steam": "945360",
+      "title": "Among Us",
+      "hdr": false,
+      "directx": [
+        "11"
+      ],
+      "source": "https://store.steampowered.com/app/945360/",
+      "note": "Simple 2D Unity game, no HDR"
+    },
+    {
+      "steam": "1172470",
+      "title": "Apex Legends",
+      "hdr": false,
+      "directx": [
+        "11",
+        "12"
+      ],
+      "source": "https://www.tomsguide.com/news/apex-legends-finally-gets-a-ps5-and-xbox-series-x-next-gen-update",
+      "note": "Native HDR added only to PS5/Xbox Series versions (2022); PC relies on Windows Auto HDR"
+    },
+    {
+      "steam": "346110",
+      "title": "ARK: Survival Evolved",
+      "hdr": null,
+      "directx": [
+        "11",
+        "12"
+      ],
+      "source": null,
+      "note": "HDR confirmed on Xbox One X/PS4 Pro; PC options list shows no HDR, but a forum claim says PC patch v271.3 added HDR options - unverified"
+    },
+    {
+      "steam": "107410",
+      "title": "Arma 3",
+      "hdr": false,
+      "directx": [
+        "11"
+      ],
+      "source": "https://steamcommunity.com/app/107410/discussions/0/619569608737340793",
+      "note": "Its 'HDR' setting is internal render precision, not HDR display output"
+    },
+    {
+      "steam": "3159330",
+      "title": "Assassin's Creed Shadows",
+      "hdr": true,
+      "directx": [
+        "12"
+      ],
+      "source": "https://news.ubisoft.com/en-us/article/5dWbPvxtnNdQQVI3cb2m3p/assassins-creed-shadows-pc-specs-revealed-preorders-open",
+      "note": ""
+    },
+    {
+      "steam": "1086940",
+      "title": "Baldur's Gate 3",
+      "hdr": true,
+      "directx": [
+        "11",
+        "Vulkan"
+      ],
+      "source": "https://archive.overkill.wtf/baldurs-gate-3-best-settings-steam-deck/",
+      "note": "Game outputs HDR (auto-enabled on Steam Deck OLED); evidence indirect, no official doc found; users report HDR works better in DX11"
+    },
+    {
+      "steam": "1517290",
+      "title": "Battlefield 2042",
+      "hdr": true,
+      "directx": [
+        "12"
+      ],
+      "source": "https://www.ea.com/able/resources/battlefield-2042/pc/display",
+      "note": "EA lists an HDR On/Off toggle in PC display settings"
+    },
+    {
+      "steam": "2807960",
+      "title": "Battlefield 6",
+      "hdr": true,
+      "directx": [
+        "12"
+      ],
+      "source": "https://www.ea.com/en/games/battlefield/battlefield-6/faq",
+      "note": ""
+    },
+    {
+      "steam": "1238810",
+      "title": "Battlefield V",
+      "hdr": true,
+      "directx": [
+        "11",
+        "12"
+      ],
+      "source": "https://www.tweaktown.com/news/63047/battlefield-open-beta-visual-settings-detailed/index.html",
+      "note": "HDR10 output on PC (Frostbite)"
+    },
+    {
+      "steam": "2358720",
+      "title": "Black Myth: Wukong",
+      "hdr": false,
+      "directx": [
+        "12"
+      ],
+      "source": "https://www.msi.com/blog/the-best-settings-to-play-black-myth-wukong-on-oled-monitor-by-rtx-hdr",
+      "note": "MSI states no native HDR on PC; users rely on RTX HDR"
+    },
+    {
+      "steam": "49520",
+      "title": "Borderlands 2",
+      "hdr": false,
+      "directx": [
+        "9"
+      ],
+      "source": "https://store.steampowered.com/app/49520/",
+      "note": "DX9 UE3 game, no HDR output"
+    },
+    {
+      "steam": "291550",
+      "title": "Brawlhalla",
+      "hdr": false,
+      "directx": [
+        "11"
+      ],
+      "source": "https://store.steampowered.com/app/291550/Brawlhalla/",
+      "note": "2D Adobe AIR game, no HDR option; API uncertain"
+    },
+    {
+      "steam": "1938090",
+      "title": "Call of Duty: Modern Warfare II",
+      "hdr": true,
+      "directx": [
+        "12"
+      ],
+      "source": "https://sportskeeda.com/gaming-tech/best-modern-warfare-2-settings-pc-video-graphics-settings-explored",
+      "note": "PC display settings include a High Dynamic Range option"
+    },
+    {
+      "steam": "255710",
+      "title": "Cities: Skylines",
+      "hdr": null,
+      "directx": [
+        "11"
+      ],
+      "source": null,
+      "note": "No source found either way"
+    },
+    {
+      "steam": "1903340",
+      "title": "Clair Obscur: Expedition 33",
+      "hdr": false,
+      "directx": [
+        "12"
+      ],
+      "source": "https://steamcommunity.com/app/1903340/discussions/0/592895271730493862",
+      "note": "No in-game HDR option; players use RTX HDR/Auto HDR/mods"
+    },
+    {
+      "steam": "10",
+      "title": "Counter-Strike",
+      "hdr": false,
+      "directx": [
+        "OpenGL"
+      ],
+      "source": "https://store.steampowered.com/app/10/CounterStrike/",
+      "note": "GoldSrc (1999-era) game, no HDR output"
+    },
+    {
+      "steam": "730",
+      "title": "Counter-Strike 2",
+      "hdr": false,
+      "directx": [
+        "11",
+        "Vulkan"
+      ],
+      "source": "https://developer.valvesoftware.com/wiki/High_Dynamic_Range",
+      "note": "In-game 'HDR' Performance/Quality option is rendering only; Valve wiki says Source 2 has no official HDR display output"
+    },
+    {
+      "steam": "240",
+      "title": "Counter-Strike: Source",
+      "hdr": false,
+      "directx": [
+        "9"
+      ],
+      "source": "https://store.steampowered.com/app/240/CounterStrike_Source/",
+      "note": "Source 'HDR rendering' only (internal/bloom), not HDR display output"
+    },
+    {
+      "steam": "1091500",
+      "title": "Cyberpunk 2077",
+      "hdr": true,
+      "directx": [
+        "12"
+      ],
+      "source": "https://store.steampowered.com/app/1091500/",
+      "note": "In-game HDR10/scRGB options; Steam lists 'HDR available'"
+    },
+    {
+      "steam": "374320",
+      "title": "DARK SOULS III",
+      "hdr": false,
+      "directx": [
+        "11"
+      ],
+      "source": "https://pcgamer.com/dark-souls-3s-graphics-options-revealed",
+      "note": "Settings list has no HDR option"
+    },
+    {
+      "steam": "221100",
+      "title": "DayZ",
+      "hdr": null,
+      "directx": [
+        "11"
+      ],
+      "source": null,
+      "note": "No reliable info found"
+    },
+    {
+      "steam": "381210",
+      "title": "Dead by Daylight",
+      "hdr": false,
+      "directx": [
+        "11"
+      ],
+      "source": "https://store.steampowered.com/app/381210/",
+      "note": "No HDR in graphics settings or ~1400 Steam news posts; HDR exists on consoles only"
+    },
+    {
+      "steam": "548430",
+      "title": "Deep Rock Galactic",
+      "hdr": true,
+      "directx": [
+        "11",
+        "12"
+      ],
+      "source": "https://steamcommunity.com/app/548430/discussions/1/3175575850984094478",
+      "note": "Experimental HDR, DX12 mode only"
+    },
+    {
+      "steam": "1085660",
+      "title": "Destiny 2",
+      "hdr": true,
+      "directx": [
+        "11"
+      ],
+      "source": "https://www.pcgamer.com/uk/destiny-2-on-the-pc-will-support-sli-and-hdr-displays",
+      "note": "HDR on PC since launch (2017); HDR settings reworked in 2022"
+    },
+    {
+      "steam": "322330",
+      "title": "Don't Starve Together",
+      "hdr": false,
+      "directx": [
+        "9"
+      ],
+      "source": "https://support.klei.com/hc/en-us/articles/360029556072",
+      "note": "2D game, DX9-class requirements, no HDR option"
+    },
+    {
+      "steam": "3017860",
+      "title": "DOOM: The Dark Ages",
+      "hdr": true,
+      "directx": [
+        "Vulkan"
+      ],
+      "source": "https://slayersclub.bethesda.net/en-US/article/doom-the-dark-ages-update-1",
+      "note": "Update 1 added HDR contrast control"
+    },
+    {
+      "steam": "570",
+      "title": "Dota 2",
+      "hdr": false,
+      "directx": [
+        "11",
+        "Vulkan"
+      ],
+      "source": "https://developer.valvesoftware.com/wiki/High_Dynamic_Range",
+      "note": "Valve wiki: Source 2 never officially supported HDR display output"
+    },
+    {
+      "steam": "239140",
+      "title": "Dying Light",
+      "hdr": false,
+      "directx": [
+        "11"
+      ],
+      "source": "https://www.dsogaming.com/news/dying-light-here-are-the-pc-graphics-options-features-nvidia-gameworks-effects/",
+      "note": "PC graphics options list has no HDR; 2022 next-gen patch was console-only"
+    },
+    {
+      "steam": "1665460",
+      "title": "eFootball",
+      "hdr": null,
+      "directx": [
+        "11"
+      ],
+      "source": null,
+      "note": "No reliable info on a PC HDR option found"
+    },
+    {
+      "steam": "1245620",
+      "title": "ELDEN RING",
+      "hdr": true,
+      "directx": [
+        "12"
+      ],
+      "source": "https://www.intel.com/content/www/us/en/support/articles/000093858.html",
+      "note": "In-game HDR toggle"
+    },
+    {
+      "steam": "2622380",
+      "title": "ELDEN RING NIGHTREIGN",
+      "hdr": true,
+      "directx": [
+        "12"
+      ],
+      "source": "https://digistatement.com/elden-ring-nightreign-hdr-not-working-how-to-fix-it/",
+      "note": "In-game HDR toggle like Elden Ring; only weak source found"
+    },
+    {
+      "steam": "227300",
+      "title": "Euro Truck Simulator 2",
+      "hdr": true,
+      "directx": [
+        "11",
+        "OpenGL"
+      ],
+      "source": "https://store.steampowered.com/news/app/227300/view/1816849002009762",
+      "note": "HDR with calibration slider added in update 1.57 (Nov 2025)"
+    },
+    {
+      "steam": "427520",
+      "title": "Factorio",
+      "hdr": false,
+      "directx": [
+        "11",
+        "OpenGL"
+      ],
+      "source": "https://forums.factorio.com/viewtopic.php?p=699943",
+      "note": "No native HDR handling as of 2026 (HDR is a community suggestion)"
+    },
+    {
+      "steam": "1097150",
+      "title": "Fall Guys",
+      "hdr": false,
+      "directx": [
+        "11"
+      ],
+      "source": "https://store.steampowered.com/app/1097150/",
+      "note": "No HDR option in PC graphics settings; Unity engine"
+    },
+    {
+      "steam": "377160",
+      "title": "Fallout 4",
+      "hdr": false,
+      "directx": [
+        "11"
+      ],
+      "source": "https://steamcommunity.com/app/377160/discussions/0/4364626599845829320",
+      "note": "Engine HDRR is internal; game outputs SDR. One user claims otherwise, but that is Windows Auto HDR"
+    },
+    {
+      "steam": "1551360",
+      "title": "Forza Horizon 5",
+      "hdr": true,
+      "directx": [
+        "12"
+      ],
+      "source": "https://support.forza.net/hc/en-us/articles/4409262786579-Forza-Horizon-5-PC-Specs",
+      "note": ""
+    },
+    {
+      "steam": "4000",
+      "title": "Garry's Mod",
+      "hdr": false,
+      "directx": [
+        "9"
+      ],
+      "source": "https://developer.valvesoftware.com/wiki/High_Dynamic_Range",
+      "note": "Source engine, HDR rendering only"
+    },
+    {
+      "steam": "2215430",
+      "title": "Ghost of Tsushima DIRECTOR'S CUT",
+      "hdr": true,
+      "directx": [
+        "12"
+      ],
+      "source": "https://store.steampowered.com/app/2215430/",
+      "note": ""
+    },
+    {
+      "steam": "1593500",
+      "title": "God of War",
+      "hdr": true,
+      "directx": [
+        "11"
+      ],
+      "source": "https://www.benq.com/en-me/knowledge-center/knowledge/god-of-war.html",
+      "note": ""
+    },
+    {
+      "steam": "12210",
+      "title": "Grand Theft Auto IV: The Complete Edition",
+      "hdr": false,
+      "directx": [
+        "9"
+      ],
+      "source": "https://store.steampowered.com/app/12210/",
+      "note": "DX9 game, no HDR output"
+    },
+    {
+      "steam": "3240220",
+      "title": "Grand Theft Auto V Enhanced",
+      "hdr": false,
+      "directx": [
+        "12"
+      ],
+      "source": "https://wccftech.com/grand-theft-auto-v-enhanced-ray-tracing-improvements-comparison/",
+      "note": "No native HDR at launch (Mar 2025); no later patch adding it found"
+    },
+    {
+      "steam": "271590",
+      "title": "Grand Theft Auto V Legacy",
+      "hdr": false,
+      "directx": [
+        "10",
+        "11"
+      ],
+      "source": "https://wccftech.com/gta-v-enhanced-makes-the-12-year-old-game-look-great-again/amp/",
+      "note": "PC version never had native HDR (consoles do); even Enhanced lacks it"
+    },
+    {
+      "steam": "219990",
+      "title": "Grim Dawn",
+      "hdr": false,
+      "directx": [
+        "9",
+        "11"
+      ],
+      "source": "https://forums.crateentertainment.com/t/feedback-on-the-hdr-rendering-option-and-how-to-fix-it/151391",
+      "note": "In-game \"HDR\" option is internal lighting/tonemapping only; HDR display output needs a mod (RenoDX)"
+    },
+    {
+      "steam": "1145350",
+      "title": "Hades II",
+      "hdr": null,
+      "directx": [
+        "12"
+      ],
+      "source": null,
+      "note": "No mention of HDR in settings guides or patch notes found"
+    },
+    {
+      "steam": "70",
+      "title": "Half-Life",
+      "hdr": false,
+      "directx": [
+        "OpenGL"
+      ],
+      "source": "https://store.steampowered.com/app/70/",
+      "note": "GoldSrc, OpenGL (plus software renderer); no HDR"
+    },
+    {
+      "steam": "220",
+      "title": "Half-Life 2",
+      "hdr": false,
+      "directx": [
+        "9"
+      ],
+      "source": "https://store.steampowered.com/app/220/",
+      "note": "Source engine 'HDR rendering' is tone-mapped bloom, not HDR output"
+    },
+    {
+      "steam": "1240440",
+      "title": "Halo Infinite",
+      "hdr": true,
+      "directx": [
+        "12"
+      ],
+      "source": "https://onmsft.com/?p=21690",
+      "note": "HDR slider in Screen Calibration settings"
+    },
+    {
+      "steam": "553850",
+      "title": "HELLDIVERS 2",
+      "hdr": true,
+      "directx": [
+        "11",
+        "12"
+      ],
+      "source": "https://steamcommunity.com/app/553850/discussions/0/4206994023681993765",
+      "note": "In-game HDR toggle requires Windows HDR on; source is user discussion, no official doc found"
+    },
+    {
+      "steam": "990080",
+      "title": "Hogwarts Legacy",
+      "hdr": true,
+      "directx": [
+        "12"
+      ],
+      "source": "https://store.steampowered.com/app/990080/",
+      "note": "Steam lists 'HDR available'; in-game HDR option"
+    },
+    {
+      "steam": "1030300",
+      "title": "Hollow Knight: Silksong",
+      "hdr": false,
+      "directx": [
+        "11"
+      ],
+      "source": "https://gamerblurb.com/articles/hollow-knight-silksong-hdr-support-guide-options",
+      "note": "No native HDR; only mods (RenoDX) or Auto/RTX HDR; Steam lists DX10 minimum"
+    },
+    {
+      "steam": "477160",
+      "title": "Human Fall Flat",
+      "hdr": null,
+      "directx": [
+        "11"
+      ],
+      "source": null,
+      "note": ""
+    },
+    {
+      "steam": "594650",
+      "title": "Hunt: Showdown 1896",
+      "hdr": true,
+      "directx": [
+        "12"
+      ],
+      "source": "https://wccftech.com/hunt-showdown-1896-out-now-on-pc-playstation-5-and-xbox-series-xs/",
+      "note": "HDR and DX12 added with the 1896 engine update (Aug 2024)"
+    },
+    {
+      "steam": "1771300",
+      "title": "Kingdom Come: Deliverance II",
+      "hdr": true,
+      "directx": [
+        "11"
+      ],
+      "source": "https://comicbook.com/gaming/news/kcd2-kingdom-come-deliverance-2-update-september-2025/",
+      "note": "HDR output added in Patch 1.4 (Sept 2025); not available at launch"
+    },
+    {
+      "steam": "899770",
+      "title": "Last Epoch",
+      "hdr": false,
+      "directx": [
+        "11"
+      ],
+      "source": "https://forum.lastepoch.com/t/are-we-allowed-to-use-nvtruehdr-dll-wrapper/62777",
+      "note": "No native HDR at 1.0 launch (players use RTX HDR/mods); no HDR in Steam news since; evidence is player statements, not dev"
+    },
+    {
+      "steam": "550",
+      "title": "Left 4 Dead 2",
+      "hdr": false,
+      "directx": [
+        "9",
+        "Vulkan"
+      ],
+      "source": "https://developer.valvesoftware.com/wiki/High_Dynamic_Range",
+      "note": "Source engine, no HDR display output; Vulkan via -vulkan launch option"
+    },
+    {
+      "steam": "1966720",
+      "title": "Lethal Company",
+      "hdr": false,
+      "directx": [
+        "11"
+      ],
+      "source": "https://twinfinite.net/?p=1013237",
+      "note": "Almost no graphics options beyond brightness; HDRP pipeline is not HDR output"
+    },
+    {
+      "steam": "532210",
+      "title": "Life is Strange 2",
+      "hdr": null,
+      "directx": [
+        "11"
+      ],
+      "source": null,
+      "note": "No reliable info found"
+    },
+    {
+      "steam": "1599340",
+      "title": "Lost Ark",
+      "hdr": null,
+      "directx": [
+        "9",
+        "11"
+      ],
+      "source": null,
+      "note": "DX9 upgraded to DX11 at Western launch; no HDR information found"
+    },
+    {
+      "steam": "2767030",
+      "title": "Marvel Rivals",
+      "hdr": null,
+      "directx": [
+        "11",
+        "12"
+      ],
+      "source": null,
+      "note": "Players reported no HDR at launch (Dec 2024); current status unconfirmed"
+    },
+    {
+      "steam": "2246340",
+      "title": "Monster Hunter Wilds",
+      "hdr": true,
+      "directx": [
+        "12"
+      ],
+      "source": "https://steamcommunity.com/app/2246340/discussions/0/720115848603275411",
+      "note": "In-game 'HDR Output' setting (Automatically Enable)"
+    },
+    {
+      "steam": "582010",
+      "title": "Monster Hunter: World",
+      "hdr": true,
+      "directx": [
+        "11",
+        "12"
+      ],
+      "source": "https://www.rpgsite.net/news/7920-a-new-update-for-the-pc-version-of-monster-hunter-world-addresses-more-bugs-prepares-for-kulve-taroth-and-adds-hdr-support",
+      "note": "HDR Mode added in Oct 2018 PC update; DX12 added with Iceborne"
+    },
+    {
+      "steam": "261550",
+      "title": "Mount & Blade II: Bannerlord",
+      "hdr": null,
+      "directx": [
+        "11"
+      ],
+      "source": null,
+      "note": "No reliable info found"
+    },
+    {
+      "steam": "1203220",
+      "title": "NARAKA: BLADEPOINT",
+      "hdr": true,
+      "directx": [
+        "11",
+        "12"
+      ],
+      "source": "https://www.sportskeeda.com/gaming-tech/best-naraka-bladepoint-graphics-settings-rtx-2070-rtx-2070-super",
+      "note": "Settings guides list an in-game HDR toggle; no official patch note found"
+    },
+    {
+      "steam": "1063730",
+      "title": "New World: Aeternum",
+      "hdr": null,
+      "directx": [
+        "11",
+        "12"
+      ],
+      "source": null,
+      "note": "Patch notes mention HDR-display fixes and console HDR; no reliable confirmation of a PC in-game HDR toggle"
+    },
+    {
+      "steam": "275850",
+      "title": "No Man's Sky",
+      "hdr": true,
+      "directx": [
+        "Vulkan"
+      ],
+      "source": "https://store.steampowered.com/app/275850/",
+      "note": ""
+    },
+    {
+      "steam": "1623730",
+      "title": "Palworld",
+      "hdr": null,
+      "directx": [
+        "11",
+        "12"
+      ],
+      "source": null,
+      "note": "No reliable confirmation of a native HDR toggle found"
+    },
+    {
+      "steam": "238960",
+      "title": "Path of Exile",
+      "hdr": null,
+      "directx": [
+        "11",
+        "12",
+        "Vulkan"
+      ],
+      "source": null,
+      "note": "Sources disagree: some say HDR only in DX12 renderer, a 2025 official-forum thread says no in-game HDR toggle; PoE2 does have HDR"
+    },
+    {
+      "steam": "2694490",
+      "title": "Path of Exile 2",
+      "hdr": true,
+      "directx": [
+        "11",
+        "12",
+        "Vulkan"
+      ],
+      "source": "https://pathofexile.com/forum/view-thread/3615129",
+      "note": "In-game HDR option exists; players report it looks dim/washed out"
+    },
+    {
+      "steam": "218620",
+      "title": "PAYDAY 2",
+      "hdr": false,
+      "directx": [
+        "9"
+      ],
+      "source": "https://store.steampowered.com/app/218620/",
+      "note": "DX9 game, no HDR output"
+    },
+    {
+      "steam": "739630",
+      "title": "Phasmophobia",
+      "hdr": null,
+      "directx": [
+        "11"
+      ],
+      "source": null,
+      "note": "No reliable info found on HDR output"
+    },
+    {
+      "steam": "400",
+      "title": "Portal",
+      "hdr": false,
+      "directx": [
+        "9"
+      ],
+      "source": "https://store.steampowered.com/app/400/Portal/",
+      "note": "Source engine 'HDR rendering' only, not HDR display output"
+    },
+    {
+      "steam": "108600",
+      "title": "Project Zomboid",
+      "hdr": false,
+      "directx": [
+        "OpenGL"
+      ],
+      "source": "https://steamcommunity.com/app/108600/discussions/1/3883851232925829349",
+      "note": "OpenGL game; players use driver/DXGI-swapchain workarounds to get HDR"
+    },
+    {
+      "steam": "578080",
+      "title": "PUBG: BATTLEGROUNDS",
+      "hdr": false,
+      "directx": [
+        "11",
+        "12"
+      ],
+      "source": "https://www.pcgamesn.com/best-pubg-settings",
+      "note": "PC graphics settings list has no HDR option; DX11 Enhanced recommended, DX12 available"
+    },
+    {
+      "steam": "3241660",
+      "title": "R.E.P.O.",
+      "hdr": null,
+      "directx": [
+        "11"
+      ],
+      "source": null,
+      "note": "Settings guides list no HDR option, but nothing authoritative"
+    },
+    {
+      "steam": "648800",
+      "title": "Raft",
+      "hdr": null,
+      "directx": [
+        "11"
+      ],
+      "source": null,
+      "note": ""
+    },
+    {
+      "steam": "1174180",
+      "title": "Red Dead Redemption 2",
+      "hdr": true,
+      "directx": [
+        "12",
+        "Vulkan"
+      ],
+      "source": "https://www.engadget.com/2019-10-09-red-dead-redemption-2-pc-specs.html",
+      "note": "HDR at launch; HDR10+ Gaming added later in a title update"
+    },
+    {
+      "steam": "2050650",
+      "title": "Resident Evil 4",
+      "hdr": true,
+      "directx": [
+        "12"
+      ],
+      "source": "https://store.steampowered.com/app/2050650/",
+      "note": ""
+    },
+    {
+      "steam": "632360",
+      "title": "Risk of Rain 2",
+      "hdr": null,
+      "directx": [
+        "11"
+      ],
+      "source": null,
+      "note": "No reliable info found"
+    },
+    {
+      "steam": "252950",
+      "title": "Rocket League",
+      "hdr": false,
+      "directx": [
+        "9",
+        "11"
+      ],
+      "source": "https://rocketleaguehelp.epicgames.com/help/en-US/c-Category_RocketLeague/c-RocketLeague_TechnicalSupport/playstation-and-xbox-4k-hdr-support-in-rocket-league-a000084238",
+      "note": "Official help lists HDR for PlayStation/Xbox only; 'HDR Audio' on PC is a sound feature"
+    },
+    {
+      "steam": "252490",
+      "title": "Rust",
+      "hdr": false,
+      "directx": [
+        "11"
+      ],
+      "source": "https://store.steampowered.com/app/252490/",
+      "note": "No HDR option in graphics settings; no HDR in ~1270 Steam news posts; HDR only via mods"
+    },
+    {
+      "steam": "1643320",
+      "title": "S.T.A.L.K.E.R. 2: Heart of Chornobyl",
+      "hdr": true,
+      "directx": [
+        "12"
+      ],
+      "source": "https://store.steampowered.com/app/1643320/",
+      "note": ""
+    },
+    {
+      "steam": "526870",
+      "title": "Satisfactory",
+      "hdr": null,
+      "directx": [
+        "11",
+        "12",
+        "Vulkan"
+      ],
+      "source": null,
+      "note": "No reliable info found"
+    },
+    {
+      "steam": "3164500",
+      "title": "Schedule I",
+      "hdr": null,
+      "directx": [
+        "11"
+      ],
+      "source": null,
+      "note": ""
+    },
+    {
+      "steam": "1172620",
+      "title": "Sea of Thieves",
+      "hdr": null,
+      "directx": [
+        "11",
+        "12"
+      ],
+      "source": null,
+      "note": "Sources conflict on PC HDR; DX12 option added in 2024 update"
+    },
+    {
+      "steam": "814380",
+      "title": "Sekiro: Shadows Die Twice",
+      "hdr": true,
+      "directx": [
+        "11"
+      ],
+      "source": "https://support.activision.com/sekiro/articles/known-issues-in-sekiro-shadows-die-twice",
+      "note": "In-game HDR toggle on PC"
+    },
+    {
+      "steam": "8930",
+      "title": "Sid Meier's Civilization V",
+      "hdr": null,
+      "directx": [
+        "9",
+        "10",
+        "11"
+      ],
+      "source": null,
+      "note": "No source found either way"
+    },
+    {
+      "steam": "289070",
+      "title": "Sid Meier's Civilization VI",
+      "hdr": null,
+      "directx": [
+        "11",
+        "12"
+      ],
+      "source": null,
+      "note": "No reliable info found"
+    },
+    {
+      "steam": "386360",
+      "title": "SMITE",
+      "hdr": null,
+      "directx": [
+        "11"
+      ],
+      "source": null,
+      "note": "UE3 game; DX9 path dropped in favour of DX11; no HDR info found"
+    },
+    {
+      "steam": "1326470",
+      "title": "Sons Of The Forest",
+      "hdr": false,
+      "directx": [
+        "11"
+      ],
+      "source": "https://www.notebookcheck.net/Sons-of-the-Forest-review-Laptop-and-desktop-benchmarks.700998.0.html",
+      "note": "Display settings list has no HDR option"
+    },
+    {
+      "steam": "2001120",
+      "title": "Split Fiction",
+      "hdr": true,
+      "directx": [
+        "12"
+      ],
+      "source": "https://store.steampowered.com/app/2001120/",
+      "note": ""
+    },
+    {
+      "steam": "413150",
+      "title": "Stardew Valley",
+      "hdr": false,
+      "directx": [
+        "OpenGL"
+      ],
+      "source": "https://store.steampowered.com/app/413150/",
+      "note": "2D pixel-art game; MonoGame/OpenGL since 1.5.5 (was XNA/DX9 before)"
+    },
+    {
+      "steam": "1716740",
+      "title": "Starfield",
+      "hdr": true,
+      "directx": [
+        "12"
+      ],
+      "source": "https://windowscentral.com/gaming/xbox/starfield-dlss-update-now-available-in-steam-beta-coming-later-this-month-for-all-xbox-and-pc-players",
+      "note": "HDR calibration/brightness controls added in Nov 2023 update"
+    },
+    {
+      "steam": "440",
+      "title": "Team Fortress 2",
+      "hdr": false,
+      "directx": [
+        "9"
+      ],
+      "source": "https://developer.valvesoftware.com/wiki/High_Dynamic_Range",
+      "note": "Source 'HDR' is HDR rendering only, no display output"
+    },
+    {
+      "steam": "105600",
+      "title": "Terraria",
+      "hdr": false,
+      "directx": [
+        "9"
+      ],
+      "source": "https://store.steampowered.com/app/105600/Terraria/",
+      "note": "2D XNA game, no HDR output"
+    },
+    {
+      "steam": "242760",
+      "title": "The Forest",
+      "hdr": false,
+      "directx": [
+        "11"
+      ],
+      "source": "https://store.steampowered.com/app/242760/",
+      "note": "Old Unity build; 'HDR' in patch notes refers to rendering (motion blur), no HDR display output"
+    },
+    {
+      "steam": "1222670",
+      "title": "The Sims 4",
+      "hdr": null,
+      "directx": [
+        "9",
+        "11"
+      ],
+      "source": null,
+      "note": "DX11 default on NVIDIA/AMD since Sep 2024 update; no HDR info found"
+    },
+    {
+      "steam": "292030",
+      "title": "The Witcher 3: Wild Hunt",
+      "hdr": true,
+      "directx": [
+        "11",
+        "12"
+      ],
+      "source": "https://store.steampowered.com/app/292030/",
+      "note": "HDR with calibration (max brightness, paper white) in the next-gen/remastered version; Steam lists 'HDR available'"
+    },
+    {
+      "steam": "359550",
+      "title": "Tom Clancy's Rainbow Six Siege",
+      "hdr": null,
+      "directx": [
+        "11",
+        "12"
+      ],
+      "source": null,
+      "note": "No HDR option found in settings guides or ~1600 Steam news posts (only 'HDR skies' lighting); no explicit confirmation either way. Vulkan removed in Y9S3 (2024), DX12 added"
+    },
+    {
+      "steam": "304930",
+      "title": "Unturned",
+      "hdr": null,
+      "directx": [
+        "11"
+      ],
+      "source": null,
+      "note": "Unity game; no information found"
+    },
+    {
+      "steam": "892970",
+      "title": "Valheim",
+      "hdr": false,
+      "directx": [
+        "11",
+        "Vulkan"
+      ],
+      "source": "https://valheimbugs.featureupvote.com/suggestions/259912/hdrautohdr-windows",
+      "note": "Official bug tracker report says the game doesn't support HDR; Vulkan is opt-in"
+    },
+    {
+      "steam": "438100",
+      "title": "VRChat",
+      "hdr": false,
+      "directx": [
+        "11"
+      ],
+      "source": "https://store.steampowered.com/app/438100/",
+      "note": "No HDR display option on desktop; no HDR in Steam news"
+    },
+    {
+      "steam": "236390",
+      "title": "War Thunder",
+      "hdr": true,
+      "directx": [
+        "11",
+        "12",
+        "Vulkan"
+      ],
+      "source": "https://wccftech.com/war-thunder-adds-raytracing-and-hdr-on-pc-and-xbox-one/amp/",
+      "note": "HDR added in update 1.95 Northern Wind (Dec 2019); later Paper White/Max Brightness settings"
+    },
+    {
+      "steam": "230410",
+      "title": "Warframe",
+      "hdr": true,
+      "directx": [
+        "11",
+        "12"
+      ],
+      "source": "https://support.warframe.com/hc/en-us/articles/360040309092-How-To-Enable-HDR",
+      "note": "'HDR Output (Experimental)' option in Display settings"
+    },
+    {
+      "steam": "2186680",
+      "title": "Warhammer 40,000: Rogue Trader",
+      "hdr": null,
+      "directx": [
+        "11"
+      ],
+      "source": null,
+      "note": "No reliable info found"
+    },
+    {
+      "steam": "444200",
+      "title": "World of Tanks Blitz",
+      "hdr": null,
+      "directx": [
+        "11"
+      ],
+      "source": null,
+      "note": ""
+    },
+    {
+      "steam": "552990",
+      "title": "World of Warships",
+      "hdr": false,
+      "directx": [
+        "11"
+      ],
+      "source": "https://store.steampowered.com/news/app/552990/view/4186652357024857227",
+      "note": "'HDR' in WG news is the internal lighting model after the DX9->DX11 move, not display output; no HDR display option"
+    }
+  ]
+}

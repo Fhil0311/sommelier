@@ -1,0 +1,1088 @@
+--- a/dlls/winemac.drv/Makefile.in
++++ b/dlls/winemac.drv/Makefile.in
+@@ -28,6 +28,7 @@
+ 	cocoa_window.m \
+ 	d3dmetal.c \
+ 	d3dmetal_objc.m \
++	framestats.c \
+ 	display.c \
+ 	dllmain.c \
+ 	event.c \
+--- a/dlls/winemac.drv/cocoa_app.h
++++ b/dlls/winemac.drv/cocoa_app.h
+@@ -138,6 +138,7 @@
+     - (WineWindow*) frontWineWindow;
+     - (void) adjustWindowLevels;
+     - (void) updateFullscreenWindows;
++    - (void) updateFullscreenPresentation;
+ 
+     - (BOOL) handleEvent:(NSEvent*)anEvent;
+     - (void) didSendEvent:(NSEvent*)anEvent;
+--- a/dlls/winemac.drv/cocoa_app.m
++++ b/dlls/winemac.drv/cocoa_app.m
+@@ -323,6 +323,17 @@
+ 
+                     return;
+                 }
++            }
++
++            /* Sommelier: a program that shouldn't show in the Dock (a store launcher) still gets working,
++               focusable windows as an accessory app; it just has no Dock icon and isn't in Cmd-Tab. */
++            if (!show_in_dock)
++            {
++                if ([NSApp activationPolicy] != NSApplicationActivationPolicyAccessory)
++                    [NSApp setActivationPolicy:NSApplicationActivationPolicyAccessory];
++                if (activateIfTransformed)
++                    [self tryToActivateIgnoringOtherApps:YES];
++                return;
+             }
+ 
+             [NSApp setActivationPolicy:NSApplicationActivationPolicyRegular];
+@@ -814,8 +825,34 @@
+         [self adjustWindowLevels:[NSApp isActive]];
+     }
+ 
++    /* Sommelier: while this app is in front with a full-screen window, macOS hides the Dock and the menu bar for it
++       (and shows them again by itself when another app comes forward). Raising the window's level alone left them on
++       top after Cmd-Tab back into a game. */
++    - (void) updateFullscreenPresentation
++    {
++        BOOL anyFullscreen = FALSE;
++        NSApplicationPresentationOptions wanted;
++        for (NSWindow* window in [NSApp windows])
++        {
++            if ([window isKindOfClass:[WineWindow class]] && ((WineWindow*)window).fullscreen && [window isVisible] &&
++                ![window isMiniaturized])
++            {
++                anyFullscreen = TRUE;
++                break;
++            }
++        }
++        wanted = anyFullscreen && [NSApp isActive] ? (NSApplicationPresentationHideDock | NSApplicationPresentationHideMenuBar)
++                                                    : NSApplicationPresentationDefault;
++        if (([NSApp presentationOptions] & NSApplicationPresentationFullScreen) == 0 && [NSApp presentationOptions] != wanted)
++        {
++            @try { [NSApp setPresentationOptions:wanted]; }
++            @catch (NSException* e) { /* an invalid combination for this state: leave it */ }
++        }
++    }
++
+     - (void) updateFullscreenWindows
+     {
++        [self updateFullscreenPresentation];
+         if (capture_displays_for_fullscreen && [NSApp isActive])
+         {
+             BOOL anyFullscreen = FALSE;
+@@ -2206,6 +2243,15 @@
+ 
+         /* This is racy. See the note in otherWineAppWillActivate:. */
+         [NSApp activate];
++
++        /* Sommelier: the app that has to yield (a launcher, Sommelier) may do so a moment after this: try again
++           then, or a game started from a launcher stays under the menu bar and the Dock until Cmd-Tab. */
++        for (NSNumber *delay in @[@0.15, @0.4, @1.0, @2.0])
++        {
++            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delay.doubleValue * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
++                if (![NSApp isActive] && [[NSApp orderedWindows] count]) [NSApp activate];
++            });
++        }
+      }
+ 
+     /* CW Hack 22310, 24199 */
+@@ -2444,6 +2490,7 @@
+ 
+         [self updateFullscreenWindows];
+         [self adjustWindowLevels:YES];
++        [self updateFullscreenPresentation];
+ 
+         if (beenActive)
+             [self unminimizeWindowIfNoneVisible];
+@@ -2887,6 +2934,16 @@
+     NSArray* imageArray = (NSArray*)images;
+     NSURL* url = (NSURL*)urlRef;
+ 
++    /* Sommelier: a game run from its own shortcut app (Sommelier Games) keeps that app's icon, its cover, rather
++       than the .exe's. The shortcut's Info.plist marks it. */
++    {
++        NSString* exe = [[NSBundle mainBundle] executablePath] ?: [[[NSProcessInfo processInfo] arguments] firstObject];
++        NSString* app = [[[exe stringByDeletingLastPathComponent] stringByDeletingLastPathComponent] stringByDeletingLastPathComponent];
++        NSDictionary* info = [NSDictionary dictionaryWithContentsOfFile:[app stringByAppendingPathComponent:@"Contents/Info.plist"]];
++        if ([app hasSuffix:@".app"] && info[@"SommelierShortcutGameID"])
++            return;
++    }
++
+     OnMainThreadAsync(^{
+         // CrossOver Hack 13440: Get the icon from the passed-in URL if no images
+         WineApplicationController* controller = [WineApplicationController sharedController];
+--- a/dlls/winemac.drv/cocoa_display.m
++++ b/dlls/winemac.drv/cocoa_display.m
+@@ -1009,6 +1009,8 @@
+ #if defined(MAC_OS_X_VERSION_10_15) && MAC_OS_X_VERSION_MAX_ALLOWED >= MAC_OS_X_VERSION_10_15
+                 if (@available(macOS 10.15, *))
+                     monitors[monitor_count].hdr_enabled = (screen.maximumPotentialExtendedDynamicRangeColorComponentValue > 1.0) ? true : false;
++                /* Sommelier: HDR switched off for this game: Windows' HDR setting reads off too. */
++                if (getenv("SOMMELIER_FORCE_SDR")) monitors[monitor_count].hdr_enabled = false;
+ #endif
+                 monitor_count++;
+                 break;
+--- a/dlls/winemac.drv/cocoa_window.m
++++ b/dlls/winemac.drv/cocoa_window.m
+@@ -389,6 +389,24 @@
+     - (void) wine_setBackingSize:(const int*)newBackingSize;
+ 
+     - (WineMetalView*) newMetalViewWithDevice:(id<MTLDevice>)device;
++
++@end
++
++
++/* Sommelier: a window whose client area is a GPU view (Metal, from Direct3D on Metal) hides the GDI drawing of
++ * its child windows, which lands in the window surface underneath. This view sits above the client views and
++ * shows the same surface image, clipped to those children's rectangles, so a GDI child (a Chromium browser inside
++ * a Qt window, say) stays visible. */
++@interface WineGDIOverlayView : WineBaseView
++{
++    CGRect surfaceRect;
++    CGImageRef colorImage;
++    NSArray* overlayRects;
++}
++
++    - (void) setColorImage:(CGImageRef)image;
++    - (void) setSurfaceRect:(CGRect)rect;
++    - (void) setOverlayRects:(NSArray*)rects;
+ 
+ @end
+ 
+@@ -418,8 +436,11 @@
+ @property (readonly, copy, nonatomic) NSArray* childWineWindows;
+ 
+ @property (retain, nonatomic) CAShapeLayer* contentViewMaskLayer;
++@property (retain, nonatomic) WineGDIOverlayView* gdiOverlay;
+ 
+     - (void) setShape:(CGPathRef)newShape;
++    - (void) setGDIOverlayRects:(NSArray*)rects;
++    - (void) raiseGDIOverlay;
+ 
+     - (void) updateForGLSubviews;
+ 
+@@ -567,6 +588,17 @@
+         colorImage = CGImageRetain(image);
+     }
+ 
++    /* Sommelier: the GDI overlay starts from the latest surface image instead of waiting for the next flush. */
++    - (CGImageRef) currentColorImage
++    {
++        return colorImage;
++    }
++
++    - (CGRect) currentSurfaceRect
++    {
++        return surfaceRect;
++    }
++
+     - (void) setShapeImage:(CGImageRef)image
+     {
+         CGImageRelease(shapeImage);
+@@ -949,6 +981,135 @@
+     - (NSInteger) windowLevel
+     {
+         return [[self window] level];
++    }
++
++@end
++
++
++@interface WineContentView (SommelierOverlay)
++    - (CGImageRef) currentColorImage;
++    - (CGRect) currentSurfaceRect;
++@end
++
++
++@implementation WineGDIOverlayView
++
++    - (id) initWithFrame:(NSRect)frame
++    {
++        self = [super initWithFrame:frame];
++        if (self)
++        {
++            [self setLayerContentsPlacement:NSViewLayerContentsPlacementTopLeft];
++            [self setWantsLayer:YES];
++            [self setLayerRetinaProperties:retina_on];
++        }
++        return self;
++    }
++
++    - (void) dealloc
++    {
++        CGImageRelease(colorImage);
++        [overlayRects release];
++        [super dealloc];
++    }
++
++    /* The same scale handling as WineContentView, whose surface image this view shows. */
++    - (void) setLayerRetinaProperties:(BOOL)mode
++    {
++        [self layer].contentsScale = mode ? 2.0 : 1.0;
++        [self layer].minificationFilter = mode ? kCAFilterLinear : kCAFilterNearest;
++        [self layer].magnificationFilter = mode ? kCAFilterLinear : kCAFilterNearest;
++    }
++
++    - (void) setRetinaMode:(BOOL)mode
++    {
++        [self setLayerRetinaProperties:mode];
++        [super setRetinaMode:mode];
++    }
++
++    - (BOOL) layer:(CALayer*)layer shouldInheritContentsScale:(CGFloat)newScale fromWindow:(NSWindow*)window
++    {
++        if (layer.contentsScale != window.backingScaleFactor)
++            return NO;
++        return YES;
++    }
++
++    - (BOOL) isFlipped
++    {
++        return YES;
++    }
++
++    - (BOOL) isOpaque
++    {
++        return NO;
++    }
++
++    - (NSView*) hitTest:(NSPoint)point
++    {
++        return nil;   /* input goes to the window, as before */
++    }
++
++    - (BOOL) wantsUpdateLayer
++    {
++        return YES;
++    }
++
++    - (void) setColorImage:(CGImageRef)image
++    {
++        CGImageRelease(colorImage);
++        colorImage = CGImageRetain(image);
++    }
++
++    - (void) setSurfaceRect:(CGRect)rect
++    {
++        surfaceRect = rect;
++    }
++
++    - (void) setOverlayRects:(NSArray*)rects
++    {
++        [overlayRects autorelease];
++        overlayRects = [rects copy];
++        [self setNeedsDisplay:YES];
++    }
++
++    - (void) updateLayer
++    {
++        CALayer* layer = [self layer];
++        CGImageRef image;
++        CGRect imageRect;
++        CGMutablePathRef path;
++        CAShapeLayer* mask;
++
++        if (!colorImage || ![overlayRects count])
++        {
++            layer.contents = nil;
++            return;
++        }
++
++        imageRect = layer.bounds;
++        imageRect.origin.x *= layer.contentsScale;
++        imageRect.origin.y *= layer.contentsScale;
++        imageRect.size.width *= layer.contentsScale;
++        imageRect.size.height *= layer.contentsScale;
++        image = CGImageCreateWithImageInRect(colorImage, imageRect);
++        if (!image) return;
++
++        path = CGPathCreateMutable();
++        for (NSValue* value in overlayRects)
++            CGPathAddRect(path, NULL, NSRectToCGRect([value rectValue]));
++        mask = (CAShapeLayer*)layer.mask;
++        if (![mask isKindOfClass:[CAShapeLayer class]])
++        {
++            mask = [CAShapeLayer layer];
++            layer.mask = mask;
++        }
++        mask.frame = layer.bounds;
++        mask.path = path;
++        CGPathRelease(path);
++
++        layer.position = surfaceRect.origin;
++        layer.contents = (id)image;
++        CFRelease(image);
+     }
+ 
+ @end
+@@ -1009,6 +1170,7 @@
+     @synthesize usePerPixelAlpha;
+     @synthesize himc, commandDone;
+     @synthesize contentViewMaskLayer;
++    @synthesize gdiOverlay;
+ 
+     + (WineWindow*) createWindowWithFeatures:(const struct macdrv_window_features*)wf
+                                  windowFrame:(NSRect)window_frame
+@@ -1832,6 +1994,12 @@
+                 [controller adjustWindowLevels];
+             }
+ 
++            /* Sommelier: a full-screen window shown while another app is in front (the game's own launcher, Steam)
++               asks for the front, so the other Wine apps yield to it; otherwise it stays under the menu bar and
++               the Dock until Cmd-Tab. */
++            if (!wasVisible && fullscreen && !self.noForeground && ![NSApp isActive])
++                [controller tryToActivateIgnoringOtherApps:YES];
++
+             if (pendingMinimize)
+             {
+                 [self setStyleMask:([self styleMask] | NSWindowStyleMaskMiniaturizable)];
+@@ -1924,6 +2092,10 @@
+                 [controller updateFullscreenWindows];
+ 
+             [controller adjustWindowLevels];
++
++            /* Sommelier: as when ordered in full screen (see orderBelow:orAbove:activate:). */
++            if (fullscreen && [self isVisible] && !self.noForeground && ![NSApp isActive])
++                [controller tryToActivateIgnoringOtherApps:YES];
+         }
+     }
+ 
+@@ -2807,7 +2979,47 @@
+         if (gl_surface_mode == GL_SURFACE_BEHIND)
+             [self checkTransparency];
+     }
++
++    - (void) setGDIOverlayRects:(NSArray*)rects
++    {
++        WineContentView* contentView = (WineContentView*)[self contentView];
+ 
++        if (![rects count])
++        {
++            if (self.gdiOverlay)
++            {
++                [self.gdiOverlay setOverlayRects:nil];
++                [self.gdiOverlay setHidden:YES];
++            }
++            return;
++        }
++        if (!self.gdiOverlay)
++        {
++            WineGDIOverlayView* overlay = [[WineGDIOverlayView alloc] initWithFrame:[contentView bounds]];
++            self.gdiOverlay = overlay;
++            [overlay release];
++        }
++        [self.gdiOverlay setFrame:[contentView bounds]];
++        [self.gdiOverlay setColorImage:[contentView currentColorImage]];
++        [self.gdiOverlay setSurfaceRect:[contentView currentSurfaceRect]];
++        [self.gdiOverlay setOverlayRects:rects];
++        [self.gdiOverlay setHidden:NO];
++        [self raiseGDIOverlay];
++    }
++
++    - (void) raiseGDIOverlay
++    {
++        WineGDIOverlayView* overlay = self.gdiOverlay;
++        NSView* contentView = [self contentView];
++        NSArray* subviews;
++
++        if (!overlay || !contentView) return;
++        subviews = [contentView subviews];
++        if ([overlay superview] == contentView && [subviews lastObject] == overlay) return;
++        [overlay removeFromSuperview];
++        [contentView addSubview:overlay positioned:NSWindowAbove relativeTo:nil];
++    }
++
+     - (void) setRetinaMode:(BOOL)mode
+     {
+         NSRect frame;
+@@ -3669,16 +3881,46 @@
+ 
+     OnMainThreadAsync(^{
+         WineContentView *view = [window contentView];
++        WineGDIOverlayView *overlay = window.gdiOverlay;
+ 
+         [view setColorImage:image];
+         [view setSurfaceRect:cgrect_mac_from_win(rect)];
+         [view setNeedsDisplayInRect:NSRectFromCGRect(cgrect_mac_from_win(dirty))];
++        if (overlay && ![overlay isHidden])
++        {
++            if (!NSEqualRects([overlay frame], [view bounds])) [overlay setFrame:[view bounds]];
++            [overlay setColorImage:image];
++            [overlay setSurfaceRect:cgrect_mac_from_win(rect)];
++            [overlay setNeedsDisplayInRect:NSRectFromCGRect(cgrect_mac_from_win(dirty))];
++        }
+ 
+         CGImageRelease(image);
+     });
+ }
+ }
+ 
++/***********************************************************************
++ *              macdrv_window_set_gdi_overlay_rects
++ *
++ * Sommelier: which child-window rectangles (window content coordinates) to show above the GPU client views.
++ */
++void macdrv_window_set_gdi_overlay_rects(macdrv_window w, const CGRect *rects, int count)
++{
++@autoreleasepool
++{
++    WineWindow* window = (WineWindow*)w;
++    NSMutableArray* array = [NSMutableArray arrayWithCapacity:count];
++    int i;
++
++    for (i = 0; i < count; i++)
++        [array addObject:[NSValue valueWithRect:NSRectFromCGRect(rects[i])]];
++
++    OnMainThreadAsync(^{
++        [window setGDIOverlayRects:array];
++    });
++}
++}
++
+ 
+ /***********************************************************************
+  *              macdrv_window_set_shape_image
+@@ -3955,6 +4197,8 @@
+             [superview addSubview:view positioned:NSWindowBelow relativeTo:prev];
+         else
+             [superview addSubview:view positioned:NSWindowAbove relativeTo:next];
++
++        [newWindow raiseGDIOverlay];   /* Sommelier: GDI children stay above the client views */
+ 
+         if (oldWindow != newWindow)
+         {
+--- a/dlls/winemac.drv/cocoa_opengl.m
++++ b/dlls/winemac.drv/cocoa_opengl.m
+@@ -342,5 +342,11 @@
+ 
+     macdrv_update_opengl_context(c);
+     [context flushBuffer];
++    /* Sommelier: count the frame (framestats.c). */
++    {
++        NSView *view = context.view;
++        NSSize size = view ? [view convertSizeToBacking:view.bounds.size] : NSZeroSize;
++        macdrv_frame_presented(context, 0, (unsigned int)size.width, (unsigned int)size.height, 4);
++    }
+ }
+ }
+--- a/dlls/winemac.drv/d3dmetal_objc.m
++++ b/dlls/winemac.drv/d3dmetal_objc.m
+@@ -24,6 +24,7 @@
+ 
+ #import <AppKit/AppKit.h>
+ #import <QuartzCore/QuartzCore.h>
++#import <Metal/Metal.h>
+ #import <objc/runtime.h>
+ 
+ #include "macdrv_cocoa.h"
+@@ -72,4 +73,71 @@
+ 
+ @end
+ 
++
++/* Sommelier: count every frame a process shows, whoever draws it (D3DMetal, DXMT, anything Metal), for the frame
++ * statistics (framestats.c). A frame reaches the screen through a command buffer's presentDrawable methods, a Metal 4
++ * queue's signalDrawable:, or the drawable's own present methods; it can pass through more than one of them, so each
++ * drawable (by its drawableID, or the object when that is 0; per layer) counts once. */
++static void count_drawable(id drawable, int path)
++{
++    CAMetalLayer *layer;
++    CGSize size;
++    NSUInteger drawable_id;
++
++    if (!drawable || ![drawable respondsToSelector:@selector(layer)]) return;
++    layer = [(id<CAMetalDrawable>)drawable layer];
++    size = layer ? layer.drawableSize : CGSizeZero;
++    drawable_id = [drawable respondsToSelector:@selector(drawableID)] ? [(id<MTLDrawable>)drawable drawableID] : 0;
++    if (!drawable_id) drawable_id = (NSUInteger)drawable;     /* D3DMetal's drawables report 0: tell them apart by object */
++    macdrv_frame_presented(layer ? (const void *)layer : (const void *)drawable, drawable_id,
++                           (unsigned int)size.width, (unsigned int)size.height, path);
++}
++
++static void swap_in(Class target, Class source, const char *selector, const char *replacement)
++{
++    Method original, counted;
++    if (!target) return;
++    original = class_getInstanceMethod(target, sel_registerName(selector));
++    counted = class_getInstanceMethod(source, sel_registerName(replacement));
++    if (!original || !counted) return;
++    /* Give the class the counting method, then swap the two on it. */
++    if (class_addMethod(target, sel_registerName(replacement), method_getImplementation(counted), method_getTypeEncoding(counted)))
++        method_exchangeImplementations(original, class_getInstanceMethod(target, sel_registerName(replacement)));
++}
++
++@interface NSObject (SommelierFrameStats)
++@end
++
++@implementation NSObject (SommelierFrameStats)
++
++    + (void) load
++    {
++        Class buffer = NSClassFromString(@"_MTLCommandBuffer");
++        Class queue4 = NSClassFromString(@"_MTL4CommandQueue");
++        Class drawable = NSClassFromString(@"CAMetalDrawable");
++
++        if (self != [NSObject class]) return;
++        swap_in(buffer, self, "presentDrawable:", "sommelier_presentDrawable:");
++        swap_in(buffer, self, "presentDrawable:atTime:", "sommelier_presentDrawable:atTime:");
++        swap_in(buffer, self, "presentDrawable:afterMinimumDuration:", "sommelier_presentDrawable:afterMinimumDuration:");
++        swap_in(buffer, self, "presentDrawable:options:", "sommelier_presentDrawable:options:");
++        swap_in(queue4, self, "signalDrawable:", "sommelier_signalDrawable:");
++        swap_in(drawable, self, "present", "sommelier_present");
++        swap_in(drawable, self, "presentAtTime:", "sommelier_presentAtTime:");
++        swap_in(drawable, self, "presentAfterMinimumDuration:", "sommelier_presentAfterMinimumDuration:");
++        swap_in(drawable, self, "presentWithOptions:", "sommelier_presentWithOptions:");
++    }
++
++    - (void) sommelier_presentDrawable:(id)d { count_drawable(d, 1); [self sommelier_presentDrawable:d]; }
++    - (void) sommelier_presentDrawable:(id)d atTime:(CFTimeInterval)t { count_drawable(d, 1); [self sommelier_presentDrawable:d atTime:t]; }
++    - (void) sommelier_presentDrawable:(id)d afterMinimumDuration:(CFTimeInterval)t { count_drawable(d, 1); [self sommelier_presentDrawable:d afterMinimumDuration:t]; }
++    - (void) sommelier_presentDrawable:(id)d options:(id)o { count_drawable(d, 1); [self sommelier_presentDrawable:d options:o]; }
++    - (void) sommelier_signalDrawable:(id)d { count_drawable(d, 2); [self sommelier_signalDrawable:d]; }
++    - (void) sommelier_present { count_drawable(self, 3); [self sommelier_present]; }
++    - (void) sommelier_presentAtTime:(CFTimeInterval)t { count_drawable(self, 3); [self sommelier_presentAtTime:t]; }
++    - (void) sommelier_presentAfterMinimumDuration:(CFTimeInterval)t { count_drawable(self, 3); [self sommelier_presentAfterMinimumDuration:t]; }
++    - (void) sommelier_presentWithOptions:(id)o { count_drawable(self, 3); [self sommelier_presentWithOptions:o]; }
++
++@end
++
+ #endif
+--- a/dlls/winemac.drv/macdrv_cocoa.h
++++ b/dlls/winemac.drv/macdrv_cocoa.h
+@@ -146,6 +146,7 @@
+ extern bool retina_enabled;  /* Whether Retina mode is enabled via registry setting. */
+ extern bool retina_on;       /* Whether Retina mode is currently active (enabled and display is in default mode). */
+ extern bool enable_app_nap;
++extern bool show_in_dock;
+ 
+ static inline CGRect cgrect_mac_from_win(CGRect rect)
+ {
+@@ -551,6 +552,9 @@
+ extern void macdrv_dispose_view(macdrv_view v);
+ extern void macdrv_set_view_frame(macdrv_view v, CGRect rect);
+ extern void macdrv_set_view_superview(macdrv_view v, macdrv_view s, macdrv_window w, macdrv_view p, macdrv_view n);
++/* Sommelier: GDI content of child windows shown above a window's GPU client views (rects in the window's
++ * content coordinates, as client view frames are); count 0 hides the overlay. */
++extern void macdrv_window_set_gdi_overlay_rects(macdrv_window w, const CGRect *rects, int count);
+ extern void macdrv_set_view_hidden(macdrv_view v, bool hidden);
+ extern void macdrv_add_view_opengl_context(macdrv_view v, macdrv_opengl_context c);
+ extern void macdrv_remove_view_opengl_context(macdrv_view v, macdrv_opengl_context c);
+@@ -612,6 +616,10 @@
+ /* CW HACK 22435 */
+ extern void macdrv_client_surface_presented(const macdrv_event *event);
+ extern void *macdrv_get_view_d3dmetal_client_surface(macdrv_view v);
++/* Sommelier: frame statistics (framestats.c). */
++extern void macdrv_frame_presented(const void *layer, unsigned long long drawable, unsigned int width, unsigned int height,
++                                   int path);
++extern void macdrv_framestats_init(void);
+ void macdrv_set_view_d3dmetal_client_surface(macdrv_view v, void *client_surface);
+ 
+ #endif  /* __WINE_MACDRV_COCOA_H */
+--- a/dlls/winemac.drv/macdrv_main.c
++++ b/dlls/winemac.drv/macdrv_main.c
+@@ -60,6 +60,8 @@
+ int gl_surface_mode = GL_SURFACE_IN_FRONT_OPAQUE;
+ bool retina_enabled = false;
+ bool enable_app_nap = false;
++/* Sommelier: false for launchers and their helpers (set per program in AppDefaults): no Dock icon, no Cmd-Tab. */
++bool show_in_dock = true;
+ 
+ UINT64 app_icon_callback = 0;
+ UINT64 app_quit_request_callback = 0;
+@@ -385,6 +387,9 @@
+         else
+             gl_surface_mode = GL_SURFACE_IN_FRONT_OPAQUE;
+     }
++
++    if (!get_config_key(hkey, appkey, "ShowInDock", buffer, sizeof(buffer)))
++        show_in_dock = IS_OPTION_TRUE(buffer[0]);
+ 
+     if (!get_config_key(hkey, appkey, "EnableAppNap", buffer, sizeof(buffer)))
+         enable_app_nap = IS_OPTION_TRUE(buffer[0]);
+@@ -458,6 +463,7 @@
+ 
+     init_win_context();
+     setup_options();
++    macdrv_framestats_init();   /* Sommelier: frame statistics (framestats.c) */
+     load_strings(params->strings);
+ 
+     macdrv_err_on = ERR_ON(macdrv);
+--- a/dlls/winemac.drv/window.c
++++ b/dlls/winemac.drv/window.c
+@@ -1138,6 +1138,75 @@
+ 
+     TRACE("changing win %p\n", hwnd);
+     NtUserPostMessage(hwnd, WM_SYSCOMMAND, command, 0);
++}
++
++/* Sommelier: windows that own a GPU client surface, so their rectangles aren't treated as GDI content. */
++static pthread_mutex_t client_surface_hwnds_mutex = PTHREAD_MUTEX_INITIALIZER;
++static HWND client_surface_hwnds[256];
++static unsigned int client_surface_hwnd_count;
++
++static void client_surface_hwnd_add(HWND hwnd)
++{
++    pthread_mutex_lock(&client_surface_hwnds_mutex);
++    if (client_surface_hwnd_count < ARRAY_SIZE(client_surface_hwnds))
++        client_surface_hwnds[client_surface_hwnd_count++] = hwnd;
++    pthread_mutex_unlock(&client_surface_hwnds_mutex);
++}
++
++static void client_surface_hwnd_remove(HWND hwnd)
++{
++    unsigned int i;
++    pthread_mutex_lock(&client_surface_hwnds_mutex);
++    for (i = 0; i < client_surface_hwnd_count; i++)
++    {
++        if (client_surface_hwnds[i] != hwnd) continue;
++        client_surface_hwnds[i] = client_surface_hwnds[--client_surface_hwnd_count];
++        break;
++    }
++    pthread_mutex_unlock(&client_surface_hwnds_mutex);
++}
++
++static BOOL hwnd_has_client_surface(HWND hwnd)
++{
++    unsigned int i;
++    BOOL found = FALSE;
++    pthread_mutex_lock(&client_surface_hwnds_mutex);
++    for (i = 0; i < client_surface_hwnd_count && !found; i++) found = client_surface_hwnds[i] == hwnd;
++    pthread_mutex_unlock(&client_surface_hwnds_mutex);
++    return found;
++}
++
++/* Sommelier: when a top-level window shows a GPU client view over its client area, its child windows that draw
++ * with GDI (into the window surface, underneath) are listed for the Cocoa side to show above the view. */
++static void update_gdi_overlay(HWND toplevel)
++{
++    struct macdrv_win_data *data;
++    CGRect rects[64];
++    int count = 0;
++    HWND child;
++
++    if (!toplevel || !(data = get_win_data(toplevel))) return;
++    if (data->cocoa_window && data->client_view)
++    {
++        for (child = NtUserGetWindowRelative(toplevel, GW_CHILD); child && count < ARRAY_SIZE(rects);
++             child = NtUserGetWindowRelative(child, GW_HWNDNEXT))
++        {
++            RECT rect;
++            UINT dpi = NtUserGetWinMonitorDpi(child, MDT_RAW_DPI);
++
++            if (!(NtUserGetWindowLongW(child, GWL_STYLE) & WS_VISIBLE)) continue;
++            if (hwnd_has_client_surface(child)) continue;
++            NtUserGetClientRect(child, &rect, dpi);
++            NtUserMapWindowPoints(child, toplevel, (POINT *)&rect, 2, NtUserGetWinMonitorDpi(toplevel, MDT_RAW_DPI));
++            OffsetRect(&rect, data->rects.client.left - data->rects.visible.left,
++                       data->rects.client.top - data->rects.visible.top);
++            if (IsRectEmpty(&rect)) continue;
++            rects[count++] = cgrect_from_rect(rect);
++        }
++        TRACE("toplevel %p: %d GDI child rects over client view\n", toplevel, count);
++    }
++    if (data->cocoa_window) macdrv_window_set_gdi_overlay_rects(data->cocoa_window, rects, count);
++    release_win_data(data);
+ }
+ 
+ static void macdrv_client_surface_destroy(struct client_surface *client)
+@@ -1146,6 +1215,7 @@
+ 
+     TRACE("%s\n", debugstr_client_surface(client));
+ 
++    client_surface_hwnd_remove(client->hwnd);
+     if (surface->metal_view) macdrv_view_release_metal_view(surface->metal_view);
+     if (surface->metal_device) macdrv_release_metal_device(surface->metal_device);
+ }
+@@ -1169,6 +1239,7 @@
+ 
+         macdrv_dispose_view(surface->cocoa_view);
+     }
++    update_gdi_overlay(NtUserGetAncestor(client->hwnd, GA_ROOT));
+ }
+ 
+ static void macdrv_client_surface_update(struct client_surface *client)
+@@ -1203,6 +1274,9 @@
+         if (data->client_view) macdrv_set_view_hidden(data->client_view, TRUE);
+         macdrv_set_view_hidden(surface->cocoa_view, FALSE);
+         data->client_view = surface->cocoa_view;
++        release_win_data(data);
++        update_gdi_overlay(surface->client.hwnd);
++        return;
+     }
+     release_win_data(data);
+ }
+@@ -1225,6 +1299,7 @@
+     NtUserMapWindowPoints(hwnd, toplevel, (POINT *)&rect, 2, NtUserGetWinMonitorDpi(toplevel, MDT_RAW_DPI));
+ 
+     surface = client_surface_create(sizeof(*surface), &macdrv_client_surface_funcs, hwnd);
++    client_surface_hwnd_add(hwnd);
+     surface->cocoa_view = macdrv_create_view(cgrect_from_rect(rect));
+     macdrv_set_view_hidden(surface->cocoa_view, TRUE);
+ 
+@@ -1326,7 +1401,12 @@
+ 
+     TRACE("%p\n", hwnd);
+ 
+-    if (!(data = get_win_data(hwnd))) return;
++    if (!(data = get_win_data(hwnd)))
++    {
++        HWND toplevel = NtUserGetAncestor(hwnd, GA_ROOT);   /* Sommelier: a GDI child went away */
++        if (toplevel && toplevel != hwnd) update_gdi_overlay(toplevel);
++        return;
++    }
+ 
+     if (hwnd == get_capture()) macdrv_SetCapture(0, 0);
+     if (data->drag_event) NtSetEvent(data->drag_event, NULL);
+@@ -1682,7 +1762,13 @@
+     unsigned int new_style = NtUserGetWindowLongW(hwnd, GWL_STYLE);
+     struct window_rects old_rects;
+ 
+-    if (!(data = get_win_data(hwnd))) return;
++    if (!(data = get_win_data(hwnd)))
++    {
++        /* Sommelier: a child window moved, appeared or went: its top-level's GDI overlay follows */
++        HWND toplevel = NtUserGetAncestor(hwnd, GA_ROOT);
++        if (toplevel && toplevel != hwnd) update_gdi_overlay(toplevel);
++        return;
++    }
+ 
+     thread_data = macdrv_thread_data();
+ 
+--- a/dlls/winemac.drv/framestats.c
++++ b/dlls/winemac.drv/framestats.c
+@@ -0,0 +1,332 @@
++/*
++ * Frame statistics for Sommelier's compatibility reports
++ *
++ * Added by the Sommelier project, 2026 (LGPL-2.1-or-later, as the rest of Wine).
++ *
++ * Counts the frames a game presents through the driver's Metal layer (D3DMetal, DXMT, anything Metal) without
++ * drawing anything, and every 10 seconds writes the totals for Sommelier to read after the session:
++ *
++ *   $SOMMELIER_FRAME_STATS_DIR/<exe>-<pid>-metal.txt   (the variable is a Windows path, Z:\...)
++ *
++ *   exe=Game.exe, frames=, seconds=, average=, low1=, width=, height=   (one per line)
++ *
++ * `average` is frames per second over the time measured; `low1` is the frame rate of the slowest 1% of frames.
++ * The first 40 seconds (loading, shader building) and gaps of a second or more are left out. Each Metal layer is
++ * counted on its own (a game may have more than one); the busiest one is written, on a thread of its own.
++ *
++ * For Sommelier's in-game counter, the current frame rate also goes, twice a second, into a small shared file
++ * that Sommelier reads without the game ever waiting on it:
++ *
++ *   $SOMMELIER_FRAME_STATS_DIR/<exe>-<pid>-live.bin   (struct live_frame_rate below, 64 bytes)
++ *
++ * It is written with a sequence number (odd while writing), so a reader that sees an odd or changed number reads
++ * again. OpenGL games are counted too (macdrv_flush_opengl_context).
++ */
++
++#if 0
++#pragma makedep unix
++#endif
++
++#include "config.h"
++
++#include <fcntl.h>
++#include <pthread.h>
++#include <sys/mman.h>
++#include <stdio.h>
++#include <stdlib.h>
++#include <string.h>
++#include <time.h>
++#include <unistd.h>
++
++#include "macdrv.h"
++
++#define BIN_MS      0.25
++#define BINS        4000            /* up to 1 second */
++#define MAX_LAYERS  4
++#define SKIP_NS     40000000000ull
++#define WRITE_NS    10000000000ull
++#define LIVE_NS     500000000ull
++
++/* The shared file Sommelier's counter reads. Fixed layout: little-endian, 64 bytes. */
++struct live_frame_rate
++{
++    unsigned int magic;              /* 'SMLV' */
++    unsigned int version;            /* 1 */
++    volatile unsigned int sequence;  /* odd while being written */
++    unsigned int width, height;
++    float fps;                       /* over the last half second */
++    float frame_ms;                  /* average frame time over it */
++    float max_ms;                    /* slowest frame in it */
++    double updated;                  /* seconds since 1970 */
++    unsigned long long frames;       /* every frame counted since start */
++    char reserved[16];
++};
++
++struct layer_stats
++{
++    const void *layer;
++    unsigned long long last_drawable;      /* the drawable counted last: one may be presented through two paths */
++    int path;                              /* the present path that counts on this layer (the first one seen) */
++    unsigned long long first, last, last_write;
++    unsigned long long frames;
++    double seconds;
++    unsigned long long live_start, live_frames, all_frames;   /* the current half second, and every frame */
++    double live_ms, live_max;
++    unsigned int width, height;
++    unsigned int histogram[BINS];
++};
++
++static pthread_mutex_t stats_mutex = PTHREAD_MUTEX_INITIALIZER;
++static struct layer_stats *layers[MAX_LAYERS];
++static int state;                    /* 0 not set up yet, 1 on, -1 off */
++static char path[4096];
++static char live_path[4096];
++static struct live_frame_rate *live;          /* mapped by the writer thread once there are frames */
++static int live_wanted;
++static char exe[256];
++
++static unsigned long long now_ns(void)
++{
++    struct timespec ts;
++    clock_gettime(CLOCK_MONOTONIC, &ts);
++    return (unsigned long long)ts.tv_sec * 1000000000ull + ts.tv_nsec;
++}
++
++/***********************************************************************
++ *              macdrv_framestats_init
++ *
++ * Called once at driver start-up, on a Wine thread: frames often arrive on Metal's own threads, where Wine's
++ * process data (the executable's name) can't be read.
++ */
++void macdrv_framestats_init(void)
++{
++    const char *dir = getenv("SOMMELIER_FRAME_STATS_DIR");
++    const WCHAR *name, *p;
++    char unix_dir[4096];
++    size_t i, n = 0;
++
++    state = -1;
++    if (!dir || !*dir) return;
++    name = NtCurrentTeb()->Peb->ProcessParameters->ImagePathName.Buffer;
++    if (!name) return;
++    /* Z:\Users\me\... -> /Users/me/... */
++    if ((dir[0] == 'Z' || dir[0] == 'z') && dir[1] == ':') dir += 2;
++    for (i = 0; dir[i] && i < sizeof(unix_dir) - 1; i++) unix_dir[i] = dir[i] == '\\' ? '/' : dir[i];
++    unix_dir[i] = 0;
++    if (i && unix_dir[i - 1] == '/') unix_dir[i - 1] = 0;
++
++    if ((p = wcsrchr(name, '\\'))) name = p + 1;
++    if ((p = wcsrchr(name, '/'))) name = p + 1;
++    for (; *name && n < sizeof(exe) - 1; name++) exe[n++] = (*name < 0x80 && *name != '/') ? (char)*name : '_';
++    exe[n] = 0;
++    if (!n) return;
++
++    snprintf(path, sizeof(path), "%s/%s-%d-metal.txt", unix_dir, exe, (int)getpid());
++    snprintf(live_path, sizeof(live_path), "%s/%s-%d-live.bin", unix_dir, exe, (int)getpid());
++    state = 1;
++}
++
++static double percentile_ms(const struct layer_stats *s, double fraction)
++{
++    unsigned long long target = (unsigned long long)(s->frames * fraction), seen = 0;
++    int i;
++    for (i = 0; i < BINS; i++)
++    {
++        seen += s->histogram[i];
++        if (seen > target) return (i + 0.5) * BIN_MS;
++    }
++    return BINS * BIN_MS;
++}
++
++/* The file is written on a thread of its own, so the thread that presents frames never waits for the disk: it
++ * only formats the text (a few hundred bytes) and hands it over. */
++static pthread_mutex_t writer_mutex = PTHREAD_MUTEX_INITIALIZER;
++static pthread_cond_t writer_cond = PTHREAD_COND_INITIALIZER;
++static char pending[512];
++static int has_pending, writer_started;
++
++static void *writer_thread(void *arg)
++{
++    char text[sizeof(pending)];
++    FILE *file;
++
++    for (;;)
++    {
++        int map_live, write_text;
++
++        pthread_mutex_lock(&writer_mutex);
++        while (!has_pending && !(live_wanted && !live)) pthread_cond_wait(&writer_cond, &writer_mutex);
++        write_text = has_pending;
++        map_live = live_wanted && !live;
++        if (write_text) memcpy(text, pending, sizeof(text));
++        has_pending = 0;
++        pthread_mutex_unlock(&writer_mutex);
++
++        if (map_live)
++        {
++            struct live_frame_rate *map = MAP_FAILED;
++            int fd = open(live_path, O_RDWR | O_CREAT | O_TRUNC, 0644);
++            if (fd >= 0)
++            {
++                if (ftruncate(fd, sizeof(*map)) == 0)
++                    map = mmap(NULL, sizeof(*map), PROT_READ | PROT_WRITE, MAP_SHARED, fd, 0);
++                close(fd);
++            }
++            pthread_mutex_lock(&writer_mutex);
++            if (map != MAP_FAILED)
++            {
++                memset(map, 0, sizeof(*map));
++                map->magic = 0x564c4d53;   /* "SMLV" */
++                map->version = 1;
++                __atomic_store_n(&live, map, __ATOMIC_RELEASE);
++            }
++            else live_wanted = 0;          /* can't: don't try again */
++            pthread_mutex_unlock(&writer_mutex);
++        }
++        if (!write_text) continue;
++        if (!(file = fopen(path, "w"))) continue;
++        fputs(text, file);
++        fclose(file);
++    }
++    return NULL;
++}
++
++/* Starts the writer thread if needed and wakes it. Called with writer_mutex held. */
++static void wake_writer(void)
++{
++    pthread_t thread;
++    if (!writer_started)
++    {
++        if (pthread_create(&thread, NULL, writer_thread, NULL) == 0)
++        {
++            pthread_detach(thread);
++            writer_started = 1;
++        }
++        else { state = -1; return; }   /* no thread, no statistics: never write on the presenting thread */
++    }
++    pthread_cond_signal(&writer_cond);
++}
++
++/* Twice a second: the busiest layer's last half second into the shared file (no system calls here). */
++static void publish_live(struct layer_stats *s, unsigned long long now)
++{
++    struct live_frame_rate *map = __atomic_load_n(&live, __ATOMIC_ACQUIRE);
++    struct timespec ts;
++    double elapsed = (now - s->live_start) / 1e9;
++    int i;
++
++    for (i = 0; i < MAX_LAYERS; i++)          /* another layer is busier: it publishes */
++        if (layers[i] && layers[i] != s && layers[i]->live_frames > s->live_frames
++            && now - layers[i]->live_start < 2 * LIVE_NS) goto reset;
++    if (!map)
++    {
++        if (!live_wanted)
++        {
++            pthread_mutex_lock(&writer_mutex);
++            live_wanted = 1;
++            wake_writer();
++            pthread_mutex_unlock(&writer_mutex);
++        }
++        goto reset;
++    }
++    clock_gettime(CLOCK_REALTIME, &ts);
++    __atomic_add_fetch(&map->sequence, 1, __ATOMIC_ACQ_REL);
++    map->width = s->width;
++    map->height = s->height;
++    map->fps = elapsed > 0 ? (float)(s->live_frames / elapsed) : 0;
++    map->frame_ms = s->live_frames ? (float)(s->live_ms / s->live_frames) : 0;
++    map->max_ms = (float)s->live_max;
++    map->updated = ts.tv_sec + ts.tv_nsec / 1e9;
++    map->frames = s->all_frames;
++    __atomic_add_fetch(&map->sequence, 1, __ATOMIC_ACQ_REL);
++
++reset:
++    s->live_start = now;
++    s->live_frames = 0;
++    s->live_ms = s->live_max = 0;
++}
++
++static void write_stats(void)
++{
++    struct layer_stats *best = NULL;
++    double slow;
++    int i;
++
++    for (i = 0; i < MAX_LAYERS; i++)
++        if (layers[i] && layers[i]->frames && (!best || layers[i]->frames > best->frames)) best = layers[i];
++    if (!best || best->seconds <= 0) return;
++    slow = percentile_ms(best, 0.99);
++
++    pthread_mutex_lock(&writer_mutex);
++    snprintf(pending, sizeof(pending), "exe=%s\nframes=%llu\nseconds=%.1f\naverage=%.1f\nlow1=%.1f\nwidth=%u\nheight=%u\n",
++             exe, best->frames, best->seconds, best->frames / best->seconds, slow > 0 ? 1000.0 / slow : 0,
++             best->width, best->height);
++    has_pending = 1;
++    wake_writer();
++    pthread_mutex_unlock(&writer_mutex);
++}
++
++/***********************************************************************
++ *              macdrv_frame_presented
++ *
++ * Called when a frame is presented: `drawable` is its drawableID (0 when unknown), `path` which way it was shown
++ * (a command buffer's presentDrawable, a Metal 4 queue, the drawable's own present, OpenGL). A frame can pass through
++ * two of them (D3DMetal's command buffer presents the drawable, which presents itself), several frames in flight
++ * at once, so only the first path seen on a layer counts there: comparing drawables alone let every frame count twice.
++ */
++void macdrv_frame_presented(const void *layer, unsigned long long drawable, unsigned int width, unsigned int height,
++                            int path)
++{
++    unsigned long long now;
++    struct layer_stats *s = NULL;
++    double ms;
++    int i;
++
++    if (state <= 0) return;                /* off, or before start-up */
++    now = now_ns();
++    pthread_mutex_lock(&stats_mutex);
++
++    for (i = 0; i < MAX_LAYERS && layers[i]; i++)
++        if (layers[i]->layer == layer) { s = layers[i]; break; }
++    if (!s)
++    {
++        if (i == MAX_LAYERS || !(s = calloc(1, sizeof(*s)))) goto done;
++        s->layer = layer;
++        s->path = path;
++        s->last_drawable = drawable;
++        s->first = s->last = s->last_write = s->live_start = now;
++        layers[i] = s;
++        goto done;
++    }
++
++    if (path != s->path) goto done;
++    if (drawable && drawable == s->last_drawable) goto done;
++    s->last_drawable = drawable;
++    ms = (now - s->last) / 1e6;
++    s->last = now;
++    if (width && height) { s->width = width; s->height = height; }
++
++    /* The live counter: every frame, from the start (loading screens included). */
++    s->all_frames++;
++    if (ms > 0 && ms < 1000)
++    {
++        s->live_frames++;
++        s->live_ms += ms;
++        if (ms > s->live_max) s->live_max = ms;
++    }
++    if (now - s->live_start >= LIVE_NS) publish_live(s, now);
++
++    if (now - s->first < SKIP_NS || ms <= 0 || ms >= 1000) goto done;
++    i = (int)(ms / BIN_MS);
++    s->histogram[i < BINS ? i : BINS - 1]++;
++    s->frames++;
++    s->seconds += ms / 1000;
++    if (now - s->last_write >= WRITE_NS)
++    {
++        s->last_write = now;
++        write_stats();
++    }
++
++done:
++    pthread_mutex_unlock(&stats_mutex);
++}

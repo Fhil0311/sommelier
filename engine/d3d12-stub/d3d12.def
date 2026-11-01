@@ -1,0 +1,17 @@
+; Copyright 2026 the Sommelier project.
+; SPDX-License-Identifier: LGPL-2.1-or-later
+; The ordinals Windows' d3d12.dll exports (101 is D3D12CreateDevice, which plugins import by number).
+LIBRARY d3d12.dll
+EXPORTS
+GetBehaviorValue @100
+D3D12CreateDevice @101
+D3D12GetDebugInterface @102
+D3D12CoreCreateLayeredDevice @103
+D3D12CoreGetLayeredDeviceSize @104
+D3D12CoreRegisterLayers @105
+D3D12CreateRootSignatureDeserializer @106
+D3D12CreateVersionedRootSignatureDeserializer @107
+D3D12EnableExperimentalFeatures @108
+D3D12GetInterface @109
+D3D12SerializeRootSignature @110
+D3D12SerializeVersionedRootSignature @111

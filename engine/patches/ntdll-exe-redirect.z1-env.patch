@@ -1,0 +1,153 @@
+--- a/dlls/ntdll/unix/process.c
++++ b/dlls/ntdll/unix/process.c
+@@ -1168,8 +1168,118 @@
+     *handles_len = count * sizeof(**handles);
+ 
+     return STATUS_SUCCESS;
++}
++
++
++/* Sommelier: the environment programs from one folder get, so a game runs with its own graphics (DXMT or D3DMetal,
++ * Turbo, SDR) without restarting the store that starts it: Steam's own environment stays as it is. The table named by
++ * SOMMELIER_EXE_ENV has one "C:\Games\Raft<TAB>DXMT_CONFIG=d3d11.x=2<TAB>SOMMELIER_FORCE_SDR=" per line: a folder and
++ * NAME=value pairs, an empty value meaning "not set". Every program under the folder (its children too) gets them,
++ * compared without case, later lines winning. Each is also given as __CX_UNIX_NAME, which the CrossOver loader hack
++ * (24717) copies into the program's unix environment, where the Mac driver and the DLL path shim read it. Returns a
++ * new environment block to use in place of `env`, or NULL when no line applies. */
++static int sommelier_env_name_matches( const WCHAR *entry, const char *name )
++{
++    while (*name && *entry && *entry != '=')
++    {
++        WCHAR a = *entry, b = (unsigned char)*name;
++        if (a >= 'a' && a <= 'z') a -= 32;
++        if (b >= 'a' && b <= 'z') b -= 32;
++        if (a != b) return 0;
++        entry++; name++;
++    }
++    return !*name && *entry == '=';
+ }
++
++static WCHAR *sommelier_environment( const UNICODE_STRING *image, const WCHAR *env )
++{
++    static const char unix_prefix[] = "__CX_UNIX_";
++    const char *table = getenv( "SOMMELIER_EXE_ENV" );
++    char line[4096], *path, *name, *vars[64], *folder, *var, *end;
++    int count = 0, i, j;
++    size_t len, name_len, folder_len, block = 0, extra = 0, pos;
++    const WCHAR *ptr;
++    WCHAR *out;
++    FILE *f;
+ 
++    if (!table || !*table || !image->Buffer || !image->Length || !env) return NULL;
++    if (!(f = fopen( table, "r" ))) return NULL;
++    len = image->Length / sizeof(WCHAR) * 3 + 1;
++    if (!(path = malloc( len ))) { fclose( f ); return NULL; }
++    len = ntdll_wcstoumbs( image->Buffer, image->Length / sizeof(WCHAR), path, len - 1, FALSE );
++    path[len] = 0;
++    name = path;
++    if (!strncmp( name, "\\??\\", 4 )) name += 4;
++    name_len = strlen( name );
++    while (fgets( line, sizeof(line), f ))
++    {
++        folder = line;
++        if ((end = strpbrk( folder, "\r\n" ))) *end = 0;
++        if (!(var = strchr( folder, '\t' ))) continue;
++        *var++ = 0;
++        folder_len = strlen( folder );
++        if (!folder_len || name_len <= folder_len) continue;
++        if (strncasecmp( name, folder, folder_len ) || name[folder_len] != '\\') continue;
++        while (var && *var && count < ARRAY_SIZE(vars))
++        {
++            char *next = strchr( var, '\t' ), *eq;
++            if (next) *next++ = 0;
++            if ((eq = strchr( var, '=' )) && eq != var)
++            {
++                /* a later line's value for the same name replaces the earlier one */
++                for (i = 0; i < count; i++)
++                    if (!strncasecmp( vars[i], var, eq - var + 1 )) break;
++                if (i < count) { free( vars[i] ); vars[i] = vars[--count]; }
++                if ((vars[count] = strdup( var ))) count++;
++            }
++            var = next;
++        }
++    }
++    fclose( f );
++    free( path );
++    if (!count) return NULL;
++
++    for (ptr = env; *ptr; ptr += wcslen( ptr ) + 1) block += wcslen( ptr ) + 1;
++    for (i = 0; i < count; i++) extra += 2 * (strlen( vars[i] ) + sizeof(unix_prefix)) + 2;
++    if (!(out = malloc( (block + extra + 2) * sizeof(WCHAR) )))
++    {
++        for (i = 0; i < count; i++) free( vars[i] );
++        return NULL;
++    }
++    pos = 0;
++    for (ptr = env; *ptr; ptr += wcslen( ptr ) + 1)
++    {
++        for (i = 0; i < count; i++)
++        {
++            char *eq = strchr( vars[i], '=' );
++            *eq = 0;
++            j = sommelier_env_name_matches( ptr, vars[i] );
++            *eq = '=';
++            if (j) break;
++        }
++        if (i < count) continue;    /* replaced below, or taken out */
++        len = wcslen( ptr ) + 1;
++        memcpy( out + pos, ptr, len * sizeof(WCHAR) );
++        pos += len;
++    }
++    for (i = 0; i < count; i++)
++    {
++        char *eq = strchr( vars[i], '=' );
++        if (eq[1])   /* a value: set on the Windows side */
++        {
++            pos += ntdll_umbstowcs( vars[i], strlen( vars[i] ), out + pos, extra );
++            out[pos++] = 0;
++        }
++        /* and on the unix side (an empty value unsets there too) */
++        pos += ntdll_umbstowcs( unix_prefix, sizeof(unix_prefix) - 1, out + pos, extra );
++        pos += ntdll_umbstowcs( vars[i], strlen( vars[i] ), out + pos, extra );
++        out[pos++] = 0;
++        free( vars[i] );
++    }
++    out[pos] = 0;
++    return out;
++}
++
+ /**********************************************************************
+  *           NtCreateUserProcess  (NTDLL.@)
+  */
+@@ -1268,7 +1378,7 @@
+     USHORT machine = 0;
+     HANDLE parent = 0, debug = 0, token = 0;
+     UNICODE_STRING nt_name, path = {0};
+-    WCHAR *redirected = NULL, *redirected_dir = NULL;  /* Sommelier */
++    WCHAR *redirected = NULL, *redirected_dir = NULL, *sommelier_env = NULL, *original_env = NULL;  /* Sommelier */
+     OBJECT_ATTRIBUTES attr, empty_attr = { sizeof(empty_attr) };
+     SIZE_T i, attr_count = (ps_attr->TotalLength - sizeof(ps_attr->TotalLength)) / sizeof(PS_ATTRIBUTE);
+     const PS_ATTRIBUTE *handles_attr = NULL, *jobs_attr = NULL;
+@@ -1344,6 +1454,14 @@
+             params->CurrentDirectory.DosPath.MaximumLength = (len + 1) * sizeof(WCHAR);
+         }
+         TRACE( "Sommelier: redirected to %s in %s\n", debugstr_us( &path ), debugstr_us( &params->CurrentDirectory.DosPath ) );
++    }
++
++    /* Sommelier: the folder's own environment for this program (sommelier_environment). */
++    if ((sommelier_env = sommelier_environment( &path, params->Environment )))
++    {
++        original_env = params->Environment;
++        params->Environment = sommelier_env;
++        TRACE( "Sommelier: own environment for %s\n", debugstr_us( &path ) );
+     }
+ 
+     InitializeObjectAttributes( &attr, &path, OBJ_CASE_INSENSITIVE, 0, 0 );
+@@ -1536,6 +1654,7 @@
+ done:
+     free( redirected );  /* Sommelier */
+     free( redirected_dir );
++    if (sommelier_env) { params->Environment = original_env; free( sommelier_env ); }
+     if (file_handle) NtClose( file_handle );
+     if (process_info) NtClose( process_info );
+     if (process_handle) NtClose( process_handle );

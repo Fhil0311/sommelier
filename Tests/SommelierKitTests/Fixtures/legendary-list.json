@@ -1,0 +1,7 @@
+[
+  {"app_name": "Quail", "app_title": "Wren Valley", "metadata": {"keyImages": [
+    {"type": "OfferImageWide", "url": "https://cdn.example/wren-wide.png"},
+    {"type": "Thumbnail", "url": "https://cdn.example/wren-thumb.png"}]}},
+  {"app_name": "Heron", "app_title": "brass Lantern", "metadata": {"keyImages": []}},
+  {"app_name": "Plover", "app_title": "Nightjar"}
+]

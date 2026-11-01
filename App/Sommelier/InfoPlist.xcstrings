@@ -1,0 +1,438 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "NSMicrophoneUsageDescription" : {
+      "comment" : "macOS asks for the microphone with this (a game's voice chat)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Мікрафон патрэбны гульням з галасавым чатам."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spiele mit Sprachchat nutzen das Mikrofon."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Games with voice chat use the microphone."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Los juegos con chat de voz usan el micrófono."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Les jeux avec chat vocal utilisent le micro."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I giochi con chat vocale usano il microfono."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ボイスチャットのあるゲームはマイクを使用します。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "음성 채팅이 있는 게임은 마이크를 사용합니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Games met voicechat gebruiken de microfoon."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gry z czatem głosowym używają mikrofonu."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jogos com chat de voz usam o microfone."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Микрофон нужен играм с голосовым чатом."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spel med röstchatt använder mikrofonen."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sesli sohbetli oyunlar mikrofonu kullanır."
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Мікрофон потрібен іграм із голосовим чатом."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "带语音聊天的游戏会使用麦克风。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "有語音聊天的遊戲會使用麥克風。"
+          }
+        }
+      }
+    },
+    "NSScreenCaptureUsageDescription" : {
+      "comment" : "macOS asks for screen recording with this (clips record the game's window)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sommelier запісвае акно гульні для кліпаў. Запісваецца толькі гульня, і нічога не пакідае гэты Mac."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sommelier nimmt für Clips das Fenster des Spiels auf. Nur das Spiel wird aufgenommen, und nichts verlässt diesen Mac."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sommelier records the game’s window for clips. Only the game is recorded, and nothing leaves this Mac."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sommelier graba la ventana del juego para los clips. Solo se graba el juego y nada sale de este Mac."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sommelier enregistre la fenêtre du jeu pour les clips. Seul le jeu est enregistré, et rien ne quitte ce Mac."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sommelier registra la finestra del gioco per le clip. Si registra solo il gioco e nulla lascia questo Mac."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sommelier はクリップのためにゲームのウインドウを録画します。録画されるのはゲームだけで、何もこの Mac の外に送られません。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sommelier가 클립을 위해 게임 윈도우를 녹화합니다. 게임만 녹화되며, 아무것도 이 Mac 밖으로 나가지 않습니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sommelier neemt het venster van de game op voor clips. Alleen de game wordt opgenomen en niets verlaat deze Mac."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sommelier nagrywa okno gry do klipów. Nagrywana jest tylko gra i nic nie opuszcza tego Maca."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O Sommelier grava a janela do jogo para os clipes. Só o jogo é gravado, e nada sai deste Mac."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sommelier записывает окно игры для клипов. Записывается только игра, и ничего не уходит с этого Mac."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sommelier spelar in spelets fönster för klipp. Bara spelet spelas in, och inget lämnar den här Macen."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sommelier klipler için oyunun penceresini kaydeder. Yalnızca oyun kaydedilir ve hiçbir şey bu Mac'ten çıkmaz."
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sommelier записує вікно гри для кліпів. Записується лише гра, і нічого не залишає цей Mac."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sommelier 为剪辑录制游戏窗口。只录制游戏，任何内容都不会离开这台 Mac。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sommelier 會為剪輯錄製遊戲視窗。只錄製遊戲，任何內容都不會離開這台 Mac。"
+          }
+        }
+      }
+    },
+    "NSAudioCaptureUsageDescription" : {
+      "comment" : "macOS asks for the game's sound with this (clips take it from the game's process)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sommelier запісвае гук гульні для кліпаў. Запісваецца толькі гульня, і нічога не пакідае гэты Mac."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sommelier nimmt für Clips den Ton des Spiels auf. Nur das Spiel wird aufgenommen, und nichts verlässt diesen Mac."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sommelier records the game’s sound for clips. Only the game is recorded, and nothing leaves this Mac."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sommelier graba el sonido del juego para los clips. Solo se graba el juego y nada sale de este Mac."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sommelier enregistre le son du jeu pour les clips. Seul le jeu est enregistré, et rien ne quitte ce Mac."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sommelier registra l'audio del gioco per le clip. Si registra solo il gioco e nulla lascia questo Mac."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sommelier はクリップのためにゲームの音声を録音します。録音されるのはゲームだけで、何もこの Mac の外に送られません。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sommelier가 클립을 위해 게임 사운드를 녹음합니다. 게임만 녹음되며, 아무것도 이 Mac 밖으로 나가지 않습니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sommelier neemt het geluid van de game op voor clips. Alleen de game wordt opgenomen en niets verlaat deze Mac."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sommelier nagrywa dźwięk gry do klipów. Nagrywana jest tylko gra i nic nie opuszcza tego Maca."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O Sommelier grava o som do jogo para os clipes. Só o jogo é gravado, e nada sai deste Mac."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sommelier записывает звук игры для клипов. Записывается только игра, и ничего не уходит с этого Mac."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sommelier spelar in spelets ljud för klipp. Bara spelet spelas in, och inget lämnar den här Macen."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sommelier klipler için oyunun sesini kaydeder. Yalnızca oyun kaydedilir ve hiçbir şey bu Mac'ten çıkmaz."
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sommelier записує звук гри для кліпів. Записується лише гра, і нічого не залишає цей Mac."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sommelier 为剪辑录制游戏声音。只录制游戏，任何内容都不会离开这台 Mac。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sommelier 會為剪輯錄製遊戲聲音。只錄製遊戲，任何內容都不會離開這台 Mac。"
+          }
+        }
+      }
+    },
+    "NSSpeechRecognitionUsageDescription" : {
+      "comment" : "macOS asks for speech recognition with this (voice search in Controller Mode)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "be" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sommelier ператварае сказанае ў пошук па вашых гульнях."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sommelier macht aus dem, was Sie sagen, eine Suche nach Ihren Spielen."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sommelier turns what you say into a search for your games."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sommelier convierte lo que dices en una búsqueda de tus juegos."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sommelier transforme ce que vous dites en recherche dans vos jeux."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sommelier trasforma quello che dici in una ricerca tra i tuoi giochi."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sommelier は話した内容をゲームの検索に使います。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sommelier가 말한 내용을 게임 검색에 사용합니다."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sommelier maakt van wat je zegt een zoekopdracht in je games."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sommelier zamienia to, co mówisz, w wyszukiwanie wśród twoich gier."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O Sommelier transforma o que você fala em uma busca nos seus jogos."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sommelier превращает сказанное в поиск по вашим играм."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sommelier gör det du säger till en sökning bland dina spel."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sommelier söylediklerinizi oyunlarınızda bir aramaya dönüştürür."
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sommelier перетворює сказане на пошук серед ваших ігор."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sommelier 将你说的话转为游戏搜索。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sommelier 會把你說的話轉成遊戲搜尋。"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

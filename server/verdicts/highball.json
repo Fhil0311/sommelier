@@ -1,0 +1,2618 @@
+{
+ "version": 1,
+ "source": "https://gethighball.com/data/games.json",
+ "license": "CC0-1.0",
+ "verdicts": [
+  {
+   "store": "steam",
+   "id": "33730",
+   "title": "18 Wheels of Steel: Extreme Trucker",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/18-wheels-of-steel-extreme-trucker/)"
+  },
+  {
+   "store": "steam",
+   "id": "1966900",
+   "title": "20 Minutes Till Dawn",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/20-minutes-till-dawn/)"
+  },
+  {
+   "store": "steam",
+   "id": "2784470",
+   "title": "9 Kings",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/9-kings/)"
+  },
+  {
+   "store": "steam",
+   "id": "1497450",
+   "title": "A Memoir Blue",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/a-memoir-blue/)"
+  },
+  {
+   "store": "steam",
+   "id": "752590",
+   "title": "A Plague Tale: Innocence",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/a-plague-tale-innocence/)"
+  },
+  {
+   "store": "steam",
+   "id": "427410",
+   "title": "Abiotic Factor",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/abiotic-factor/)"
+  },
+  {
+   "store": "steam",
+   "id": "320140",
+   "title": "Absolute Drift",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/absolute-drift/)"
+  },
+  {
+   "store": "steam",
+   "id": "4736580",
+   "title": "Abyssal Lapidary Demo",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/abyssal-lapidary-demo/)"
+  },
+  {
+   "store": "steam",
+   "id": "384190",
+   "title": "ABZU",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/abzu/)"
+  },
+  {
+   "store": "steam",
+   "id": "502500",
+   "title": "ACE COMBAT™ 7: SKIES UNKNOWN",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/ace-combat-7-skies-unknown/)"
+  },
+  {
+   "store": "steam",
+   "id": "1422630",
+   "title": "Active Neurons - Wonders Of The World",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/active-neurons-wonders-of-the-world/)"
+  },
+  {
+   "store": "steam",
+   "id": "3462260",
+   "title": "Aethermancer Demo",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/aethermancer-demo/)"
+  },
+  {
+   "store": "steam",
+   "id": "813780",
+   "title": "Age of Empires II: Definitive Edition",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/age-of-empires-ii-definitive-edition/)"
+  },
+  {
+   "store": "steam",
+   "id": "1934680",
+   "title": "Age of Mythology: Retold",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/age-of-mythology-retold/)"
+  },
+  {
+   "store": "steam",
+   "id": "3393110",
+   "title": "AION 2",
+   "verdict": "wontRun",
+   "source": "Highball marks it blocked-anticheat (https://gethighball.com/games/aion-2/)"
+  },
+  {
+   "store": "steam",
+   "id": "1549970",
+   "title": "Aliens: Fireteam Elite",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/aliens-fireteam-elite/)"
+  },
+  {
+   "store": "steam",
+   "id": "2166060",
+   "title": "Amanda the Adventurer",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/amanda-the-adventurer/)"
+  },
+  {
+   "store": "steam",
+   "id": "270880",
+   "title": "American Truck Simulator",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/american-truck-simulator/)"
+  },
+  {
+   "store": "steam",
+   "id": "4126040",
+   "title": "Aniimo",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/aniimo/)"
+  },
+  {
+   "store": "steam",
+   "id": "1902490",
+   "title": "Aperture Desk Job",
+   "verdict": "works",
+   "source": "Highball tested it on Apple Silicon (https://gethighball.com/games/aperture-desk-job/)"
+  },
+  {
+   "store": "steam",
+   "id": "1172470",
+   "title": "Apex Legends",
+   "verdict": "wontRun",
+   "source": "Highball marks it blocked-anticheat (https://gethighball.com/games/apex-legends/)"
+  },
+  {
+   "store": "steam",
+   "id": "4391380",
+   "title": "Artillery Miner",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/artillery-miner/)"
+  },
+  {
+   "store": "steam",
+   "id": "2697940",
+   "title": "Ascend to ZERO",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/ascend-to-zero/)"
+  },
+  {
+   "store": "steam",
+   "id": "48190",
+   "title": "Assassin's Creed Brotherhood",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/assassins-creed-brotherhood/)"
+  },
+  {
+   "store": "steam",
+   "id": "244210",
+   "title": "Assetto Corsa",
+   "verdict": "works",
+   "source": "Highball tested it on Apple Silicon (https://gethighball.com/games/assetto-corsa/)"
+  },
+  {
+   "store": "steam",
+   "id": "805550",
+   "title": "Assetto Corsa Competizione",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/assetto-corsa-competizione/)"
+  },
+  {
+   "store": "steam",
+   "id": "2353250",
+   "title": "Astrometica",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/astrometica/)"
+  },
+  {
+   "store": "steam",
+   "id": "361420",
+   "title": "ASTRONEER",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/astroneer/)"
+  },
+  {
+   "store": "steam",
+   "id": "484900",
+   "title": "Aven Colony",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/aven-colony/)"
+  },
+  {
+   "store": "steam",
+   "id": "2141730",
+   "title": "Backrooms: Escape Together",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/backrooms-escape-together/)"
+  },
+  {
+   "store": "steam",
+   "id": "688420",
+   "title": "Bad North: Jotunn Edition",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/bad-north-jotunn-edition/)"
+  },
+  {
+   "store": "steam",
+   "id": "1086940",
+   "title": "Baldur's Gate 3",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/baldur-s-gate-3/)"
+  },
+  {
+   "store": "steam",
+   "id": "242920",
+   "title": "Banished",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/banished/)"
+  },
+  {
+   "store": "steam",
+   "id": "208650",
+   "title": "Batman: Arkham Knight",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/batman-arkham-knight/)"
+  },
+  {
+   "store": "steam",
+   "id": "4557380",
+   "title": "Batomon Showdown",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/batomon-showdown/)"
+  },
+  {
+   "store": "steam",
+   "id": "1346400",
+   "title": "Battle Engine Aquila",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/battle-engine-aquila/)"
+  },
+  {
+   "store": "steam",
+   "id": "1025600",
+   "title": "Battle Realms: Zen Edition",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/battle-realms-zen-edition/)"
+  },
+  {
+   "store": "steam",
+   "id": "671860",
+   "title": "BattleBit Remastered",
+   "verdict": "wontRun",
+   "source": "Highball marks it blocked-anticheat (https://gethighball.com/games/battlebit-remastered/)"
+  },
+  {
+   "store": "steam",
+   "id": "1238840",
+   "title": "Battlefield 1",
+   "verdict": "wontRun",
+   "source": "Highball marks it blocked-anticheat (https://gethighball.com/games/battlefield-1/)"
+  },
+  {
+   "store": "steam",
+   "id": "1517290",
+   "title": "Battlefield 2042",
+   "verdict": "wontRun",
+   "source": "Highball marks it blocked-anticheat (https://gethighball.com/games/battlefield-2042/)"
+  },
+  {
+   "store": "steam",
+   "id": "2807960",
+   "title": "Battlefield 6",
+   "verdict": "wontRun",
+   "source": "Highball marks it blocked-anticheat (https://gethighball.com/games/battlefield-6/)"
+  },
+  {
+   "store": "steam",
+   "id": "1238810",
+   "title": "Battlefield V",
+   "verdict": "wontRun",
+   "source": "Highball marks it blocked-anticheat (https://gethighball.com/games/battlefield-v/)"
+  },
+  {
+   "store": "steam",
+   "id": "284160",
+   "title": "BeamNG.drive",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/beamng-drive/)"
+  },
+  {
+   "store": "steam",
+   "id": "622650",
+   "title": "Bendy and the Ink Machine",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/bendy-and-the-ink-machine/)"
+  },
+  {
+   "store": "steam",
+   "id": "960990",
+   "title": "Beyond: Two Souls",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/beyond-two-souls/)"
+  },
+  {
+   "store": "steam",
+   "id": "21680",
+   "title": "Bionic Commando: Rearmed",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/bionic-commando-rearmed/)"
+  },
+  {
+   "store": "steam",
+   "id": "2707110",
+   "title": "Birds Organized Neatly",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/birds-organized-neatly/)"
+  },
+  {
+   "store": "steam",
+   "id": "1201240",
+   "title": "BLEACH Brave Souls",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/bleach-brave-souls/)"
+  },
+  {
+   "store": "steam",
+   "id": "1016950",
+   "title": "Blood Bowl 3",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/blood-bowl-3/)"
+  },
+  {
+   "store": "steam",
+   "id": "3649940",
+   "title": "Bloodbreaker: Labyrinth of the Witch Demo",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/bloodbreaker-labyrinth-of-the-witch-demo/)"
+  },
+  {
+   "store": "steam",
+   "id": "960090",
+   "title": "Bloons TD 6",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/bloons-td-6/)"
+  },
+  {
+   "store": "steam",
+   "id": "4659940",
+   "title": "Booster Pack Heroes Demo",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/booster-pack-heroes-demo/)"
+  },
+  {
+   "store": "steam",
+   "id": "3191050",
+   "title": "BRAZILIAN DRUG DEALER 3: I OPENED A PORTAL TO HELL IN THE FAVELA TRYING TO REVIVE MIT AIA I NEED TO CLOSE IT",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/brazilian-drug-dealer-3/)"
+  },
+  {
+   "store": "steam",
+   "id": "266130",
+   "title": "Breach & Clear",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/breach-and-clear/)"
+  },
+  {
+   "store": "steam",
+   "id": "225080",
+   "title": "Brothers - A Tale of Two Sons",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/brothers-a-tale-of-two-sons/)"
+  },
+  {
+   "store": "steam",
+   "id": "976590",
+   "title": "Bus Simulator 21 Next Stop",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/bus-simulator-21-next-stop/)"
+  },
+  {
+   "store": "steam",
+   "id": "1588550",
+   "title": "Cairn",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/cairn/)"
+  },
+  {
+   "store": "steam",
+   "id": "1938090",
+   "title": "Call of Duty (MW/Warzone)",
+   "verdict": "wontRun",
+   "source": "Highball marks it blocked-anticheat (https://gethighball.com/games/call-of-duty-mw-warzone/)"
+  },
+  {
+   "store": "steam",
+   "id": "3606480",
+   "title": "Call of Duty: Black Ops 7",
+   "verdict": "wontRun",
+   "source": "Highball marks it blocked-anticheat (https://gethighball.com/games/cod-blackops7/)"
+  },
+  {
+   "store": "steam",
+   "id": "1594320",
+   "title": "Captain of Industry",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/captain-of-industry/)"
+  },
+  {
+   "store": "steam",
+   "id": "1582650",
+   "title": "Caravan SandWitch",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/caravan-sandwitch/)"
+  },
+  {
+   "store": "steam",
+   "id": "5000760",
+   "title": "Castlevania: Belmont's Curse Demo",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/castlevania-belmonts-curse-demo/)"
+  },
+  {
+   "store": "steam",
+   "id": "3665520",
+   "title": "Catto Pew Pew!",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/catto-pew-pew/)"
+  },
+  {
+   "store": "steam",
+   "id": "200900",
+   "title": "Cave Story+",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/cave-story-plus/)"
+  },
+  {
+   "store": "steam",
+   "id": "2567870",
+   "title": "Chained Together",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/chained-together/)"
+  },
+  {
+   "store": "steam",
+   "id": "4584240",
+   "title": "Cheap Car Repair: Welcome to Nowhere",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/cheap-car-repair-welcome-to-nowhere/)"
+  },
+  {
+   "store": "steam",
+   "id": "613830",
+   "title": "CHRONO TRIGGER",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/chrono-trigger/)"
+  },
+  {
+   "store": "steam",
+   "id": "255710",
+   "title": "Cities: Skylines",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/cities-skylines/)"
+  },
+  {
+   "store": "steam",
+   "id": "949230",
+   "title": "Cities: Skylines II",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/cities-skylines-ii/)"
+  },
+  {
+   "store": "steam",
+   "id": "1386780",
+   "title": "City of Gangsters",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/city-of-gangsters/)"
+  },
+  {
+   "store": "steam",
+   "id": "289070",
+   "title": "Civilization VI",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/civilization-vi/)"
+  },
+  {
+   "store": "steam",
+   "id": "2757330",
+   "title": "Class of '09: The Flip Side",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/class-of-09-the-flip-side/)"
+  },
+  {
+   "store": "steam",
+   "id": "1710820",
+   "title": "Cleared Hot",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/cleared-hot/)"
+  },
+  {
+   "store": "steam",
+   "id": "3314790",
+   "title": "CloverPit",
+   "verdict": "works",
+   "source": "Highball tested it on Apple Silicon (https://gethighball.com/games/cloverpit/)"
+  },
+  {
+   "store": "steam",
+   "id": "2281730",
+   "title": "Combat Master",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/combat-master/)"
+  },
+  {
+   "store": "steam",
+   "id": "4075620",
+   "title": "Combolands: Roguelike Citybuilder",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/combolands-roguelike-citybuilder/)"
+  },
+  {
+   "store": "steam",
+   "id": "24790",
+   "title": "Command & Conquer 3: Tiberium Wars",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/command-and-conquer-3-tiberium-wars/)"
+  },
+  {
+   "store": "steam",
+   "id": "2229850",
+   "title": "Command & Conquer Red Alert™ 2 and Yuri’s Revenge™",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/command-and-conquer-red-alert-2-and-yuri-s-revenge/)"
+  },
+  {
+   "store": "steam",
+   "id": "231430",
+   "title": "Company of Heroes 2",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/company-of-heroes-2/)"
+  },
+  {
+   "store": "steam",
+   "id": "2698780",
+   "title": "ContractVille",
+   "verdict": "works",
+   "source": "Highball tested it on Apple Silicon (https://gethighball.com/games/contractville/)"
+  },
+  {
+   "store": "steam",
+   "id": "10",
+   "title": "Counter-Strike",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/counter-strike/)"
+  },
+  {
+   "store": "steam",
+   "id": "80",
+   "title": "Counter-Strike: Condition Zero",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/counter-strike-condition-zero/)"
+  },
+  {
+   "store": "steam",
+   "id": "4465480",
+   "title": "Counter-Strike: Global Offensive (Legacy)",
+   "verdict": "works",
+   "source": "Highball tested it on Apple Silicon (https://gethighball.com/games/csgo-legacy/)"
+  },
+  {
+   "store": "steam",
+   "id": "774801",
+   "title": "Crab Champions",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/crab-champions/)"
+  },
+  {
+   "store": "steam",
+   "id": "1028630",
+   "title": "Cricket 19",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/cricket-19/)"
+  },
+  {
+   "store": "steam",
+   "id": "1091500",
+   "title": "Cyberpunk 2077",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/cyberpunk-2077/)"
+  },
+  {
+   "store": "steam",
+   "id": "374320",
+   "title": "Dark Souls III",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/dark-souls-iii/)"
+  },
+  {
+   "store": "steam",
+   "id": "2195910",
+   "title": "Darkenstein 3D",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/darkenstein-3d/)"
+  },
+  {
+   "store": "steam",
+   "id": "262060",
+   "title": "Darkest Dungeon",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/darkest-dungeon/)"
+  },
+  {
+   "store": "steam",
+   "id": "388410",
+   "title": "Darksiders II Deathinitive Edition",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/darksiders-ii-deathinitive-edition/)"
+  },
+  {
+   "store": "steam",
+   "id": "462780",
+   "title": "Darksiders Warmastered Edition",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/darksiders-warmastered-edition/)"
+  },
+  {
+   "store": "steam",
+   "id": "2693730",
+   "title": "Dawnsbury Days",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/dawnsbury-days/)"
+  },
+  {
+   "store": "steam",
+   "id": "381210",
+   "title": "Dead by Daylight",
+   "verdict": "wontRun",
+   "source": "Highball marks it blocked-anticheat (https://gethighball.com/games/dead-by-daylight/)"
+  },
+  {
+   "store": "steam",
+   "id": "1190460",
+   "title": "Death Stranding",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/death-stranding/)"
+  },
+  {
+   "store": "steam",
+   "id": "894020",
+   "title": "Death's Door",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/deaths-door/)"
+  },
+  {
+   "store": "steam",
+   "id": "18500",
+   "title": "Defense Grid: The Awakening",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/defense-grid-the-awakening/)"
+  },
+  {
+   "store": "steam",
+   "id": "2524850",
+   "title": "Denshattack!",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/denshattack/)"
+  },
+  {
+   "store": "steam",
+   "id": "4623570",
+   "title": "Deskrawl",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/deskrawl/)"
+  },
+  {
+   "store": "steam",
+   "id": "1085660",
+   "title": "Destiny 2",
+   "verdict": "wontRun",
+   "source": "Highball marks it blocked-anticheat (https://gethighball.com/games/destiny-2/)"
+  },
+  {
+   "store": "steam",
+   "id": "329050",
+   "title": "Devil May Cry 4 Special Edition",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/devil-may-cry-4-special-edition/)"
+  },
+  {
+   "store": "steam",
+   "id": "2402680",
+   "title": "Dimraeth",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/dimraeth/)"
+  },
+  {
+   "store": "steam",
+   "id": "310560",
+   "title": "DiRT Rally",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/dirt-rally/)"
+  },
+  {
+   "store": "steam",
+   "id": "690790",
+   "title": "DiRT Rally 2.0",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/dirt-rally-2-0/)"
+  },
+  {
+   "store": "steam",
+   "id": "632470",
+   "title": "Disco Elysium - The Final Cut",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/disco-elysium/)"
+  },
+  {
+   "store": "steam",
+   "id": "205100",
+   "title": "Dishonored",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/dishonored/)"
+  },
+  {
+   "store": "steam",
+   "id": "464450",
+   "title": "DoDonPachi Resurrection",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/dodonpachi-resurrection/)"
+  },
+  {
+   "store": "steam",
+   "id": "2338140",
+   "title": "Dokapon Kingdom: Connect",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/dokapon-kingdom-connect/)"
+  },
+  {
+   "store": "steam",
+   "id": "2019300",
+   "title": "Dokimon Quest",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/dokimon-quest/)"
+  },
+  {
+   "store": "steam",
+   "id": "1148590",
+   "title": "DOOM 64",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/doom-64/)"
+  },
+  {
+   "store": "steam",
+   "id": "248610",
+   "title": "Door Kickers",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/door-kickers/)"
+  },
+  {
+   "store": "steam",
+   "id": "2893570",
+   "title": "DRAGON QUEST I & II HD-2D Remake",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/dragon-quest-i-ii-hd-2d-remake/)"
+  },
+  {
+   "store": "steam",
+   "id": "2525310",
+   "title": "Drop Duchy",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/drop-duchy/)"
+  },
+  {
+   "store": "steam",
+   "id": "1605220",
+   "title": "Dune: Spice Wars",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/dune-spice-wars/)"
+  },
+  {
+   "store": "steam",
+   "id": "2669320",
+   "title": "EA SPORTS FC™ 25",
+   "verdict": "wontRun",
+   "source": "Highball marks it blocked-anticheat (https://gethighball.com/games/ea-sports-fc-25/)"
+  },
+  {
+   "store": "steam",
+   "id": "1811260",
+   "title": "EA SPORTS™ FIFA 23",
+   "verdict": "wontRun",
+   "source": "Highball marks it blocked-anticheat (https://gethighball.com/games/fifa-23/)"
+  },
+  {
+   "store": "steam",
+   "id": "2140330",
+   "title": "EA SPORTS™ Madden NFL 24",
+   "verdict": "wontRun",
+   "source": "Highball marks it blocked-anticheat (https://gethighball.com/games/madden-nfl-24/)"
+  },
+  {
+   "store": "steam",
+   "id": "3230400",
+   "title": "EA SPORTS™ Madden NFL 26",
+   "verdict": "wontRun",
+   "source": "Highball marks it blocked-anticheat (https://gethighball.com/games/madden-nfl-26/)"
+  },
+  {
+   "store": "steam",
+   "id": "1849250",
+   "title": "EA SPORTS™ WRC 24",
+   "verdict": "wontRun",
+   "source": "Highball marks it blocked-anticheat (https://gethighball.com/games/ea-sports-wrc/)"
+  },
+  {
+   "store": "steam",
+   "id": "1665460",
+   "title": "eFootball",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/efootball/)"
+  },
+  {
+   "store": "steam",
+   "id": "1245620",
+   "title": "Elden Ring",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/elden-ring/)"
+  },
+  {
+   "store": "steam",
+   "id": "359320",
+   "title": "Elite Dangerous (Odyssey)",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/elite-dangerous-odyssey/)"
+  },
+  {
+   "store": "steam",
+   "id": "237310",
+   "title": "Elsword",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/elsword/)"
+  },
+  {
+   "store": "steam",
+   "id": "2643980",
+   "title": "Emberward",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/emberward/)"
+  },
+  {
+   "store": "steam",
+   "id": "1943950",
+   "title": "Escape the Backrooms",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/escape-the-backrooms/)"
+  },
+  {
+   "store": "steam",
+   "id": "2057760",
+   "title": "Esoteric Ebb",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/esoteric-ebb/)"
+  },
+  {
+   "store": "steam",
+   "id": "1477590",
+   "title": "EZ2ON REBOOT : R",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/ez2on-reboot-r/)"
+  },
+  {
+   "store": "steam",
+   "id": "1080110",
+   "title": "F1 2020",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/f1-2020/)"
+  },
+  {
+   "store": "steam",
+   "id": "2488620",
+   "title": "F1® 24",
+   "verdict": "wontRun",
+   "source": "Highball marks it blocked-anticheat (https://gethighball.com/games/f1-24/)"
+  },
+  {
+   "store": "steam",
+   "id": "427520",
+   "title": "Factorio",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/factorio/)"
+  },
+  {
+   "store": "steam",
+   "id": "1044720",
+   "title": "Farthest Frontier",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/farthest-frontier/)"
+  },
+  {
+   "store": "steam",
+   "id": "1462040",
+   "title": "FINAL FANTASY VII REMAKE INTERGRADE",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/final-fantasy-vii-remake-intergrade/)"
+  },
+  {
+   "store": "steam",
+   "id": "319510",
+   "title": "Five Nights at Freddy's",
+   "verdict": "works",
+   "source": "Highball tested it on Apple Silicon (https://gethighball.com/games/five-nights-at-freddys/)"
+  },
+  {
+   "store": "steam",
+   "id": "2638370",
+   "title": "Five Nights at Freddy's: Into the Pit",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/five-nights-at-freddys-into-the-pit/)"
+  },
+  {
+   "store": "steam",
+   "id": "2215390",
+   "title": "Five Nights at Freddy's: Secret of the Mimic",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/five-nights-at-freddys-secret-of-the-mimic/)"
+  },
+  {
+   "store": "steam",
+   "id": "4995030",
+   "title": "Folded Fables: Tidy Up The Dragon Hoard",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/folded-fables-tidy-up-the-dragon-hoard/)"
+  },
+  {
+   "store": "steam",
+   "id": "751780",
+   "title": "Forager",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/forager/)"
+  },
+  {
+   "store": "steam",
+   "id": "1590910",
+   "title": "Forgive Me Father",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/forgive-me-father/)"
+  },
+  {
+   "store": "steam",
+   "id": "2483190",
+   "title": "Forza Horizon 6",
+   "verdict": "works",
+   "source": "Highball tested it on Apple Silicon (https://gethighball.com/games/forza-horizon-6/)"
+  },
+  {
+   "store": "steam",
+   "id": "738060",
+   "title": "Freddy Fazbear's Pizzeria Simulator",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/freddy-fazbears-pizzeria-simulator/)"
+  },
+  {
+   "store": "steam",
+   "id": "1062140",
+   "title": "Garden Story",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/garden-story/)"
+  },
+  {
+   "store": "steam",
+   "id": "322170",
+   "title": "Geometry Dash",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/geometry-dash/)"
+  },
+  {
+   "store": "steam",
+   "id": "2144740",
+   "title": "Ghostrunner 2",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/ghostrunner-2/)"
+  },
+  {
+   "store": "steam",
+   "id": "2437570",
+   "title": "Golden Chambers",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/golden-chambers/)"
+  },
+  {
+   "store": "steam",
+   "id": "1297900",
+   "title": "Gothic 1 Remake",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/gothic-1-remake/)"
+  },
+  {
+   "store": "steam",
+   "id": "12210",
+   "title": "Grand Theft Auto IV: The Complete Edition",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/grand-theft-auto-iv/)"
+  },
+  {
+   "store": "steam",
+   "id": "271590",
+   "title": "Grand Theft Auto V (Legacy)",
+   "verdict": "works",
+   "source": "Highball tested it on Apple Silicon (https://gethighball.com/games/grand-theft-auto-v/)"
+  },
+  {
+   "store": "steam",
+   "id": "12120",
+   "title": "Grand Theft Auto: San Andreas",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/grand-theft-auto-san-andreas/)"
+  },
+  {
+   "store": "steam",
+   "id": "4358690",
+   "title": "Graveyard Keeper 2",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/graveyard-keeper-2/)"
+  },
+  {
+   "store": "steam",
+   "id": "815370",
+   "title": "Green Hell",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/green-hell/)"
+  },
+  {
+   "store": "steam",
+   "id": "601840",
+   "title": "Griftlands",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/griftlands/)"
+  },
+  {
+   "store": "steam",
+   "id": "1284210",
+   "title": "Guild Wars 2",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/guild-wars-2/)"
+  },
+  {
+   "store": "steam",
+   "id": "246070",
+   "title": "Hack 'n' Slash",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/hack-n-slash/)"
+  },
+  {
+   "store": "steam",
+   "id": "70",
+   "title": "Half-Life",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/half-life/)"
+  },
+  {
+   "store": "steam",
+   "id": "320",
+   "title": "Half-Life 2: Deathmatch",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/half-life-2-deathmatch/)"
+  },
+  {
+   "store": "steam",
+   "id": "360",
+   "title": "Half-Life Deathmatch: Source",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/half-life-deathmatch-source/)"
+  },
+  {
+   "store": "steam",
+   "id": "4025700",
+   "title": "Heartopia",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/heartopia/)"
+  },
+  {
+   "store": "steam",
+   "id": "1782460",
+   "title": "Hell Clock",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/hell-clock/)"
+  },
+  {
+   "store": "steam",
+   "id": "553850",
+   "title": "HELLDIVERS 2",
+   "verdict": "wontRun",
+   "source": "Highball marks it blocked-anticheat (https://gethighball.com/games/helldivers-2/)"
+  },
+  {
+   "store": "steam",
+   "id": "521890",
+   "title": "Hello Neighbor",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/hello-neighbor/)"
+  },
+  {
+   "store": "steam",
+   "id": "3286930",
+   "title": "Heretic + Hexen",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/heretic-hexen/)"
+  },
+  {
+   "store": "steam",
+   "id": "1948980",
+   "title": "Hero's Adventure: Road to Passion",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/hero-s-adventure-road-to-passion/)"
+  },
+  {
+   "store": "steam",
+   "id": "619820",
+   "title": "Heroes of Hammerwatch II",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/heroes-of-hammerwatch-ii/)"
+  },
+  {
+   "store": "steam",
+   "id": "15370",
+   "title": "Heroes of Might and Magic V: Tribes of the East",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/heroes-of-might-and-magic-v-tribes-of-the-east/)"
+  },
+  {
+   "store": "steam",
+   "id": "3105440",
+   "title": "Heroes of Might and Magic: Olden Era",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/heroes-of-might-and-magic-olden-era/)"
+  },
+  {
+   "store": "steam",
+   "id": "367520",
+   "title": "Hollow Knight",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/hollow-knight/)"
+  },
+  {
+   "store": "steam",
+   "id": "2420510",
+   "title": "HoloCure - Save the Fans!",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/holocure-save-the-fans/)"
+  },
+  {
+   "store": "steam",
+   "id": "389140",
+   "title": "Horizon Chase Turbo",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/horizon-chase-turbo/)"
+  },
+  {
+   "store": "steam",
+   "id": "219150",
+   "title": "Hotline Miami",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/hotline-miami/)"
+  },
+  {
+   "store": "steam",
+   "id": "4001890",
+   "title": "How to Fish",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/how-to-fish/)"
+  },
+  {
+   "store": "steam",
+   "id": "383270",
+   "title": "Hue",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/hue/)"
+  },
+  {
+   "store": "steam",
+   "id": "253750",
+   "title": "Ikaruga",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/ikaruga/)"
+  },
+  {
+   "store": "steam",
+   "id": "3320",
+   "title": "Insaniquarium Deluxe",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/insaniquarium-deluxe/)"
+  },
+  {
+   "store": "steam",
+   "id": "304430",
+   "title": "INSIDE",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/inside/)"
+  },
+  {
+   "store": "steam",
+   "id": "2239710",
+   "title": "Into the Dead: Our Darkest Days",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/into-the-dead-our-darkest-days/)"
+  },
+  {
+   "store": "steam",
+   "id": "2950790",
+   "title": "IRON NEST: Heavy Turret Simulator",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/iron-nest-heavy-turret-simulator/)"
+  },
+  {
+   "store": "steam",
+   "id": "4300500",
+   "title": "IRON NEST: Heavy Turret Simulator Demo",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/iron-nest-heavy-turret-simulator-demo/)"
+  },
+  {
+   "store": "steam",
+   "id": "205950",
+   "title": "Jet Set Radio",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/jet-set-radio/)"
+  },
+  {
+   "store": "steam",
+   "id": "517630",
+   "title": "Just Cause 4",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/just-cause-4/)"
+  },
+  {
+   "store": "steam",
+   "id": "345390",
+   "title": "King's Quest",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/kings-quest/)"
+  },
+  {
+   "store": "steam",
+   "id": "1221540",
+   "title": "KUUKIYOMI: Consider It",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/kuukiyomi-consider-it/)"
+  },
+  {
+   "store": "steam",
+   "id": "578330",
+   "title": "LEGO City Undercover",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/lego-city-undercover/)"
+  },
+  {
+   "store": "steam",
+   "id": "920210",
+   "title": "LEGO Star Wars: The Skywalker Saga",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/lego-star-wars-the-skywalker-saga/)"
+  },
+  {
+   "store": "steam",
+   "id": "1265920",
+   "title": "Life is Strange Remastered",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/life-is-strange-remastered/)"
+  },
+  {
+   "store": "steam",
+   "id": "1265930",
+   "title": "Life is Strange: Before the Storm Remastered",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/life-is-strange-before-the-storm-remastered/)"
+  },
+  {
+   "store": "steam",
+   "id": "1973530",
+   "title": "Limbus Company",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/limbus-company/)"
+  },
+  {
+   "store": "steam",
+   "id": "5315310",
+   "title": "Loftia Demo",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/loftia-demo/)"
+  },
+  {
+   "store": "steam",
+   "id": "1030830",
+   "title": "Mafia II: Definitive Edition",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/mafia-ii-definitive-edition/)"
+  },
+  {
+   "store": "steam",
+   "id": "42910",
+   "title": "Magicka",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/magicka/)"
+  },
+  {
+   "store": "steam",
+   "id": "629820",
+   "title": "Maneater",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/maneater/)"
+  },
+  {
+   "store": "steam",
+   "id": "1789480",
+   "title": "Marauders",
+   "verdict": "wontRun",
+   "source": "Highball marks it blocked-anticheat (https://gethighball.com/games/marauders/)"
+  },
+  {
+   "store": "steam",
+   "id": "2767030",
+   "title": "Marvel Rivals",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/marvel-rivals/)"
+  },
+  {
+   "store": "steam",
+   "id": "1088850",
+   "title": "Marvel's Guardians of the Galaxy",
+   "verdict": "works",
+   "source": "Highball tested it on Apple Silicon (https://gethighball.com/games/marvels-guardians-of-the-galaxy/)"
+  },
+  {
+   "store": "steam",
+   "id": "1817070",
+   "title": "Marvel's Spider-Man Remastered",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/marvels-spider-man-remastered/)"
+  },
+  {
+   "store": "steam",
+   "id": "1817190",
+   "title": "Marvel's Spider-Man: Miles Morales",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/marvels-spider-man-miles-morales/)"
+  },
+  {
+   "store": "steam",
+   "id": "743890",
+   "title": "Mega Man X Legacy Collection",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/mega-man-x-legacy-collection/)"
+  },
+  {
+   "store": "steam",
+   "id": "1585220",
+   "title": "Melatonin",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/melatonin/)"
+  },
+  {
+   "store": "steam",
+   "id": "2679460",
+   "title": "Metaphor: ReFantazio",
+   "verdict": "works",
+   "source": "Highball tested it on Apple Silicon (https://gethighball.com/games/metaphor-refantazio/)"
+  },
+  {
+   "store": "steam",
+   "id": "287390",
+   "title": "Metro: Last Light Redux",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/metro-last-light-redux/)"
+  },
+  {
+   "store": "steam",
+   "id": "2537590",
+   "title": "Microsoft Flight Simulator 2024",
+   "verdict": "works",
+   "source": "Highball tested it on Apple Silicon (https://gethighball.com/games/microsoft-flight-simulator-2024/)"
+  },
+  {
+   "store": "steam",
+   "id": "4399150",
+   "title": "Might & Mushroom Playtest",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/might-mushroom-playtest/)"
+  },
+  {
+   "store": "steam",
+   "id": "1912410",
+   "title": "Minecraft Dungeons II",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/minecraft-dungeons-ii/)"
+  },
+  {
+   "store": "steam",
+   "id": "5029110",
+   "title": "MineMergeMatic Demo",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/minemergematic-demo/)"
+  },
+  {
+   "store": "steam",
+   "id": "2521630",
+   "title": "Mini Settlers",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/mini-settlers/)"
+  },
+  {
+   "store": "steam",
+   "id": "1446780",
+   "title": "Monster Hunter Rise",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/monster-hunter-rise/)"
+  },
+  {
+   "store": "steam",
+   "id": "1927720",
+   "title": "Monument Valley",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/monument-valley/)"
+  },
+  {
+   "store": "steam",
+   "id": "3132930",
+   "title": "Monument Valley 3",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/monument-valley-3/)"
+  },
+  {
+   "store": "steam",
+   "id": "1933840",
+   "title": "Moon Mystery",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/moon-mystery/)"
+  },
+  {
+   "store": "steam",
+   "id": "5335510",
+   "title": "Moon Sweepers",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/moon-sweepers/)"
+  },
+  {
+   "store": "steam",
+   "id": "976310",
+   "title": "Mortal Kombat 11",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/mortal-kombat-11/)"
+  },
+  {
+   "store": "steam",
+   "id": "307780",
+   "title": "Mortal Kombat X",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/mortal-kombat-x/)"
+  },
+  {
+   "store": "steam",
+   "id": "4170430",
+   "title": "Mount Noire",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/mount-noire/)"
+  },
+  {
+   "store": "steam",
+   "id": "2416450",
+   "title": "MOUSE: P.I. For Hire",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/mouse-pi-for-hire/)"
+  },
+  {
+   "store": "steam",
+   "id": "675010",
+   "title": "MudRunner",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/mudrunner/)"
+  },
+  {
+   "store": "steam",
+   "id": "377860",
+   "title": "Mushihimesama",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/mushihimesama/)"
+  },
+  {
+   "store": "steam",
+   "id": "516750",
+   "title": "My Summer Car",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/my-summer-car/)"
+  },
+  {
+   "store": "steam",
+   "id": "1084600",
+   "title": "My Time at Sandrock",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/my-time-at-sandrock/)"
+  },
+  {
+   "store": "steam",
+   "id": "4164420",
+   "title": "My Winter Car",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/my-winter-car/)"
+  },
+  {
+   "store": "steam",
+   "id": "3247750",
+   "title": "Mycopunk",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/mycopunk/)"
+  },
+  {
+   "store": "steam",
+   "id": "349040",
+   "title": "NARUTO SHIPPUDEN: Ultimate Ninja STORM 4",
+   "verdict": "works",
+   "source": "Highball tested it on Apple Silicon (https://gethighball.com/games/naruto-shippuden-ultimate-ninja-storm-4/)"
+  },
+  {
+   "store": "steam",
+   "id": "1732430",
+   "title": "Neighbors: Suburban Warfare",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/neighbors-suburban-warfare/)"
+  },
+  {
+   "store": "steam",
+   "id": "334660",
+   "title": "NEKOPARA Vol. 1 Demo",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/nekopara-vol-1-demo/)"
+  },
+  {
+   "store": "steam",
+   "id": "1406990",
+   "title": "NEKOPARA Vol. 4",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/nekopara-vol-4/)"
+  },
+  {
+   "store": "steam",
+   "id": "2553040",
+   "title": "Nested Lands",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/nested-lands/)"
+  },
+  {
+   "store": "steam",
+   "id": "1113560",
+   "title": "NieR Replicant ver.1.22474487139...",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/nier-replicant-ver-1-22474487139/)"
+  },
+  {
+   "store": "steam",
+   "id": "1134710",
+   "title": "NIMBY Rails",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/nimby-rails/)"
+  },
+  {
+   "store": "steam",
+   "id": "3180070",
+   "title": "No, I'm not a Human",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/no-im-not-a-human/)"
+  },
+  {
+   "store": "steam",
+   "id": "3191030",
+   "title": "Nubby's Number Factory",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/nubbys-number-factory/)"
+  },
+  {
+   "store": "steam",
+   "id": "1150690",
+   "title": "OMORI",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/omori/)"
+  },
+  {
+   "store": "steam",
+   "id": "12830",
+   "title": "Operation Flashpoint: Dragon Rising",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/operation-flashpoint-dragon-rising/)"
+  },
+  {
+   "store": "steam",
+   "id": "102600",
+   "title": "Orcs Must Die!",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/orcs-must-die/)"
+  },
+  {
+   "store": "steam",
+   "id": "499170",
+   "title": "Order of the Sinking Star",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/order-of-the-sinking-star/)"
+  },
+  {
+   "store": "steam",
+   "id": "4210580",
+   "title": "Ore Factory Squad",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/ore-factory-squad/)"
+  },
+  {
+   "store": "steam",
+   "id": "1071140",
+   "title": "ORX",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/orx/)"
+  },
+  {
+   "store": "steam",
+   "id": "2929250",
+   "title": "over the hill",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/over-the-hill/)"
+  },
+  {
+   "store": "steam",
+   "id": "1458140",
+   "title": "Pacific Drive",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/pacific-drive/)"
+  },
+  {
+   "store": "steam",
+   "id": "2707930",
+   "title": "Palia",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/palia/)"
+  },
+  {
+   "store": "steam",
+   "id": "1272080",
+   "title": "PAYDAY 3",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/payday-3/)"
+  },
+  {
+   "store": "steam",
+   "id": "24240",
+   "title": "PAYDAY: The Heist",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/payday-the-heist/)"
+  },
+  {
+   "store": "steam",
+   "id": "3527290",
+   "title": "PEAK",
+   "verdict": "works",
+   "source": "Highball tested it on Apple Silicon (https://gethighball.com/games/peak/)"
+  },
+  {
+   "store": "steam",
+   "id": "2161700",
+   "title": "Persona 3 Reload",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/persona-3-reload/)"
+  },
+  {
+   "store": "steam",
+   "id": "1687950",
+   "title": "Persona 5 Royal",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/persona-5-royal/)"
+  },
+  {
+   "store": "steam",
+   "id": "553540",
+   "title": "Phantom Brigade",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/phantom-brigade/)"
+  },
+  {
+   "store": "steam",
+   "id": "1733240",
+   "title": "Phantom Fury",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/phantom-fury/)"
+  },
+  {
+   "store": "steam",
+   "id": "2088840",
+   "title": "Picayune Dreams",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/picayune-dreams/)"
+  },
+  {
+   "store": "steam",
+   "id": "461040",
+   "title": "PICO PARK:Classic Edition",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/pico-park-classic-edition/)"
+  },
+  {
+   "store": "steam",
+   "id": "1262240",
+   "title": "Plants vs. Zombies: Battle for Neighborville",
+   "verdict": "wontRun",
+   "source": "Highball marks it blocked-anticheat (https://gethighball.com/games/plants-vs-zombies-battle-for-neighborville/)"
+  },
+  {
+   "store": "steam",
+   "id": "400",
+   "title": "Portal",
+   "verdict": "works",
+   "source": "Highball tested it on Apple Silicon (https://gethighball.com/games/portal-1/)"
+  },
+  {
+   "store": "steam",
+   "id": "1290000",
+   "title": "PowerWash Simulator",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/powerwash-simulator/)"
+  },
+  {
+   "store": "steam",
+   "id": "3357650",
+   "title": "PRAGMATA",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/pragmata/)"
+  },
+  {
+   "store": "steam",
+   "id": "233450",
+   "title": "Prison Architect",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/prison-architect/)"
+  },
+  {
+   "store": "steam",
+   "id": "578080",
+   "title": "PUBG: Battlegrounds",
+   "verdict": "wontRun",
+   "source": "Highball marks it blocked-anticheat (https://gethighball.com/games/pubg-battlegrounds/)"
+  },
+  {
+   "store": "steam",
+   "id": "2320",
+   "title": "Quake II",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/quake-ii/)"
+  },
+  {
+   "store": "steam",
+   "id": "359550",
+   "title": "Rainbow Six Siege",
+   "verdict": "wontRun",
+   "source": "Highball marks it blocked-anticheat (https://gethighball.com/games/rainbow-six-siege/)"
+  },
+  {
+   "store": "steam",
+   "id": "636480",
+   "title": "Ravenfield",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/ravenfield/)"
+  },
+  {
+   "store": "steam",
+   "id": "287310",
+   "title": "Re-Volt",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/re-volt/)"
+  },
+  {
+   "store": "steam",
+   "id": "1174180",
+   "title": "Red Dead Redemption 2",
+   "verdict": "works",
+   "source": "Highball tested it on Apple Silicon (https://gethighball.com/games/red-dead-redemption-2/)"
+  },
+  {
+   "store": "steam",
+   "id": "304240",
+   "title": "Resident Evil",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/resident-evil/)"
+  },
+  {
+   "store": "steam",
+   "id": "952060",
+   "title": "Resident Evil 3",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/resident-evil-3/)"
+  },
+  {
+   "store": "steam",
+   "id": "2050650",
+   "title": "Resident Evil 4",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/resident-evil-4-remake/)"
+  },
+  {
+   "store": "steam",
+   "id": "952070",
+   "title": "Resident Evil Resistance",
+   "verdict": "wontRun",
+   "source": "Highball marks it blocked-anticheat (https://gethighball.com/games/resident-evil-resistance/)"
+  },
+  {
+   "store": "steam",
+   "id": "3812600",
+   "title": "ReStory: Chill Electronics Repairs",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/restory-chill-electronics-repairs/)"
+  },
+  {
+   "store": "steam",
+   "id": "3552140",
+   "title": "Retro Rewind: Video Store Simulator",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/retro-rewind-video-store-simulator/)"
+  },
+  {
+   "store": "steam",
+   "id": "1346010",
+   "title": "RiMS Racing",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/rims-racing/)"
+  },
+  {
+   "store": "steam",
+   "id": "4758450",
+   "title": "RippleLoop Demo",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/rippleloop-demo/)"
+  },
+  {
+   "store": "steam",
+   "id": "383980",
+   "title": "Rivals of Aether",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/rivals-of-aether/)"
+  },
+  {
+   "store": "steam",
+   "id": "2104890",
+   "title": "RoadCraft",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/roadcraft/)"
+  },
+  {
+   "store": "steam",
+   "id": "252950",
+   "title": "Rocket League",
+   "verdict": "wontRun",
+   "source": "Highball marks it blocked-anticheat (https://gethighball.com/games/rocket-league/)"
+  },
+  {
+   "store": "steam",
+   "id": "392260",
+   "title": "Rogue Wizards",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/rogue-wizards/)"
+  },
+  {
+   "store": "steam",
+   "id": "1805320",
+   "title": "Romestead",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/romestead/)"
+  },
+  {
+   "store": "steam",
+   "id": "1374490",
+   "title": "RuneScape: Dragonwilds",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/runescape-dragonwilds/)"
+  },
+  {
+   "store": "steam",
+   "id": "252490",
+   "title": "Rust",
+   "verdict": "wontRun",
+   "source": "Highball marks it blocked-anticheat (https://gethighball.com/games/rust/)"
+  },
+  {
+   "store": "steam",
+   "id": "206420",
+   "title": "Saints Row IV: Re-Elected",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/saints-row-iv-re-elected/)"
+  },
+  {
+   "store": "steam",
+   "id": "4894830",
+   "title": "Sandcastle",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/sandcastle/)"
+  },
+  {
+   "store": "steam",
+   "id": "1122720",
+   "title": "Sayonara Wild Hearts",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/sayonara-wild-hearts/)"
+  },
+  {
+   "store": "steam",
+   "id": "4989200",
+   "title": "SCP Idle: SECURE. CONTAIN. PROGRESS. Demo",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/scp-idle-secure-contain-progress-demo/)"
+  },
+  {
+   "store": "steam",
+   "id": "3576350",
+   "title": "Sex, Secrets & Used Tech",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/sex-secrets-and-used-tech/)"
+  },
+  {
+   "store": "steam",
+   "id": "547490",
+   "title": "Shadow Tactics: Blades of the Shogun Demo",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/shadow-tactics-blades-of-the-shogun-demo/)"
+  },
+  {
+   "store": "steam",
+   "id": "356040",
+   "title": "Sheltered",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/sheltered/)"
+  },
+  {
+   "store": "steam",
+   "id": "3722330",
+   "title": "Shift At Midnight",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/shift-at-midnight/)"
+  },
+  {
+   "store": "steam",
+   "id": "1286580",
+   "title": "Ship of Fools",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/ship-of-fools/)"
+  },
+  {
+   "store": "steam",
+   "id": "2178480",
+   "title": "Shiren the Wanderer: The Mystery Dungeon of Serpentcoil Island",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/shiren-the-wanderer-the-mystery-dungeon-of-serpentcoil-island/)"
+  },
+  {
+   "store": "steam",
+   "id": "2084000",
+   "title": "Shogun Showdown",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/shogun-showdown/)"
+  },
+  {
+   "store": "steam",
+   "id": "2333000",
+   "title": "Silver Pines",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/silver-pines/)"
+  },
+  {
+   "store": "steam",
+   "id": "632950",
+   "title": "SiN Reloaded",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/sin-reloaded/)"
+  },
+  {
+   "store": "steam",
+   "id": "646570",
+   "title": "Slay the Spire",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/slay-the-spire/)"
+  },
+  {
+   "store": "steam",
+   "id": "2868840",
+   "title": "Slay the Spire 2",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/slay-the-spire-2/)"
+  },
+  {
+   "store": "steam",
+   "id": "307690",
+   "title": "Sleeping Dogs: Definitive Edition",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/sleeping-dogs-definitive-edition/)"
+  },
+  {
+   "store": "steam",
+   "id": "5017590",
+   "title": "sobosuba Demo",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/sobosuba-demo/)"
+  },
+  {
+   "store": "steam",
+   "id": "213610",
+   "title": "Sonic Adventure 2",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/sonic-adventure-2/)"
+  },
+  {
+   "store": "steam",
+   "id": "584400",
+   "title": "Sonic Mania",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/sonic-mania/)"
+  },
+  {
+   "store": "steam",
+   "id": "2475460",
+   "title": "SOS OPS!",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/sos-ops/)"
+  },
+  {
+   "store": "steam",
+   "id": "1602080",
+   "title": "Soulstice",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/soulstice/)"
+  },
+  {
+   "store": "steam",
+   "id": "107200",
+   "title": "Space Pirates and Zombies",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/space-pirates-and-zombies/)"
+  },
+  {
+   "store": "steam",
+   "id": "2902720",
+   "title": "SPAM",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/spam/)"
+  },
+  {
+   "store": "steam",
+   "id": "418530",
+   "title": "Spelunky 2",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/spelunky-2/)"
+  },
+  {
+   "store": "steam",
+   "id": "3767850",
+   "title": "SpiritVale",
+   "verdict": "wontRun",
+   "source": "Highball marks it blocked-anticheat (https://gethighball.com/games/spiritvale/)"
+  },
+  {
+   "store": "steam",
+   "id": "376680",
+   "title": "Splendor",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/splendor/)"
+  },
+  {
+   "store": "steam",
+   "id": "2001120",
+   "title": "Split Fiction",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/split-fiction/)"
+  },
+  {
+   "store": "steam",
+   "id": "24720",
+   "title": "SPORE Galactic Adventures",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/spore-galactic-adventures/)"
+  },
+  {
+   "store": "steam",
+   "id": "115110",
+   "title": "Stacking",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/stacking/)"
+  },
+  {
+   "store": "steam",
+   "id": "32470",
+   "title": "STAR WARS Empire at War: Gold Pack",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/star-wars-empire-at-war-gold-pack/)"
+  },
+  {
+   "store": "steam",
+   "id": "460920",
+   "title": "Steep",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/steep/)"
+  },
+  {
+   "store": "steam",
+   "id": "3489700",
+   "title": "Stellar Blade",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/stellar-blade/)"
+  },
+  {
+   "store": "steam",
+   "id": "978780",
+   "title": "STORY OF SEASONS: Friends of Mineral Town",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/story-of-seasons-friends-of-mineral-town/)"
+  },
+  {
+   "store": "steam",
+   "id": "985890",
+   "title": "Streets of Rage 4",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/streets-of-rage-4/)"
+  },
+  {
+   "store": "steam",
+   "id": "1677740",
+   "title": "Stumble Guys",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/stumble-guys/)"
+  },
+  {
+   "store": "steam",
+   "id": "40800",
+   "title": "Super Meat Boy",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/super-meat-boy/)"
+  },
+  {
+   "store": "steam",
+   "id": "1566200",
+   "title": "Tape to Tape",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/tape-to-tape/)"
+  },
+  {
+   "store": "steam",
+   "id": "3678970",
+   "title": "TBH: Task Bar Hero",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/tbh-task-bar-hero/)"
+  },
+  {
+   "store": "steam",
+   "id": "1167630",
+   "title": "Teardown",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/teardown/)"
+  },
+  {
+   "store": "steam",
+   "id": "1180660",
+   "title": "Tell Me Why",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/tell-me-why/)"
+  },
+  {
+   "store": "steam",
+   "id": "1486920",
+   "title": "Tempest Rising",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/tempest-rising/)"
+  },
+  {
+   "store": "steam",
+   "id": "1593030",
+   "title": "Terra Nil",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/terra-nil/)"
+  },
+  {
+   "store": "steam",
+   "id": "2837600",
+   "title": "The Alto Collection",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/the-alto-collection/)"
+  },
+  {
+   "store": "steam",
+   "id": "250900",
+   "title": "The Binding of Isaac: Rebirth (Repentance+)",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/the-binding-of-isaac-rebirth/)"
+  },
+  {
+   "store": "steam",
+   "id": "3751260",
+   "title": "The Blood of Dawnwalker",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/the-blood-of-dawnwalker/)"
+  },
+  {
+   "store": "steam",
+   "id": "489830",
+   "title": "The Elder Scrolls V: Skyrim Special Edition",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/the-elder-scrolls-v-skyrim-special-edition/)"
+  },
+  {
+   "store": "steam",
+   "id": "2060160",
+   "title": "The Farmer Was Replaced",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/the-farmer-was-replaced/)"
+  },
+  {
+   "store": "steam",
+   "id": "2073850",
+   "title": "THE FINALS",
+   "verdict": "wontRun",
+   "source": "Highball marks it blocked-anticheat (https://gethighball.com/games/the-finals/)"
+  },
+  {
+   "store": "steam",
+   "id": "345610",
+   "title": "The Fruit of Grisaia",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/the-fruit-of-grisaia/)"
+  },
+  {
+   "store": "steam",
+   "id": "1830970",
+   "title": "The Last Flame",
+   "verdict": "works",
+   "source": "Highball tested it on Apple Silicon (https://gethighball.com/games/the-last-flame/)"
+  },
+  {
+   "store": "steam",
+   "id": "3690030",
+   "title": "The Last Gas Station",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/the-last-gas-station/)"
+  },
+  {
+   "store": "steam",
+   "id": "1295920",
+   "title": "The Mortuary Assistant",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/the-mortuary-assistant/)"
+  },
+  {
+   "store": "steam",
+   "id": "3314070",
+   "title": "The Sims 2 Legacy Collection",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/the-sims-2-legacy-collection/)"
+  },
+  {
+   "store": "steam",
+   "id": "1222670",
+   "title": "The Sims 4",
+   "verdict": "works",
+   "source": "Highball tested it on Apple Silicon (https://gethighball.com/games/the-sims-4/)"
+  },
+  {
+   "store": "steam",
+   "id": "3314060",
+   "title": "The Sims Legacy Collection",
+   "verdict": "works",
+   "source": "Highball tested it on Apple Silicon (https://gethighball.com/games/the-sims-legacy-collection/)"
+  },
+  {
+   "store": "steam",
+   "id": "378540",
+   "title": "The Surge",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/the-surge/)"
+  },
+  {
+   "store": "steam",
+   "id": "250320",
+   "title": "The Wolf Among Us",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/the-wolf-among-us/)"
+  },
+  {
+   "store": "steam",
+   "id": "282070",
+   "title": "This War of Mine",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/this-war-of-mine/)"
+  },
+  {
+   "store": "steam",
+   "id": "2198150",
+   "title": "Tiny Glade",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/tiny-glade/)"
+  },
+  {
+   "store": "steam",
+   "id": "2634950",
+   "title": "Tokyo Xtreme Racer",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/tokyo-xtreme-racer/)"
+  },
+  {
+   "store": "steam",
+   "id": "2221490",
+   "title": "Tom Clancy's The Division 2",
+   "verdict": "wontRun",
+   "source": "Highball marks it blocked-anticheat (https://gethighball.com/games/tom-clancys-the-division-2/)"
+  },
+  {
+   "store": "steam",
+   "id": "2379390",
+   "title": "Tom Clancy’s Rainbow Six® Extraction",
+   "verdict": "wontRun",
+   "source": "Highball marks it blocked-anticheat (https://gethighball.com/games/tom-clancys-rainbow-six-extraction/)"
+  },
+  {
+   "store": "steam",
+   "id": "203160",
+   "title": "Tomb Raider Game of the Year Edition",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/tomb-raider-game-of-the-year/)"
+  },
+  {
+   "store": "steam",
+   "id": "2525380",
+   "title": "Tomb Raider IV-VI Remastered",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/tomb-raider-iv-vi-remastered/)"
+  },
+  {
+   "store": "steam",
+   "id": "1827180",
+   "title": "Toram Online",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/toram-online/)"
+  },
+  {
+   "store": "steam",
+   "id": "3226530",
+   "title": "Tower Dominion",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/tower-dominion/)"
+  },
+  {
+   "store": "steam",
+   "id": "2225070",
+   "title": "Trackmania",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/trackmania/)"
+  },
+  {
+   "store": "steam",
+   "id": "585420",
+   "title": "Trailmakers",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/trailmakers/)"
+  },
+  {
+   "store": "steam",
+   "id": "1282590",
+   "title": "Train Sim World 2",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/train-sim-world-2/)"
+  },
+  {
+   "store": "steam",
+   "id": "24010",
+   "title": "Train Simulator Classic",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/train-simulator-classic/)"
+  },
+  {
+   "store": "steam",
+   "id": "1850510",
+   "title": "TRIANGLE STRATEGY",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/triangle-strategy/)"
+  },
+  {
+   "store": "steam",
+   "id": "1229490",
+   "title": "ULTRAKILL",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/ultrakill/)"
+  },
+  {
+   "store": "steam",
+   "id": "1659420",
+   "title": "UNCHARTED: Legacy of Thieves Collection",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/uncharted-legacy-of-thieves-collection/)"
+  },
+  {
+   "store": "steam",
+   "id": "391540",
+   "title": "Undertale",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/undertale/)"
+  },
+  {
+   "store": "steam",
+   "id": "1794680",
+   "title": "Vampire Survivors",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/vampire-survivors/)"
+  },
+  {
+   "store": "steam",
+   "id": "1382070",
+   "title": "Viewfinder",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/viewfinder/)"
+  },
+  {
+   "store": "steam",
+   "id": "5213930",
+   "title": "Vital Decisions Demo",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/vital-decisions-demo/)"
+  },
+  {
+   "store": "steam",
+   "id": "438100",
+   "title": "VRChat",
+   "verdict": "wontRun",
+   "source": "Highball marks it blocked-anticheat (https://gethighball.com/games/vrchat/)"
+  },
+  {
+   "store": "steam",
+   "id": "3624140",
+   "title": "Wanderburg",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/wanderburg/)"
+  },
+  {
+   "store": "steam",
+   "id": "1876890",
+   "title": "Wandering Sword",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/wandering-sword/)"
+  },
+  {
+   "store": "steam",
+   "id": "767560",
+   "title": "War Robots",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/war-robots/)"
+  },
+  {
+   "store": "steam",
+   "id": "230410",
+   "title": "Warframe",
+   "verdict": "works",
+   "source": "Highball tested it on Apple Silicon (https://gethighball.com/games/warframe/)"
+  },
+  {
+   "store": "steam",
+   "id": "2005010",
+   "title": "Warhammer 40,000: Boltgun",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/warhammer-40000-boltgun/)"
+  },
+  {
+   "store": "steam",
+   "id": "447040",
+   "title": "Watch_Dogs® 2",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/watch-dogs-2/)"
+  },
+  {
+   "store": "steam",
+   "id": "3699590",
+   "title": "Well Dweller",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/well-dweller/)"
+  },
+  {
+   "store": "steam",
+   "id": "2823140",
+   "title": "WHERE SAFETY ENDS *Remake*",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/where-safety-ends-remake/)"
+  },
+  {
+   "store": "steam",
+   "id": "3564740",
+   "title": "Where Winds Meet",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/where-winds-meet/)"
+  },
+  {
+   "store": "steam",
+   "id": "1115050",
+   "title": "Will You Snail?",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/will-you-snail/)"
+  },
+  {
+   "store": "steam",
+   "id": "1211020",
+   "title": "Wobbly Life",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/wobbly-life/)"
+  },
+  {
+   "store": "steam",
+   "id": "4072240",
+   "title": "Woman Simulator",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/woman-simulator/)"
+  },
+  {
+   "store": "steam",
+   "id": "784150",
+   "title": "Workers & Resources: Soviet Republic",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/workers-and-resources-soviet-republic/)"
+  },
+  {
+   "store": "steam",
+   "id": "552990",
+   "title": "World of Warships",
+   "verdict": "wontRun",
+   "source": "Highball marks it blocked-publisher (https://gethighball.com/games/world-of-warships/)"
+  },
+  {
+   "store": "steam",
+   "id": "1000410",
+   "title": "WRATH: Aeon of Ruin",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/wrath-aeon-of-ruin/)"
+  },
+  {
+   "store": "steam",
+   "id": "2988580",
+   "title": "Yakuza 0 Director's Cut",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/yakuza-0-directors-cut/)"
+  },
+  {
+   "store": "steam",
+   "id": "1359090",
+   "title": "Zero Hour",
+   "verdict": "wontRun",
+   "source": "Highball marks it blocked-anticheat (https://gethighball.com/games/zero-hour/)"
+  },
+  {
+   "store": "steam",
+   "id": "1782120",
+   "title": "ZERO Sievert",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/zero-sievert/)"
+  },
+  {
+   "store": "steam",
+   "id": "1159090",
+   "title": "Zoria: Age of Shattering",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/zoria-age-of-shattering/)"
+  },
+  {
+   "store": "steam",
+   "id": "2340650",
+   "title": "古龙风云录",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/gu-long-feng-yun-lu/)"
+  },
+  {
+   "store": "steam",
+   "id": "2551500",
+   "title": "巫兎 - KANNAGI USAGI",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/kannagi-usagi/)"
+  },
+  {
+   "store": "steam",
+   "id": "952860",
+   "title": "河洛群俠傳 (Ho Tu Lo Shu ： The Books of Dragon)",
+   "verdict": "works",
+   "source": "a Highball player rated it 4 of 5; NOT tested by Highball or us (https://gethighball.com/games/ho-tu-lo-shu-the-books-of-dragon/)"
+  },
+  {
+   "store": "steam",
+   "id": "2098790",
+   "title": "群侠传，启动！",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/qun-xia-zhuan-qi-dong/)"
+  },
+  {
+   "store": "steam",
+   "id": "1189490",
+   "title": "觅长生",
+   "verdict": "works",
+   "source": "a Highball player rated it 5 of 5; NOT tested by Highball or us (https://gethighball.com/games/mi-chang-sheng/)"
+  }
+ ]
+}

@@ -1,0 +1,12 @@
+name: Bug in Sommelier
+description: Something in the app itself doesn't work as it should
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes: { label: What happens, description: "Steps, what you expected and what you saw." }
+    validations: { required: true }
+  - type: input
+    id: version
+    attributes: { label: Sommelier version and macOS }
+    validations: { required: true }

@@ -1,0 +1,118 @@
+--- a/dlls/ntdll/unix/loader.c
++++ b/dlls/ntdll/unix/loader.c
+@@ -535,6 +535,81 @@
+  * TODO: this could do something more complicated, like getting strings out of the
+  * version resource.
+  */
++/* Sommelier: the name a program should have in the Dock, from the list Sommelier keeps (the file named by
++ * SOMMELIER_APP_NAMES, one "program.exe<TAB>Name[<TAB>/path/to/Game.app]" per line), so a game shows as
++ * "The Witcher 3", not "witcher3". A '/' in the name would make it a path, so it becomes '-'. With a third column
++ * the program runs from inside that app bundle (see create_preloader_link), so macOS counts it as that app: its
++ * icon, and the running dot on it when it's kept in the Dock. */
++static char *sommelier_bundle;
++
++static char *sommelier_app_name(const char *exe_file)
++{
++    const char *list = getenv("SOMMELIER_APP_NAMES");
++    char line[2048], *tab, *tab2, *end, *p, *ret = NULL;
++    FILE *f;
++
++    free(sommelier_bundle);
++    sommelier_bundle = NULL;
++    if (!list || !*list || !(f = fopen(list, "r"))) return NULL;
++    while (!ret && fgets(line, sizeof(line), f))
++    {
++        if (!(tab = strchr(line, '\t'))) continue;
++        *tab = 0;
++        if (strcasecmp(line, exe_file)) continue;
++        if ((end = strpbrk(tab + 1, "\r\n"))) *end = 0;
++        if ((tab2 = strchr(tab + 1, '\t')))
++        {
++            *tab2 = 0;
++            if (tab2[1] == '/') sommelier_bundle = strdup(tab2 + 1);
++        }
++        if (tab[1]) ret = strdup(tab + 1);
++    }
++    fclose(f);
++    if (ret) for (p = ret; *p; p++) if (*p == '/') *p = '-';
++    return ret;
++}
++
++/* Sommelier: the link inside the game's app bundle (Contents/MacOS/<name>), next to a link to ntdll.so as in
++ * the temp folder. It must be a hard link: a symbolic one resolves to the engine's path and the bundle is lost.
++ * A link left from an older engine (another file) is replaced. NULL when the bundle can't take it. */
++static char *sommelier_bundle_link(const char *wineloader_path, const char *name)
++{
++    char *dir, *linkpath, *ntdll, *ntdll_link, *p;
++    struct stat loader_st, st;
++
++    if (!sommelier_bundle || stat(wineloader_path, &loader_st)) return NULL;
++    if (asprintf(&dir, "%s/Contents/MacOS", sommelier_bundle) < 0) return NULL;
++    if (stat(dir, &st) || !S_ISDIR(st.st_mode)) { free(dir); return NULL; }
++
++    ntdll = strdup(wineloader_path);
++    if ((p = strrchr(ntdll, '/'))) *p = 0;
++    if (asprintf(&ntdll_link, "%s/ntdll.so", dir) >= 0)
++    {
++        char target[PATH_MAX];
++        ssize_t n = readlink(ntdll_link, target, sizeof(target) - 1);
++        char *want;
++        if (asprintf(&want, "%s/ntdll.so", ntdll) >= 0)
++        {
++            if (n < 0 || (size_t)n != strlen(want) || strncmp(target, want, n))
++            {
++                unlink(ntdll_link);
++                symlink(want, ntdll_link);
++            }
++            free(want);
++        }
++        free(ntdll_link);
++    }
++    free(ntdll);
++
++    if (asprintf(&linkpath, "%s/%s", dir, name) < 0) { free(dir); return NULL; }
++    free(dir);
++    if (!stat(linkpath, &st) && st.st_ino == loader_st.st_ino && st.st_dev == loader_st.st_dev) return linkpath;
++    unlink(linkpath);
++    if (!link(wineloader_path, linkpath)) return linkpath;
++    free(linkpath);
++    return NULL;
++}
++
+ static char *extract_exe_name(const char *exe_path)
+ {
+     char *exe_name, *exe_path_copy, *p, *ret;
+@@ -548,13 +623,19 @@
+     if (strspn(exe_name, "0123456789abcdefABCDEF") == 32 &&
+         exe_name[32] == '.')
+         exe_name += 33;
++    if ((ret = sommelier_app_name(exe_name)))
++    {
++        free(exe_path_copy);
++        return ret;
++    }
+     if ((p = strrchr(exe_name, '.')) && p != exe_name)
+         exe_name_len = p - exe_name;
+     else
+         exe_name_len = strlen(exe_name);
+ 
++    /* Sommelier: without the extension, as intended ("witcher3", not "witcher3.exe"). */
+     if (exe_name_len)
+-        ret = strdup(exe_name);
++        ret = strndup(exe_name, exe_name_len);
+     else
+         ret = NULL;
+ 
+@@ -608,8 +689,11 @@
+ static char *create_preloader_link(const char *wineloader_path, const char *exe_name)
+ {
+     struct stat st;
+-    char *linkpath = create_tempdir(wineloader_path);
++    char *linkpath = sommelier_bundle_link(wineloader_path, exe_name);
+ 
++    if (linkpath) return linkpath;
++    linkpath = create_tempdir(wineloader_path);
++
+     if (!linkpath)
+         return NULL;
+ 

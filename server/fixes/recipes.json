@@ -1,0 +1,6289 @@
+{
+  "version": 1,
+  "recipes": [
+    {
+      "game": "epic:b4a0d2d15acb4db894a599b810297543",
+      "actions": [
+        {
+          "editConfig": {
+            "file": "appdata:Remnant/Saved/Config/WindowsNoEditor/GameUserSettings.ini",
+            "section": "GameUserSettingsGunfire",
+            "key": "ShadowQuality",
+            "value": "${level}"
+          }
+        },
+        {
+          "editConfig": {
+            "file": "appdata:Remnant/Saved/Config/WindowsNoEditor/GameUserSettings.ini",
+            "section": "GameUserSettingsGunfire",
+            "key": "AntiAliasing",
+            "value": "${level}"
+          }
+        },
+        {
+          "editConfig": {
+            "file": "appdata:Remnant/Saved/Config/WindowsNoEditor/GameUserSettings.ini",
+            "section": "GameUserSettingsGunfire",
+            "key": "ViewDistance",
+            "value": "${level}"
+          }
+        },
+        {
+          "editConfig": {
+            "file": "appdata:Remnant/Saved/Config/WindowsNoEditor/GameUserSettings.ini",
+            "section": "GameUserSettingsGunfire",
+            "key": "TextureQuality",
+            "value": "${level}"
+          }
+        },
+        {
+          "editConfig": {
+            "file": "appdata:Remnant/Saved/Config/WindowsNoEditor/GameUserSettings.ini",
+            "section": "GameUserSettingsGunfire",
+            "key": "PostProcessing",
+            "value": "${level}"
+          }
+        },
+        {
+          "editConfig": {
+            "file": "appdata:Remnant/Saved/Config/WindowsNoEditor/GameUserSettings.ini",
+            "section": "GameUserSettingsGunfire",
+            "key": "EffectsQuality",
+            "value": "${level}"
+          }
+        },
+        {
+          "editConfig": {
+            "file": "appdata:Remnant/Saved/Config/WindowsNoEditor/GameUserSettings.ini",
+            "section": "GameUserSettingsGunfire",
+            "key": "FoliageQuality",
+            "value": "${level}"
+          }
+        },
+        {
+          "editConfig": {
+            "file": "appdata:Remnant/Saved/Config/WindowsNoEditor/GameUserSettings.ini",
+            "section": "GameUserSettingsGunfire",
+            "key": "ShadowDistance",
+            "value": "${level:0.5,0.7,0.85,1.0}"
+          }
+        }
+      ],
+      "source": "team"
+    },
+    {
+      "game": "epic:umu-286690",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Metro 2033 Redux"
+    },
+    {
+      "game": "epic:umu-287390",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Metro Last Light Redux"
+    },
+    {
+      "game": "epic:umu-298110",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        },
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "FarCry 4 chokes on more than 24 cores"
+    },
+    {
+      "game": "epic:umu-397540",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        },
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Borderlands 3"
+    },
+    {
+      "game": "epic:umu-40800",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        },
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Installs d3dcompiler, xact"
+    },
+    {
+      "game": "epic:umu-50620",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        },
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Add d3dcompiler fixes"
+    },
+    {
+      "game": "epic:umu-675010",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "MudRunner"
+    },
+    {
+      "game": "epic:umu-7580986b33344aeb8fd733caa7457a72",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Fix for Asphalt 8"
+    },
+    {
+      "game": "gog:umu-1151640",
+      "actions": [
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Game fix for Horizon Zero Dawn"
+    },
+    {
+      "game": "gog:umu-1207658861",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Two Worlds Epic Edition"
+    },
+    {
+      "game": "gog:umu-15750",
+      "actions": [
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Oddworld: Stranger's Wrath HD"
+    },
+    {
+      "game": "gog:umu-219990",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Game fix for Grim Dawn"
+    },
+    {
+      "game": "gog:umu-22610",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "physx"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Alien Breed: Impact"
+    },
+    {
+      "game": "gog:umu-22650",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "physx"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Alien Breed 2: Assault"
+    },
+    {
+      "game": "gog:umu-22670",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "physx"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Alien Breed 3: Descent"
+    },
+    {
+      "game": "gog:umu-245050",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directplay"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Needs DirectPlay for multiplayer functionality"
+    },
+    {
+      "game": "gog:umu-245450",
+      "actions": [
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Needs mfc42 for settings dialog functionality"
+    },
+    {
+      "game": "gog:umu-254840",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "corefonts"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Game fix for Ground Control 2"
+    },
+    {
+      "game": "gog:umu-269330",
+      "actions": [
+        {
+          "installDotNet": {}
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Add dotnet"
+    },
+    {
+      "game": "gog:umu-283310",
+      "actions": [
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Game fix for Soulbringer"
+    },
+    {
+      "game": "gog:umu-311770",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Game fix for LEGO® Pirates of the Caribbean"
+    },
+    {
+      "game": "gog:umu-333980",
+      "actions": [
+        {
+          "setEnvironment": {
+            "_0": {
+              "SOMMELIER_HIDE_WINE": "1"
+            }
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Game fix for Akiba's Trip: Undead & Undressed"
+    },
+    {
+      "game": "gog:umu-3556750",
+      "actions": [
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Warhammer 40,000: Dawn of War - Definitive Edition"
+    },
+    {
+      "game": "gog:umu-356190",
+      "actions": [
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Game fix for Middle-earth: Shadow of War"
+    },
+    {
+      "game": "gog:umu-39190",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directplay"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Enable Multiplayer and protontricks directplay for full functionality"
+    },
+    {
+      "game": "gog:umu-39200",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directplay"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Apply protontricks directplay for full multiplayer functionality"
+    },
+    {
+      "game": "gog:umu-39540",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directplay"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Needs DirectPlay for multiplayer functionality"
+    },
+    {
+      "game": "gog:umu-39550",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directplay"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Needs DirectPlay for multiplayer functionality"
+    },
+    {
+      "game": "gog:umu-50620",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        },
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Add d3dcompiler fixes"
+    },
+    {
+      "game": "gog:umu-65530",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directplay"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Needs DirectPlay for multiplayer functionality"
+    },
+    {
+      "game": "gog:umu-910830",
+      "actions": [
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Installs mfc42"
+    },
+    {
+      "game": "steam:10",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:10090",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1016950",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1025600",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1030830",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "physx"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Enable NVIDIA PhysX support."
+    },
+    {
+      "game": "steam:1044720",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1057090",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), reported-upstream"
+    },
+    {
+      "game": "steam:1071140",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1086940",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:108710",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Installs d3dcompiler_47"
+    },
+    {
+      "game": "steam:1088850",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), verified-local"
+    },
+    {
+      "game": "steam:1091500",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1101120",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:110800",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        },
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Installs d3dx9_43, d3dcompiler_43, d3dx11_43, d3dcompiler_47 forces dx11 (enables intro cinematics) without editing settings.ini"
+    },
+    {
+      "game": "steam:1113560",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1115050",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1122720",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1139900",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), reported-upstream"
+    },
+    {
+      "game": "steam:1145350",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1148590",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1150690",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxvk"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1151640",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        },
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes-highball",
+      "note": "Game fix for Horizon Zero Dawn"
+    },
+    {
+      "game": "steam:1158310",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxvk"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1159090",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1167630",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1175730",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        },
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes",
+      "note": "https://forum.treeofsavior.com/t/linux-the-graphic-card-does-not-support-directx11-13ep/418073/13"
+    },
+    {
+      "game": "steam:1180660",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1189490",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1190460",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1196590",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1201240",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1210320",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1211020",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:12120",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "wined3d"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:12210",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxvk"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1221540",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1222670",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), verified-local"
+    },
+    {
+      "game": "steam:1229490",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxvk"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1237970",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1239520",
+      "actions": [
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Madden NFL 21 needs vcrun2019 for online mode to work"
+    },
+    {
+      "game": "steam:1240440",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        },
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes-highball",
+      "note": "Halo Infinite needs vcrun2019"
+    },
+    {
+      "game": "steam:1244460",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1245620",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1262560",
+      "actions": [
+        {
+          "editConfig": {
+            "file": "documents:Criterion Games/Need For Speed(TM) Most Wanted/config.NFS13Save",
+            "section": "Display",
+            "key": "Width",
+            "value": "${width}"
+          }
+        },
+        {
+          "editConfig": {
+            "file": "documents:Criterion Games/Need For Speed(TM) Most Wanted/config.NFS13Save",
+            "section": "Display",
+            "key": "Height",
+            "value": "${height}"
+          }
+        },
+        {
+          "editConfig": {
+            "file": "documents:Criterion Games/Need For Speed(TM) Most Wanted/config.NFS13Save",
+            "section": "Display",
+            "key": "SSAOLevel",
+            "value": "${level:0,1,1,2}"
+          }
+        },
+        {
+          "editConfig": {
+            "file": "documents:Criterion Games/Need For Speed(TM) Most Wanted/config.NFS13Save",
+            "section": "Display",
+            "key": "MotionBlurLevel",
+            "value": "${level:0,1,1,1}"
+          }
+        },
+        {
+          "editConfig": {
+            "file": "documents:Criterion Games/Need For Speed(TM) Most Wanted/config.NFS13Save",
+            "section": "Display",
+            "key": "ReflectionDetailLevel",
+            "value": "${level:0,1,1,2}"
+          }
+        },
+        {
+          "editConfig": {
+            "file": "documents:Criterion Games/Need For Speed(TM) Most Wanted/config.NFS13Save",
+            "section": "Display",
+            "key": "VfxDetail",
+            "value": "${level:0,1,1,2}"
+          }
+        },
+        {
+          "editConfig": {
+            "file": "documents:Criterion Games/Need For Speed(TM) Most Wanted/config.NFS13Save",
+            "section": "Display",
+            "key": "HiResTextures",
+            "value": "${level:false,true,true,true}"
+          }
+        },
+        {
+          "editConfig": {
+            "file": "documents:Criterion Games/Need For Speed(TM) Most Wanted/config.NFS13Save",
+            "section": "Display",
+            "key": "HeadlightShadows",
+            "value": "${level:false,false,true,true}"
+          }
+        },
+        {
+          "editConfig": {
+            "file": "documents:Criterion Games/Need For Speed(TM) Most Wanted/config.NFS13Save",
+            "section": "Settings",
+            "key": "ShadowMapLevel",
+            "value": "${level}"
+          }
+        }
+      ],
+      "source": "team"
+    },
+    {
+      "game": "steam:1265920",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1265930",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1271700",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1277510",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Game fix for Re:ZERO -Starting Life in Another World- The Prophecy of the Throne"
+    },
+    {
+      "game": "steam:12810",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "physx"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Overlord II"
+    },
+    {
+      "game": "steam:1282590",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1284410",
+      "actions": [
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Installs mfc140 mfc140 is necessary to start the game up. GOG login happens inside the Steam overlay. vcrun2019 enables full support of the prelauncher interface. GOG login inside the prelauncher. Thi"
+    },
+    {
+      "game": "steam:1286580",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1290000",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1293830",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        },
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes-highball",
+      "note": "Forza Horizon 4"
+    },
+    {
+      "game": "steam:1295920",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1332010",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1346400",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "dsound"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Game needs DirectSound dlls to fix looping and overlapping sound in menus and ingame"
+    },
+    {
+      "game": "steam:1361510",
+      "actions": [
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Teenage Mutant Ninja Turtles Shredders Revenge"
+    },
+    {
+      "game": "steam:1363080",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1374490",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1382070",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "wined3d"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1386780",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1392960",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        },
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Game fix for STORY OF SEASONS: Pioneers of Olive Town"
+    },
+    {
+      "game": "steam:1406990",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "wined3d"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1422450",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), reported-upstream"
+    },
+    {
+      "game": "steam:1422630",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1426210",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1434950",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        },
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Installs d3dcompiler, d3dx11_43"
+    },
+    {
+      "game": "steam:1446780",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1449110",
+      "actions": [
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Game fix for The Outer Worlds 2"
+    },
+    {
+      "game": "steam:1449850",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1462040",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1477590",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxvk"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1478500",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1486920",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1544020",
+      "actions": [
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes",
+      "note": "The Callisto Protocol"
+    },
+    {
+      "game": "steam:1549970",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1551360",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1557480",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Needs native d3dcompiler_47"
+    },
+    {
+      "game": "steam:15750",
+      "actions": [
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Oddworld: Stranger's Wrath HD"
+    },
+    {
+      "game": "steam:1577120",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxvk"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1585220",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1588550",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1590910",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1593030",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1593500",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1602080",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1623730",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1659420",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:16700",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directplay"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Installs directplay"
+    },
+    {
+      "game": "steam:1677280",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        },
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes-highball",
+      "note": "Company Of Heroes 3"
+    },
+    {
+      "game": "steam:1687950",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1695793",
+      "actions": [
+        {
+          "installDotNet": {}
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Game fix for the Halo Reach mod tools Foundation gamemode. Standalone and Sapien seem to work just fine without d3dcompiler_47 and msxml3, although might be required at some deeper level. I just playt"
+    },
+    {
+      "game": "steam:1710820",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1711950",
+      "actions": [
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Installs mfc140 mfc140 is necessary to start the game up. GOG login happens inside the Steam overlay. vcrun2019 enables full support of the prelauncher interface. GOG login inside the prelauncher. Thi"
+    },
+    {
+      "game": "steam:1715130",
+      "actions": [
+        {
+          "installVCRuntime": {}
+        },
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Crysis Remastered"
+    },
+    {
+      "game": "steam:1716740",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1732430",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1733240",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1766060",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1782120",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1782460",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1783560",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1794680",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1805320",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1817190",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1827180",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxvk"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1830970",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), verified-local"
+    },
+    {
+      "game": "steam:1850510",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1876280",
+      "actions": [
+        {
+          "installDotNet": {}
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Crashes unless dotnet48 is installed."
+    },
+    {
+      "game": "steam:1876890",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1888160",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1902490",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxvk"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), verified-local"
+    },
+    {
+      "game": "steam:1903340",
+      "actions": [
+        {
+          "editSave": {
+            "file": "appdata:Sandfall/Saved/SaveGames/*/SharedGameUserSettings.sav",
+            "structName": "EngineSettingsData",
+            "values": {
+              "OverallScalabilityLevel": "${level}",
+              "ViewDistanceQuality": "${level}",
+              "AntiAliasingQuality": "${level}",
+              "ShadowQuality": "${level}",
+              "GlobalIlluminationQuality": "${level}",
+              "ReflectionQuality": "${level}",
+              "PostProcessQuality": "${level}",
+              "TextureQuality": "${level}",
+              "EffectsQuality": "${level}",
+              "FoliageQuality": "${level}",
+              "ShadingQuality": "${level}"
+            }
+          }
+        },
+        {
+          "playStationPrompts": {
+            "file": "appdata:Sandfall/Saved/Config/Windows/Game.ini",
+            "section": "CommonInputPlatformSettings_Windows CommonInputPlatformSettings",
+            "values": {
+              "DefaultGamepadName": "PS5",
+              "bCanChangeGamepadType": "False"
+            }
+          }
+        }
+      ],
+      "source": "team"
+    },
+    {
+      "game": "steam:1930",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Two Worlds Epic Edition - ID 1930 https://www.protondb.com/app/1930"
+    },
+    {
+      "game": "steam:1933840",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1934680",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1943950",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1948980",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1966720",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1966900",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:1973530",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:2005010",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:201480",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directmusic"
+          }
+        },
+        {
+          "installComponent": {
+            "_0": "dsound"
+          }
+        },
+        {
+          "installComponent": {
+            "_0": "directplay"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Installs directmusic and directplay"
+    },
+    {
+      "game": "steam:2019300",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:203160",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:203750",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:2050650",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:205100",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:205650",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "physx"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Needs to have PhysX installed to work, even for systems not using Nvidia."
+    },
+    {
+      "game": "steam:2084000",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:208650",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "physx"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "NVIDIA PhysX support."
+    },
+    {
+      "game": "steam:2098790",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:2111630",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        },
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Add misc. fixes"
+    },
+    {
+      "game": "steam:211500",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxvk"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:213330",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Installs d3dx9_41"
+    },
+    {
+      "game": "steam:213670",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:2141730",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:2144740",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxvk"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:214490",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), reported-upstream"
+    },
+    {
+      "game": "steam:214510",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Installs d3dx9_41"
+    },
+    {
+      "game": "steam:214950",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        },
+        {
+          "installComponent": {
+            "_0": "directplay"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Installs d3dcompiler_42, directplay Disable esync and fsync"
+    },
+    {
+      "game": "steam:215280",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Game fix for Secret World Legends"
+    },
+    {
+      "game": "steam:2161700",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "wined3d"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:21680",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "physx"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Installs physx"
+    },
+    {
+      "game": "steam:2178480",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:2195910",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:219990",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Game fix for Grim Dawn"
+    },
+    {
+      "game": "steam:220",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "wined3d"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:2225070",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:223750",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        },
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Fixes for DCS World Steam Edition"
+    },
+    {
+      "game": "steam:2239710",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:225080",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:225640",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "physx"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Install physx"
+    },
+    {
+      "game": "steam:227300",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:227320",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "corefonts"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Installs corefonts"
+    },
+    {
+      "game": "steam:231430",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        },
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes-highball",
+      "note": "Company Of Heroes 2"
+    },
+    {
+      "game": "steam:231990",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Installs d3dx9_43, xact"
+    },
+    {
+      "game": "steam:2320",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:2322010",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:23300",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Works around a Wine bug causing the game to crash."
+    },
+    {
+      "game": "steam:2333000",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:233450",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxvk"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:2338140",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "wined3d"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:2340650",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:23460",
+      "actions": [
+        {
+          "installDotNet": {}
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Ceville Works with dotnet35sp1 only, now without needing Proton5 Videos still don't work."
+    },
+    {
+      "game": "steam:2353250",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:2357570",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), reported-upstream"
+    },
+    {
+      "game": "steam:237310",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:2379780",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:24010",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:2402680",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:240600",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Game fix for MotorGP"
+    },
+    {
+      "game": "steam:2406770",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:2416450",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:2420510",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:2437570",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:244210",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), verified-local"
+    },
+    {
+      "game": "steam:245050",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directplay"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Needs DirectPlay for multiplayer functionality"
+    },
+    {
+      "game": "steam:245450",
+      "actions": [
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Needs mfc42 for settings dialog functionality"
+    },
+    {
+      "game": "steam:246070",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:2475460",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:24790",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:2483190",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), verified-local"
+    },
+    {
+      "game": "steam:2499860",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:250320",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:250900",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:2521630",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:252430",
+      "actions": [
+        {
+          "installVCRuntime": {}
+        },
+        {
+          "installComponent": {
+            "_0": "dsound"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Install vcrun2010"
+    },
+    {
+      "game": "steam:2524850",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:2525310",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:2536520",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:253750",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:254840",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "corefonts"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Game fix for Ground Control 2"
+    },
+    {
+      "game": "steam:2553040",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:255710",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:256330",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "WRC 4"
+    },
+    {
+      "game": "steam:2567870",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:261510",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "corefonts"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Install corefonts"
+    },
+    {
+      "game": "steam:261550",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), reported-upstream"
+    },
+    {
+      "game": "steam:261640",
+      "actions": [
+        {
+          "runExecutable": {
+            "instead": "Launcher.exe",
+            "run": "BorderlandsPreSequel.exe"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Launcherfix and NVIDIA PhysX support."
+    },
+    {
+      "game": "steam:262060",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:2622380",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:2634950",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:2638370",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:2643980",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:264710",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:2679460",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), verified-local"
+    },
+    {
+      "game": "steam:2688950",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:269330",
+      "actions": [
+        {
+          "installDotNet": {}
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Add dotnet"
+    },
+    {
+      "game": "steam:2693730",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:2694490",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:2697940",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:2698780",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), verified-local"
+    },
+    {
+      "game": "steam:2699660",
+      "actions": [
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Needs vcrun2019 to fix 'Visual C++ Runtime' required error"
+    },
+    {
+      "game": "steam:2707930",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:270880",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:2772750",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxvk"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:281990",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), reported-upstream"
+    },
+    {
+      "game": "steam:282070",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:2823140",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:283310",
+      "actions": [
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Game fix for Soulbringer"
+    },
+    {
+      "game": "steam:2837600",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:284160",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        },
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        },
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        }
+      ],
+      "source": "protonfixes-highball",
+      "note": "Installs d3dx9_43, d3dcompiler_43, d3dx11_43, d3dcompiler_47"
+    },
+    {
+      "game": "steam:287390",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:289070",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:2893570",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:2902720",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:291550",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:292030",
+      "actions": [
+        {
+          "runExecutable": {
+            "instead": "REDprelauncher.exe",
+            "run": "bin\\x64_dx12\\witcher3.exe"
+          }
+        },
+        {
+          "setEnvironment": {
+            "_0": {
+              "D3DM_SUPPORT_DXR": "0"
+            }
+          }
+        },
+        {
+          "setEnvironment": {
+            "_0": {
+              "SOMMELIER_HIDE_WINE": "1"
+            }
+          }
+        },
+        {
+          "editConfig": {
+            "file": "documents:The Witcher 3/user.settings",
+            "section": "Viewport",
+            "key": "Resolution",
+            "value": "\"${width}x${height}\""
+          }
+        },
+        {
+          "editConfig": {
+            "file": "documents:The Witcher 3/user.settings",
+            "section": "Engine",
+            "key": "LimitFPS",
+            "value": "${level:60,60,60,0}"
+          }
+        },
+        {
+          "editConfig": {
+            "file": "documents:The Witcher 3/user.settings",
+            "section": "Rendering",
+            "key": "GrassDensity",
+            "value": "${level:1200,1800,2400,3600}"
+          }
+        },
+        {
+          "editConfig": {
+            "file": "documents:The Witcher 3/user.settings",
+            "section": "Rendering",
+            "key": "CascadeShadowmapSize",
+            "value": "${level:1024,1024,2048,3072}"
+          }
+        },
+        {
+          "editConfig": {
+            "file": "documents:The Witcher 3/user.settings",
+            "section": "Rendering",
+            "key": "CascadeShadowQuality",
+            "value": "${level:0,0,1,1}"
+          }
+        },
+        {
+          "editConfig": {
+            "file": "documents:The Witcher 3/user.settings",
+            "section": "Rendering",
+            "key": "MeshRenderingDistanceScale",
+            "value": "${level:0.6,0.8,1,1.5}"
+          }
+        },
+        {
+          "editConfig": {
+            "file": "documents:The Witcher 3/user.settings",
+            "section": "Rendering",
+            "key": "MeshLODDistanceScale",
+            "value": "${level:0.6,0.8,1,1.3}"
+          }
+        },
+        {
+          "editConfig": {
+            "file": "documents:The Witcher 3/user.settings",
+            "section": "Rendering",
+            "key": "MaxTextureAnizotropy",
+            "value": "${level:4,8,16,16}"
+          }
+        },
+        {
+          "editConfig": {
+            "file": "documents:The Witcher 3/user.settings",
+            "section": "Rendering",
+            "key": "HairWorksLevel",
+            "value": "0"
+          }
+        },
+        {
+          "editConfig": {
+            "file": "documents:The Witcher 3/user.settings",
+            "section": "Rendering/RT",
+            "key": "EnableRT",
+            "value": "false"
+          }
+        },
+        {
+          "editConfig": {
+            "file": "documents:The Witcher 3/user.settings",
+            "section": "Rendering/RT",
+            "key": "RTAOEnabled",
+            "value": "false"
+          }
+        },
+        {
+          "editConfig": {
+            "file": "documents:The Witcher 3/user.settings",
+            "section": "Rendering/RT/PathTracer",
+            "key": "PTEnable",
+            "value": "false"
+          }
+        },
+        {
+          "editConfig": {
+            "file": "documents:The Witcher 3/dx12user.settings",
+            "section": "Viewport",
+            "key": "Resolution",
+            "value": "\"${width}x${height}\""
+          }
+        },
+        {
+          "editConfig": {
+            "file": "documents:The Witcher 3/dx12user.settings",
+            "section": "Engine",
+            "key": "LimitFPS",
+            "value": "${level:60,60,60,0}"
+          }
+        },
+        {
+          "editConfig": {
+            "file": "documents:The Witcher 3/dx12user.settings",
+            "section": "Rendering",
+            "key": "GrassDensity",
+            "value": "${level:1200,1800,2400,3600}"
+          }
+        },
+        {
+          "editConfig": {
+            "file": "documents:The Witcher 3/dx12user.settings",
+            "section": "Rendering",
+            "key": "CascadeShadowmapSize",
+            "value": "${level:1024,1024,2048,3072}"
+          }
+        },
+        {
+          "editConfig": {
+            "file": "documents:The Witcher 3/dx12user.settings",
+            "section": "Rendering",
+            "key": "CascadeShadowQuality",
+            "value": "${level:0,0,1,1}"
+          }
+        },
+        {
+          "editConfig": {
+            "file": "documents:The Witcher 3/dx12user.settings",
+            "section": "Rendering",
+            "key": "MeshRenderingDistanceScale",
+            "value": "${level:0.6,0.8,1,1.5}"
+          }
+        },
+        {
+          "editConfig": {
+            "file": "documents:The Witcher 3/dx12user.settings",
+            "section": "Rendering",
+            "key": "MeshLODDistanceScale",
+            "value": "${level:0.6,0.8,1,1.3}"
+          }
+        },
+        {
+          "editConfig": {
+            "file": "documents:The Witcher 3/dx12user.settings",
+            "section": "Rendering",
+            "key": "MaxTextureAnizotropy",
+            "value": "${level:4,8,16,16}"
+          }
+        },
+        {
+          "editConfig": {
+            "file": "documents:The Witcher 3/dx12user.settings",
+            "section": "Rendering",
+            "key": "HairWorksLevel",
+            "value": "0"
+          }
+        },
+        {
+          "editConfig": {
+            "file": "documents:The Witcher 3/dx12user.settings",
+            "section": "Rendering/RT",
+            "key": "EnableRT",
+            "value": "false"
+          }
+        },
+        {
+          "editConfig": {
+            "file": "documents:The Witcher 3/dx12user.settings",
+            "section": "Rendering/RT",
+            "key": "RTAOEnabled",
+            "value": "false"
+          }
+        },
+        {
+          "editConfig": {
+            "file": "documents:The Witcher 3/dx12user.settings",
+            "section": "Rendering/RT/PathTracer",
+            "key": "PTEnable",
+            "value": "false"
+          }
+        }
+      ],
+      "source": "team",
+      "note": "Game fix for The Witcher 3: Wild Hunt The 5.0 update looks up wine_get_version. When it finds it, the game never initializes Streamline (DLSS SR/RR, DLSS-G, Reflex) and turns off ray tracing, path tra"
+    },
+    {
+      "game": "steam:292120",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "wined3d"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:2925280",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:2929250",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:298030",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directplay"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Multiplayer requires directplay for full functionality"
+    },
+    {
+      "game": "steam:298110",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        },
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "FarCry 4 chokes on more than 24 cores"
+    },
+    {
+      "game": "steam:2988580",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:304240",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:304430",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:306910",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:307780",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        },
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        }
+      ],
+      "source": "protonfixes-highball",
+      "note": "Game fix for Mortal Kombat X"
+    },
+    {
+      "game": "steam:310560",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:310950",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), reported-upstream"
+    },
+    {
+      "game": "steam:312450",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "corefonts"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Install corefonts"
+    },
+    {
+      "game": "steam:312520",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:312780",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Use the native compiler for legacy D3D9 effects."
+    },
+    {
+      "game": "steam:3164500",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxvk"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:3191030",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:3191050",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:319510",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxvk"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), verified-local"
+    },
+    {
+      "game": "steam:320140",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:3224770",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), reported-upstream"
+    },
+    {
+      "game": "steam:323190",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:3241660",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:32470",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:329050",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:329380",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "dsound"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Dsound is needed for audio"
+    },
+    {
+      "game": "steam:3314060",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxvk"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), verified-local"
+    },
+    {
+      "game": "steam:3314070",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "wined3d"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:3314790",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), verified-local"
+    },
+    {
+      "game": "steam:3320",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:332800",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxvk"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:33390",
+      "actions": [
+        {
+          "installDotNet": {}
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Needs dotnet48 installed to avoid crashing."
+    },
+    {
+      "game": "steam:333980",
+      "actions": [
+        {
+          "setEnvironment": {
+            "_0": {
+              "SOMMELIER_HIDE_WINE": "1"
+            }
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Game fix for Akiba's Trip: Undead & Undressed"
+    },
+    {
+      "game": "steam:3357650",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:34330",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Total War: Shogun 2"
+    },
+    {
+      "game": "steam:3450310",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxvk"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:345390",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:345610",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "wined3d"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:3489700",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:349040",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), verified-local"
+    },
+    {
+      "game": "steam:3527290",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxvk"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), verified-local"
+    },
+    {
+      "game": "steam:3556750",
+      "actions": [
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Warhammer 40,000: Dawn of War - Definitive Edition"
+    },
+    {
+      "game": "steam:356040",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:356190",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), reported-upstream"
+    },
+    {
+      "game": "steam:3564740",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:3576350",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:359320",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:3606890",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:3626940",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:3649940",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:365590",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:3656800",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:366250",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Metal Slug"
+    },
+    {
+      "game": "steam:3669060",
+      "actions": [
+        {
+          "setEnvironment": {
+            "_0": {
+              "SOMMELIER_HIDE_WINE": "1"
+            }
+          }
+        },
+        {
+          "installDotNet": {}
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Game fix for Blade & Soul NEO"
+    },
+    {
+      "game": "steam:3676940",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:3699590",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:372000",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        },
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes",
+      "note": "https://forum.treeofsavior.com/t/linux-the-graphic-card-does-not-support-directx11-13ep/418073/13"
+    },
+    {
+      "game": "steam:3722330",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:374320",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:3751260",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:376680",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:377160",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:377530",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:378540",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:383980",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:384190",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:388090",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:389730",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:391540",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "wined3d"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:39190",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directplay"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Enable Multiplayer and protontricks directplay for full functionality"
+    },
+    {
+      "game": "steam:39200",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directplay"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Apply protontricks directplay for full multiplayer functionality"
+    },
+    {
+      "game": "steam:392260",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxvk"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:3949040",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:39540",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directplay"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Needs DirectPlay for multiplayer functionality"
+    },
+    {
+      "game": "steam:39550",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directplay"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Needs DirectPlay for multiplayer functionality"
+    },
+    {
+      "game": "steam:3974650",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:397540",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        },
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Borderlands 3"
+    },
+    {
+      "game": "steam:400",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxvk"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), verified-local"
+    },
+    {
+      "game": "steam:4000",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:4001890",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:4003800",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:403640",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:4072240",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:40800",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "wined3d"
+          }
+        },
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        },
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        }
+      ],
+      "source": "protonfixes-highball",
+      "note": "Installs d3dcompiler, xact"
+    },
+    {
+      "game": "steam:40950",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directplay"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Installs directplay"
+    },
+    {
+      "game": "steam:40970",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directplay"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Installs directplay"
+    },
+    {
+      "game": "steam:4126040",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:418530",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:4196100",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:427410",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:427520",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:42890",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Installs d3dcompiler_42"
+    },
+    {
+      "game": "steam:43110",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Installs d3dcompiler_42"
+    },
+    {
+      "game": "steam:4317790",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:4358690",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:4399150",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:440",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:4465480",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), verified-local"
+    },
+    {
+      "game": "steam:44690",
+      "actions": [
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Installs mfc42"
+    },
+    {
+      "game": "steam:447040",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        },
+        {
+          "addArguments": {
+            "_0": [
+              "-eac_launcher",
+              "-nosplash"
+            ]
+          }
+        }
+      ],
+      "source": "protonfixes-highball",
+      "note": "Disable Easy Anti-Cheat and online play"
+    },
+    {
+      "game": "steam:4557380",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:4560",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "physx"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Installs physx library, without it the game simply won't launch"
+    },
+    {
+      "game": "steam:460920",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:461040",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxvk"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:4623570",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:465840",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "The Last Blade"
+    },
+    {
+      "game": "steam:4704690",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:4730",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Outrun 2006: Coast 2 Coast"
+    },
+    {
+      "game": "steam:473950",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:4758450",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:480490",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:484900",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:4894830",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:489830",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxvk"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:49520",
+      "actions": [
+        {
+          "runExecutable": {
+            "instead": "Launcher.exe",
+            "run": "Borderlands2.exe"
+          }
+        },
+        {
+          "addArguments": {
+            "_0": [
+              "-NoSplash"
+            ]
+          }
+        },
+        {
+          "installComponent": {
+            "_0": "physx"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Launcherfix and NVIDIA PhysX support."
+    },
+    {
+      "game": "steam:496300",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxvk"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:4995030",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:500",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "wined3d"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:5000760",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:502500",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:50620",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        },
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Add d3dcompiler fixes"
+    },
+    {
+      "game": "steam:5149020",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:516750",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:517630",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:521890",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:524220",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:526870",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:548430",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:550320",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:553540",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:553850",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:570940",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        },
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes-highball",
+      "note": "Game fix Dark Souls Remastered"
+    },
+    {
+      "game": "steam:579180",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), reported-upstream"
+    },
+    {
+      "game": "steam:582010",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:584400",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:585420",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:589360",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), reported-upstream"
+    },
+    {
+      "game": "steam:589370",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), reported-upstream"
+    },
+    {
+      "game": "steam:601150",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:601510",
+      "actions": [
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Yu-Gi-Oh Duel Links needs vcrun2019"
+    },
+    {
+      "game": "steam:601840",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:613830",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:617290",
+      "actions": [
+        {
+          "editConfig": {
+            "file": "appdata:Remnant/Saved/Config/WindowsNoEditor/GameUserSettings.ini",
+            "section": "GameUserSettingsGunfire",
+            "key": "ShadowQuality",
+            "value": "${level}"
+          }
+        },
+        {
+          "editConfig": {
+            "file": "appdata:Remnant/Saved/Config/WindowsNoEditor/GameUserSettings.ini",
+            "section": "GameUserSettingsGunfire",
+            "key": "AntiAliasing",
+            "value": "${level}"
+          }
+        },
+        {
+          "editConfig": {
+            "file": "appdata:Remnant/Saved/Config/WindowsNoEditor/GameUserSettings.ini",
+            "section": "GameUserSettingsGunfire",
+            "key": "ViewDistance",
+            "value": "${level}"
+          }
+        },
+        {
+          "editConfig": {
+            "file": "appdata:Remnant/Saved/Config/WindowsNoEditor/GameUserSettings.ini",
+            "section": "GameUserSettingsGunfire",
+            "key": "TextureQuality",
+            "value": "${level}"
+          }
+        },
+        {
+          "editConfig": {
+            "file": "appdata:Remnant/Saved/Config/WindowsNoEditor/GameUserSettings.ini",
+            "section": "GameUserSettingsGunfire",
+            "key": "PostProcessing",
+            "value": "${level}"
+          }
+        },
+        {
+          "editConfig": {
+            "file": "appdata:Remnant/Saved/Config/WindowsNoEditor/GameUserSettings.ini",
+            "section": "GameUserSettingsGunfire",
+            "key": "EffectsQuality",
+            "value": "${level}"
+          }
+        },
+        {
+          "editConfig": {
+            "file": "appdata:Remnant/Saved/Config/WindowsNoEditor/GameUserSettings.ini",
+            "section": "GameUserSettingsGunfire",
+            "key": "FoliageQuality",
+            "value": "${level}"
+          }
+        },
+        {
+          "editConfig": {
+            "file": "appdata:Remnant/Saved/Config/WindowsNoEditor/GameUserSettings.ini",
+            "section": "GameUserSettingsGunfire",
+            "key": "ShadowDistance",
+            "value": "${level:0.5,0.7,0.85,1.0}"
+          }
+        }
+      ],
+      "source": "team"
+    },
+    {
+      "game": "steam:620",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxvk"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), verified-local"
+    },
+    {
+      "game": "steam:622650",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:627270",
+      "actions": [
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Game fix Injustice 2"
+    },
+    {
+      "game": "steam:632360",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:632470",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:632950",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:633230",
+      "actions": [
+        {
+          "setEnvironment": {
+            "_0": {
+              "SOMMELIER_HIDE_WINE": "1"
+            }
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Game fix for Naruto To Boruto"
+    },
+    {
+      "game": "steam:636480",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:63700",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Game fix for BIT.TRIP BEAT"
+    },
+    {
+      "game": "steam:646570",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:65530",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directplay"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Needs DirectPlay for multiplayer functionality"
+    },
+    {
+      "game": "steam:658150",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Fixes shader compilation error"
+    },
+    {
+      "game": "steam:675010",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:678950",
+      "actions": [
+        {
+          "setEnvironment": {
+            "_0": {
+              "SOMMELIER_HIDE_WINE": "1"
+            }
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Game fix for DRAGON BALL FighterZ"
+    },
+    {
+      "game": "steam:688420",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:690040",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), reported-upstream"
+    },
+    {
+      "game": "steam:690790",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:6920",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "dsound"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Deus Ex: Invisible War"
+    },
+    {
+      "game": "steam:70",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxvk"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:701160",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:70400",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directmusic"
+          }
+        },
+        {
+          "installComponent": {
+            "_0": "dsound"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Install directsound libraries"
+    },
+    {
+      "game": "steam:70420",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directmusic"
+          }
+        },
+        {
+          "installComponent": {
+            "_0": "dsound"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Install directsound libraries"
+    },
+    {
+      "game": "steam:70650",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directmusic"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Installs directmusic to fix menu and game music"
+    },
+    {
+      "game": "steam:710700",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:730",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), verified-local"
+    },
+    {
+      "game": "steam:739630",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxvk"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:742520",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:743890",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:750920",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        },
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        }
+      ],
+      "source": "protonfixes-highball",
+      "note": "Shadow of the Tomb Raider"
+    },
+    {
+      "game": "steam:751780",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:753640",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxvk"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:767560",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:773370",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Requires d3dcompiler_47"
+    },
+    {
+      "game": "steam:774801",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:782330",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxvk"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:784150",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:7850",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "physx"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Uses physx"
+    },
+    {
+      "game": "steam:805550",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:813780",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        },
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes-highball",
+      "note": "Game fix Age of Empires II: DE"
+    },
+    {
+      "game": "steam:814380",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), reported-upstream"
+    },
+    {
+      "game": "steam:815370",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:816020",
+      "actions": [
+        {
+          "setEnvironment": {
+            "_0": {
+              "SOMMELIER_HIDE_WINE": "1"
+            }
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Game fix for JUMP FORCE"
+    },
+    {
+      "game": "steam:8190",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        },
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Requires seccomp"
+    },
+    {
+      "game": "steam:835960",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:870780",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:871720",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "wined3d"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:893180",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        },
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Game fix Catherine Classic"
+    },
+    {
+      "game": "steam:894020",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:895870",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Requires d3dcompiler_47"
+    },
+    {
+      "game": "steam:8980",
+      "actions": [
+        {
+          "runExecutable": {
+            "instead": "Launcher.exe",
+            "run": "BorderlandsGOTY.exe"
+          }
+        }
+      ],
+      "source": "protonfixes"
+    },
+    {
+      "game": "steam:906510",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Installs d3dcompiler_47"
+    },
+    {
+      "game": "steam:910830",
+      "actions": [
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Installs mfc42"
+    },
+    {
+      "game": "steam:920210",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxvk"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:934700",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:945360",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:952060",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:952860",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:960090",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:960170",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxvk"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:960990",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:963930",
+      "actions": [
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Contractors VR"
+    },
+    {
+      "game": "steam:976310",
+      "actions": [
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Game fix Mortal Kombat 11"
+    },
+    {
+      "game": "steam:976730",
+      "actions": [
+        {
+          "installVCRuntime": {}
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Game fix Halo:MCC"
+    },
+    {
+      "game": "steam:978780",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "dxmt"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:985890",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:9900",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Ensure d3dcompiler_47 is installed so the launcher window content is visible"
+    },
+    {
+      "game": "steam:990080",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:992300",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        }
+      ],
+      "source": "highball",
+      "note": "graphics layer from highball-db (CC0), community"
+    },
+    {
+      "game": "steam:997070",
+      "actions": [
+        {
+          "installVCRuntime": {}
+        },
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "Game fix Marvel's Avengers"
+    },
+    {
+      "game": "ubisoft:umu-298110",
+      "actions": [
+        {
+          "installComponent": {
+            "_0": "directx"
+          }
+        },
+        {
+          "installComponent": {
+            "_0": "d3dcompiler47"
+          }
+        }
+      ],
+      "source": "protonfixes",
+      "note": "FarCry 4 chokes on more than 24 cores"
+    },
+    {
+      "game": "steam:1501750",
+      "actions": [
+        {
+          "playStationPrompts": {
+            "file": "appdata:LOTF2/Saved/Config/Windows/Game.ini",
+            "section": "CommonInputPlatformSettings_Windows CommonInputPlatformSettings",
+            "values": {
+              "DefaultGamepadName": "PS5",
+              "bCanChangeGamepadType": "False"
+            }
+          }
+        }
+      ],
+      "source": "team"
+    },
+    {
+      "game": "steam:2129530",
+      "actions": [
+        {
+          "playStationPrompts": {
+            "file": "appdata:REANIMAL/Saved/Config/Windows/Game.ini",
+            "section": "CommonInputPlatformSettings_Windows CommonInputPlatformSettings",
+            "values": {
+              "DefaultGamepadName": "PS5",
+              "bCanChangeGamepadType": "False"
+            }
+          }
+        }
+      ],
+      "source": "team"
+    }
+  ]
+}

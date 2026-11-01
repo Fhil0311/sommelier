@@ -1,0 +1,918 @@
+{
+  "version" : 1,
+  "games" : [
+    {
+      "game" : "steam:990080",
+      "status" : "ready",
+      "runtime" : "wine",
+      "sources" : {
+        "nexus" : {
+          "domain" : "hogwartslegacy"
+        }
+      },
+      "frameworks" : [
+        {
+          "id" : "ue4ss",
+          "name" : "UE4SS",
+          "license" : "MIT",
+          "code" : true,
+          "download" : {
+            "kind" : "github",
+            "repo" : "UE4SS-RE/RE-UE4SS",
+            "asset" : "UE4SS_v3.0.1.zip",
+            "tag" : "v3.0.1"
+          },
+          "pick" : [
+            {
+              "match" : "dwmapi.dll|UE4SS.dll|UE4SS-settings.ini|ue4ss/UE4SS.dll|ue4ss/UE4SS-settings.ini",
+              "to" : "game:Phoenix/Binaries/Win64/"
+            },
+            {
+              "match" : "Mods/**|ue4ss/Mods/**",
+              "to" : "game:Phoenix/Binaries/Win64/",
+              "stripTo" : "Mods"
+            }
+          ],
+          "remove" : [
+            "game:Phoenix/Binaries/Win64/xinput1_3.dll",
+            "game:dwmapi.dll"
+          ],
+          "settings" : [
+            {
+              "file" : "game:Phoenix/Binaries/Win64/UE4SS-settings.ini",
+              "format" : "ini",
+              "set" : {
+                "EngineVersionOverride" : {
+                  "MajorVersion" : "4",
+                  "MinorVersion" : "27"
+                },
+                "Debug" : {
+                  "ConsoleEnabled" : "0",
+                  "GuiConsoleEnabled" : "0"
+                }
+              }
+            }
+          ],
+          "dllOverrides" : {
+            "dwmapi" : "n,b"
+          },
+          "components" : [],
+          "launch" : null,
+          "disableArgument" : "--disable-ue4ss"
+        },
+        {
+          "id" : "asiloader",
+          "name" : "Ultimate ASI Loader",
+          "license" : "MIT",
+          "code" : true,
+          "optional" : true,
+          "download" : {
+            "kind" : "github",
+            "repo" : "ThirteenAG/Ultimate-ASI-Loader",
+            "asset" : "Ultimate-ASI-Loader_x64.zip"
+          },
+          "pick" : [
+            {
+              "match" : "dinput8.dll",
+              "to" : "game:Phoenix/Binaries/Win64/version.dll"
+            }
+          ],
+          "dllOverrides" : {
+            "version" : "n,b"
+          }
+        }
+      ],
+      "kinds" : [
+        {
+          "id" : "logic",
+          "code" : false,
+          "framework" : "ue4ss",
+          "unit" : "triple",
+          "match" : "**/LogicMods/*.pak",
+          "to" : "game:Phoenix/Content/Paks/LogicMods/",
+          "order" : "none"
+        },
+        {
+          "id" : "pak",
+          "code" : false,
+          "unit" : "triple",
+          "match" : "**/*_P.pak",
+          "to" : "game:Phoenix/Content/Paks/~mods/{slot}/",
+          "order" : "prefix"
+        },
+        {
+          "id" : "lua",
+          "code" : true,
+          "framework" : "ue4ss",
+          "unit" : "folder",
+          "marker" : "Scripts/main.lua",
+          "match" : "**/Scripts/main.lua",
+          "to" : "game:Phoenix/Binaries/Win64/Mods/{name}/",
+          "order" : "orderFile",
+          "enable" : {
+            "file" : "game:Phoenix/Binaries/Win64/Mods/mods.txt",
+            "format" : "ue4ssModsTxt"
+          }
+        },
+        {
+          "id" : "asi",
+          "code" : true,
+          "framework" : "asiloader",
+          "unit" : "file",
+          "match" : "**/*.asi",
+          "siblings" : true,
+          "to" : "game:Phoenix/Binaries/Win64/",
+          "order" : "none"
+        },
+        {
+          "id" : "movie",
+          "code" : false,
+          "unit" : "file",
+          "match" : "**/Movies/**/*.bk2",
+          "stripTo" : "Movies",
+          "to" : "game:Phoenix/Content/",
+          "backupOriginal" : true,
+          "order" : "none"
+        },
+        {
+          "id" : "ini",
+          "code" : false,
+          "unit" : "file",
+          "match" : "Engine.ini",
+          "to" : "appdata:Hogwarts Legacy/Saved/Config/WindowsNoEditor/Engine.ini",
+          "merge" : "ini",
+          "order" : "none",
+          "ask" : true,
+          "backupOriginal" : true
+        }
+      ],
+      "archive" : {
+        "wrappers" : true,
+        "deny" : [
+          "dwmapi.dll",
+          "xinput1_3.dll",
+          "version.dll",
+          "dxgi.dll",
+          "d3d12.dll"
+        ],
+        "reject" : [
+          {
+            "match" : "**/*.exe",
+            "reason" : "executable"
+          },
+          {
+            "match" : "**/*.sav",
+            "reason" : "saveFile"
+          },
+          {
+            "match" : "**/UE4SS.dll",
+            "reason" : "loader"
+          },
+          {
+            "match" : "**/reshade-shaders/**|**/ReShade.ini|**/ReShadePreset.ini",
+            "reason" : "reshade"
+          }
+        ]
+      },
+      "loadOrder" : {
+        "format" : "prefixFolder",
+        "reverse" : true
+      },
+      "conflicts" : {
+        "samePath" : "warn",
+        "rules" : [
+          {
+            "match" : "**/pakchunk*_P.pak",
+            "sameStem" : true,
+            "reason" : "pakchunk"
+          }
+        ]
+      },
+      "logs" : [
+        {
+          "file" : "game:Phoenix/Binaries/Win64/UE4SS.log",
+          "rules" : [
+            {
+              "pattern" : "AOB scans could not be completed|unable to find address for",
+              "action" : "disableFramework",
+              "framework" : "ue4ss"
+            },
+            {
+              "pattern" : "Mods[/\\\\]([^/\\\\]+)[/\\\\]Scripts[/\\\\]main\\.lua[^\\n]*(error|Error)",
+              "action" : "disableMod",
+              "modFrom" : 1
+            }
+          ],
+          "altFile" : "game:Phoenix/Binaries/Win64/ue4ss/UE4SS.log"
+        },
+        {
+          "file" : "appdata:Hogwarts Legacy/Saved/Logs/Phoenix.log"
+        }
+      ],
+      "saves" : [
+        {
+          "root" : "local",
+          "path" : "Hogwarts Legacy/Saved/SaveGames"
+        },
+        {
+          "root" : "local",
+          "path" : "Hogwarts Legacy/Saved/Config/WindowsNoEditor"
+        }
+      ],
+      "online" : {
+        "policy" : "allowed",
+        "moddedLaunch" : "same"
+      },
+      "notes" : {
+        "gameVersionFile" : "game:Phoenix/Content/Data/Version/DA_Version.txt",
+        "untouched" : [
+          "documents:Hogwarts Legacy/Mods/**"
+        ],
+        "cleanupOnLastCodeMod" : true
+      }
+    },
+    {
+      "game" : "steam:2050650",
+      "status" : "ready",
+      "runtime" : "wine",
+      "sources" : {
+        "nexus" : {
+          "domain" : "residentevil42023"
+        }
+      },
+      "frameworks" : [
+        {
+          "id" : "reframework",
+          "name" : "REFramework",
+          "license" : "MIT",
+          "code" : true,
+          "download" : {
+            "kind" : "github",
+            "repo" : "praydog/REFramework",
+            "asset" : "RE4.zip"
+          },
+          "pick" : [
+            {
+              "match" : "dinput8.dll",
+              "to" : "game:"
+            }
+          ],
+          "skip" : [
+            "reframework/plugins/reframework-d2d.dll",
+            "reframework/autorun/reframework-d2d.lua"
+          ],
+          "dllOverrides" : {
+            "dinput8" : "n,b"
+          },
+          "launch" : null,
+          "settings" : [
+            {
+              "file" : "game:re2_fw_config.txt",
+              "format" : "keyValue",
+              "set" : {
+                "LooseFileLoader_Enabled" : "true"
+              }
+            }
+          ]
+        }
+      ],
+      "kinds" : [
+        {
+          "id" : "pak",
+          "code" : false,
+          "unit" : "file",
+          "match" : "**/*.pak",
+          "to" : "game:re_chunk_000.pak.patch_{next}.pak",
+          "order" : "deploy",
+          "pinned" : "last"
+        },
+        {
+          "id" : "loose",
+          "code" : false,
+          "framework" : "reframework",
+          "unit" : "tree",
+          "match" : "**/natives/**",
+          "stripTo" : "natives",
+          "to" : "game:",
+          "order" : "deploy"
+        },
+        {
+          "id" : "script",
+          "code" : true,
+          "framework" : "reframework",
+          "unit" : "tree",
+          "match" : "**/reframework/**",
+          "stripTo" : "reframework",
+          "to" : "game:",
+          "order" : "none"
+        },
+        {
+          "id" : "lua",
+          "code" : true,
+          "framework" : "reframework",
+          "unit" : "file",
+          "match" : "*.lua",
+          "to" : "game:reframework/autorun/",
+          "order" : "none"
+        }
+      ],
+      "archive" : {
+        "variants" : "modinfo.ini",
+        "wrappers" : true,
+        "deny" : [
+          "dinput8.dll",
+          "dxgi.dll",
+          "d3d12.dll"
+        ],
+        "reject" : [
+          {
+            "match" : "**/*.exe",
+            "reason" : "executable"
+          },
+          {
+            "match" : "**/openvr_api.dll|**/openxr_loader.dll",
+            "reason" : "loader"
+          },
+          {
+            "match" : "**/reshade-shaders/**|**/ReShade.ini|**/ReShadePreset.ini",
+            "reason" : "reshade"
+          }
+        ]
+      },
+      "loadOrder" : {
+        "format" : "deployOrder",
+        "pinLastGroups" : [
+          "pak"
+        ]
+      },
+      "conflicts" : {
+        "samePath" : "warn"
+      },
+      "logs" : [
+        {
+          "file" : "game:re2_framework_log.txt",
+          "rules" : [
+            {
+              "pattern" : "autorun[/\\\\]([^/\\\\\\n]+\\.lua)[^\\n]*(error|exception)",
+              "action" : "disableMod",
+              "modFrom" : 1
+            },
+            {
+              "pattern" : "\\[(?:error|critical)\\][^\\n]*autorun[/\\\\]([^/\\\\\\n:]+\\.lua)",
+              "action" : "disableMod",
+              "modFrom" : 1
+            }
+          ]
+        },
+        {
+          "file" : "game:reframework_crash.dmp",
+          "exists" : {
+            "action" : "disableNewestMod"
+          }
+        }
+      ],
+      "saves" : [],
+      "online" : {
+        "policy" : "allowed",
+        "moddedLaunch" : "same"
+      },
+      "notes" : {
+        "cleanupOnLastCodeMod" : true,
+        "gameVersionFile" : "game:re4.exe"
+      }
+    },
+    {
+      "game" : "steam:413150",
+      "aliases" : [
+        "gog:1453375253"
+      ],
+      "status" : "ready",
+      "runtime" : "native",
+      "sources" : {
+        "nexus" : {
+          "domain" : "stardewvalley"
+        }
+      },
+      "frameworks" : [
+        {
+          "id" : "smapi",
+          "name" : "SMAPI",
+          "license" : "MIT",
+          "code" : true,
+          "download" : {
+            "kind" : "github",
+            "repo" : "Pathoschild/SMAPI",
+            "asset" : "SMAPI-4.5.2-installer.zip",
+            "tag" : "4.5.2",
+            "sha256" : "dd01ddca7b566bfe0d3b3d2d03833496abc56c53da976241f2ab443f5484acc4"
+          },
+          "pick" : [
+            {
+              "match" : "internal/macOS/install.dat",
+              "unpack" : true,
+              "to" : "game:"
+            }
+          ],
+          "copyAs" : [
+            {
+              "from" : "game:Stardew Valley.deps.json",
+              "to" : "game:StardewModdingAPI.deps.json"
+            }
+          ],
+          "launch" : {
+            "redirect" : {
+              "instead" : "Stardew Valley",
+              "run" : "StardewModdingAPI"
+            }
+          }
+        }
+      ],
+      "kinds" : [
+        {
+          "id" : "mod",
+          "code" : true,
+          "framework" : "smapi",
+          "unit" : "folder",
+          "marker" : "manifest.json",
+          "match" : "**/manifest.json",
+          "codeIf" : "manifest.EntryDll",
+          "to" : "game:Mods/{name}/",
+          "order" : "none",
+          "enable" : {
+            "format" : "dotPrefix"
+          },
+          "keepOnUpdate" : [
+            "config.json"
+          ]
+        }
+      ],
+      "archive" : {
+        "wrappers" : true,
+        "ignore" : [
+          "__MACOSX/**",
+          "**/.DS_Store",
+          "**/._*",
+          "**/Thumbs.db",
+          "**/desktop.ini",
+          "**/*.url",
+          "**/readme*",
+          "**/__folder_managed_by_vortex"
+        ],
+        "reject" : [
+          {
+            "match" : "**/install.dat",
+            "reason" : "loader"
+          },
+          {
+            "match" : "**/*.xnb",
+            "reason" : "legacyFormat",
+            "unlessNearby" : "manifest.json"
+          },
+          {
+            "match" : "**/*.exe",
+            "reason" : "executable"
+          },
+          {
+            "match" : "config.json",
+            "onlyFile" : true,
+            "reason" : "configOnly"
+          }
+        ]
+      },
+      "loadOrder" : {
+        "format" : "dependencies"
+      },
+      "conflicts" : {
+        "samePath" : "block",
+        "rules" : [
+          {
+            "field" : "manifest.UniqueID",
+            "max" : 1,
+            "reason" : "duplicateMod"
+          }
+        ],
+        "needs" : {
+          "field" : "manifest.ContentPackFor.UniqueID",
+          "label" : "needsFramework"
+        }
+      },
+      "logs" : [
+        {
+          "file" : "home:.config/StardewValley/ErrorLogs/SMAPI-latest.txt",
+          "summary" : "smapi",
+          "rules" : [
+            {
+              "pattern" : "(?m)^\\[[^\\]]*\\]\\s+- (.+?)(?: \\d\\S*)?(?: \\(ID: [^)]*\\))? because",
+              "action" : "disableMod",
+              "modFrom" : 1
+            },
+            {
+              "pattern" : "(?m)^\\[[^\\]]*\\]\\s+- .+? \\(ID: ([^,)]+), path: [^)]*\\) because",
+              "action" : "disableMod",
+              "modFrom" : 1,
+              "byUniqueID" : true
+            }
+          ]
+        }
+      ],
+      "saves" : [
+        {
+          "root" : "home",
+          "path" : ".config/StardewValley/Saves"
+        }
+      ],
+      "online" : {
+        "policy" : "allowed",
+        "moddedLaunch" : "same"
+      },
+      "notes" : {
+        "gameVersionFile" : "game:Stardew Valley.dll",
+        "cleanupOnLastCodeMod" : false
+      }
+    },
+    {
+      "game" : "steam:1174180",
+      "status" : "experimental",
+      "runtime" : "wine",
+      "sources" : {
+        "nexus" : {
+          "domain" : "reddeadredemption2"
+        },
+        "other" : [
+          "https://www.dev-c.com/rdr2/scripthookrdr2/",
+          "https://www.rdr2mods.com/"
+        ]
+      },
+      "frameworks" : [
+        {
+          "id" : "scripthookrdr2",
+          "name" : "Script Hook RDR2",
+          "license" : "none",
+          "code" : true,
+          "download" : {
+            "kind" : "url",
+            "url" : "https://www.dev-c.com/rdr2/scripthookrdr2/",
+            "file" : "ScriptHookRDR2_*.zip",
+            "viaBrowser" : true
+          },
+          "pick" : [
+            {
+              "match" : "bin/ScriptHookRDR2.dll|bin/dinput8.dll",
+              "to" : "game:"
+            }
+          ],
+          "dllOverrides" : {
+            "dinput8" : "n,b"
+          },
+          "launch" : null,
+          "closesOnOnline" : true
+        },
+        {
+          "id" : "lml",
+          "name" : "Lenny's Mod Loader",
+          "license" : "none",
+          "code" : true,
+          "requires" : [
+            "scripthookrdr2"
+          ],
+          "download" : {
+            "kind" : "url",
+            "url" : "https://www.rdr2mods.com/downloads/rdr2/tools/76-lennys-mod-loader-rdr/",
+            "file" : "*.zip",
+            "viaBrowser" : true
+          },
+          "pick" : [
+            {
+              "match" : "ModLoader/vfs.asi|ModLoader/lml.ini|ModLoader/ModManager.Core.dll|ModLoader/ModManager.NativeInterop.dll|ModLoader/NLog.dll",
+              "to" : "game:"
+            },
+            {
+              "match" : "ModLoader/lml/**",
+              "stripTo" : "lml",
+              "to" : "game:"
+            }
+          ]
+        },
+        {
+          "id" : "asiloader-version",
+          "name" : "RDR 2 ASI Loader",
+          "license" : "none",
+          "code" : true,
+          "optional" : true,
+          "download" : {
+            "kind" : "url",
+            "url" : "https://www.rdr2mods.com/downloads/rdr2/tools/9-rdr-2-asi-loader/",
+            "file" : "*.zip",
+            "viaBrowser" : true
+          },
+          "pick" : [
+            {
+              "match" : "version.dll",
+              "to" : "game:"
+            }
+          ],
+          "dllOverrides" : {
+            "version" : "n,b"
+          }
+        }
+      ],
+      "kinds" : [
+        {
+          "id" : "asi",
+          "code" : true,
+          "framework" : "scripthookrdr2",
+          "unit" : "file",
+          "match" : "**/*.asi",
+          "siblings" : true,
+          "to" : "game:",
+          "order" : "none"
+        },
+        {
+          "id" : "lml",
+          "code" : false,
+          "framework" : "lml",
+          "unit" : "folder",
+          "marker" : "install.xml",
+          "match" : "**/install.xml",
+          "to" : "game:lml/{name}/",
+          "order" : "orderFile"
+        },
+        {
+          "id" : "stream",
+          "code" : false,
+          "framework" : "lml",
+          "unit" : "file",
+          "match" : "**/*.{ymt,ytd,ydd,yft}",
+          "to" : "game:lml/stream/",
+          "order" : "none",
+          "ask" : true
+        }
+      ],
+      "archive" : {
+        "wrappers" : true,
+        "deny" : [
+          "dinput8.dll",
+          "version.dll",
+          "ScriptHookRDR2.dll",
+          "vfs.asi",
+          "dxgi.dll",
+          "d3d12.dll"
+        ],
+        "reject" : [
+          {
+            "match" : "**/*.exe",
+            "reason" : "executable"
+          },
+          {
+            "match" : "**/NativeTrainer.asi",
+            "reason" : "loader"
+          },
+          {
+            "match" : "**/reshade-shaders/**|**/ReShade.ini|**/ReShadePreset.ini|**/ReShade64.dll",
+            "reason" : "reshade"
+          }
+        ]
+      },
+      "loadOrder" : {
+        "format" : "lml",
+        "file" : "game:lml/mods.xml",
+        "reverse" : true,
+        "pinLast" : [
+          "Online Content Unlocker",
+          "Red Dead Offline"
+        ]
+      },
+      "conflicts" : {
+        "samePath" : "warn",
+        "rules" : [
+          {
+            "match" : "**/weapons.ymt|**/catalog_sp.ymt",
+            "sameStem" : true,
+            "reason" : "sameDataFile"
+          }
+        ]
+      },
+      "logs" : [
+        {
+          "file" : "game:asiloader.log",
+          "rules" : [
+            {
+              "pattern" : "(?i)\"((?:[^\"\\n]*[/\\\\])?(?!vfs\\.asi\")[^\"/\\\\\\n]+\\.asi)\" failed to load",
+              "action" : "disableMod",
+              "modFrom" : 1
+            },
+            {
+              "pattern" : "(?i)\"(?:[^\"\\n]*[/\\\\])?vfs\\.asi\" failed to load",
+              "action" : "disableFramework",
+              "framework" : "scripthookrdr2"
+            }
+          ]
+        },
+        {
+          "file" : "game:ScriptHookRDR2.log",
+          "rules" : [
+            {
+              "pattern" : "(?i)unknown game version|unsupported game version",
+              "action" : "disableFramework",
+              "framework" : "scripthookrdr2"
+            }
+          ]
+        }
+      ],
+      "saves" : [
+        {
+          "root" : "documents",
+          "path" : "Rockstar Games/Red Dead Redemption 2/Profiles"
+        }
+      ],
+      "online" : {
+        "policy" : "storyOnly",
+        "moddedLaunch" : "same",
+        "noticeKey" : "storyOnly",
+        "playWithoutModsRemoves" : [
+          "game:dinput8.dll",
+          "game:version.dll",
+          "game:vfs.asi",
+          "game:*.asi",
+          "game:lml/"
+        ]
+      },
+      "notes" : {
+        "gameVersionFile" : "game:RDR2.exe",
+        "cleanupOnLastCodeMod" : true
+      }
+    },
+    {
+      "game" : "steam:1245620",
+      "status" : "ready",
+      "runtime" : "wine",
+      "sources" : {
+        "nexus" : {
+          "domain" : "eldenring"
+        },
+        "other" : [
+          "https://me3.help/"
+        ]
+      },
+      "frameworks" : [
+        {
+          "id" : "me3",
+          "name" : "me3",
+          "license" : "Apache-2.0 OR MIT",
+          "code" : true,
+          "download" : {
+            "kind" : "github",
+            "repo" : "garyttierney/me3",
+            "asset" : "me3-windows-amd64.zip",
+            "tag" : "v0.13.0",
+            "sha256" : "a8b693c574106f20532ab1e8b58b2452f37370679b938a884fe75f87f9b68c2b"
+          },
+          "pick" : [
+            {
+              "match" : "bin/**|LICENSE-*",
+              "to" : "tools:me3/"
+            }
+          ],
+          "components" : [
+            "installVCRuntime"
+          ],
+          "launch" : {
+            "loader" : {
+              "exe" : "tools:me3/bin/me3.exe",
+              "args" : [
+                "launch",
+                "--skip-steam-init",
+                "--exe-path",
+                "{gameExe:Game/eldenring.exe}",
+                "-p",
+                "{config}"
+              ],
+              "config" : "me3",
+              "steamInBottle" : true
+            }
+          }
+        }
+      ],
+      "kinds" : [
+        {
+          "id" : "me2import",
+          "code" : false,
+          "framework" : "me3",
+          "unit" : "folder",
+          "marker" : "config_eldenring.toml",
+          "match" : "**/config_eldenring.toml",
+          "importer" : "modengine2",
+          "to" : "store:{name}/",
+          "order" : "config"
+        },
+        {
+          "id" : "native",
+          "code" : true,
+          "framework" : "me3",
+          "unit" : "file",
+          "match" : "**/*.dll",
+          "siblings" : true,
+          "to" : "store:{name}/",
+          "order" : "config"
+        },
+        {
+          "id" : "package",
+          "code" : false,
+          "framework" : "me3",
+          "unit" : "tree",
+          "match" : "**/{regulation.bin,parts,chr,msg,menu,map,event,script,sfx,sound,font,cutscene,obj,asset,param,movie,action,facegen,shader,other}/**|**/regulation.bin",
+          "stripToParentOf" : "regulation.bin|parts|chr|msg|menu|map|event|script|sfx|sound|font|cutscene|obj|asset|param|movie|action|facegen|shader|other",
+          "to" : "store:{name}/",
+          "order" : "config"
+        }
+      ],
+      "archive" : {
+        "wrappers" : true,
+        "variants" : "regulation.bin",
+        "deny" : [
+          "dinput8.dll",
+          "winhttp.dll",
+          "dxgi.dll",
+          "modengine2.dll",
+          "modengine2_launcher.exe",
+          "ersc_launcher.exe",
+          "**/SeamlessCoop/**"
+        ],
+        "reject" : [
+          {
+            "match" : "**/toggle_anti_cheat.exe|**/start_game_in_offline_mode.exe",
+            "reason" : "eacToggler"
+          },
+          {
+            "match" : "**/*.exe",
+            "reason" : "executable",
+            "unlessNearby" : "config_eldenring.toml"
+          },
+          {
+            "match" : "**/ReShade.ini|**/reshade-shaders/**",
+            "reason" : "reshade"
+          },
+          {
+            "match" : "**/*.sl2|**/*.co2",
+            "reason" : "saveFile"
+          }
+        ]
+      },
+      "loadOrder" : {
+        "format" : "loaderConfig",
+        "config" : "me3",
+        "file" : "store:sommelier.me3"
+      },
+      "conflicts" : {
+        "samePath" : "warn",
+        "rules" : [
+          {
+            "match" : "**/regulation.bin",
+            "max" : 1,
+            "reason" : "regulation"
+          }
+        ]
+      },
+      "logs" : [
+        {
+          "file" : "appdata:garyttierney/me3/data/logs/sommelier/*.log"
+        },
+        {
+          "file" : "game:Game/crashdumps/*.dmp",
+          "exists" : {
+            "action" : "disableNewestMod"
+          }
+        }
+      ],
+      "saves" : [
+        {
+          "root" : "roaming",
+          "path" : "EldenRing"
+        }
+      ],
+      "online" : {
+        "policy" : "offlineOnly",
+        "antiCheat" : "eac",
+        "moddedLaunch" : "loader",
+        "noticeKey" : "offline",
+        "separateSave" : {
+          "default" : true,
+          "via" : "loaderConfig",
+          "file" : "ER0000_sommelier.sl2"
+        },
+        "cleanBeforeVanilla" : [
+          "game:Game/dinput8.dll",
+          "game:Game/winhttp.dll",
+          "game:Game/SeamlessCoop/",
+          "game:Game/steam_appid.txt",
+          "game:Game/modengine2_launcher.exe",
+          "game:Game/mods/"
+        ]
+      },
+      "notes" : {
+        "gameVersionFile" : "game:Game/eldenring.exe",
+        "cleanupOnLastCodeMod" : true
+      }
+    }
+  ]
+}

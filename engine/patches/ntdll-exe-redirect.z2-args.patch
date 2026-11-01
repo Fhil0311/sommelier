@@ -1,0 +1,109 @@
+--- a/dlls/ntdll/unix/process.c
++++ b/dlls/ntdll/unix/process.c
+@@ -1169,7 +1169,72 @@
+ 
+     return STATUS_SUCCESS;
+ }
++
++
+ 
++/* Sommelier: arguments a program gets on top of its own, for programs a store starts that can't be given any (a
++ * game started by Ubisoft Connect or the EA app). The table named by SOMMELIER_EXE_ARGS has one
++ * "C:\Games\WD2\bin\WatchDogs2.exe<TAB>-eac_launcher -nosplash" per line: a program's full path, compared without
++ * case, and what to add. An argument already on the command line isn't added twice. Returns a new command line
++ * (the old one with the arguments after it), or NULL. */
++static WCHAR *sommelier_arguments( const UNICODE_STRING *image, const UNICODE_STRING *cmdline )
++{
++    const char *table = getenv( "SOMMELIER_EXE_ARGS" );
++    char line[2048], *path, *name, *args = NULL, *tab, *end, *arg, *next;
++    WCHAR *ret, *argw;
++    size_t len, cmd_len, pos;
++    FILE *f;
++
++    if (!table || !*table || !image->Buffer || !image->Length || !cmdline->Buffer) return NULL;
++    if (!(f = fopen( table, "r" ))) return NULL;
++    len = image->Length / sizeof(WCHAR) * 3 + 1;
++    if (!(path = malloc( len ))) { fclose( f ); return NULL; }
++    len = ntdll_wcstoumbs( image->Buffer, image->Length / sizeof(WCHAR), path, len - 1, FALSE );
++    path[len] = 0;
++    name = path;
++    if (!strncmp( name, "\\??\\", 4 )) name += 4;
++    while (!args && fgets( line, sizeof(line), f ))
++    {
++        if ((end = strpbrk( line, "\r\n" ))) *end = 0;
++        if (!(tab = strchr( line, '\t' ))) continue;
++        *tab++ = 0;
++        if (*tab && !strcasecmp( line, name )) args = strdup( tab );
++    }
++    fclose( f );
++    free( path );
++    if (!args) return NULL;
++
++    cmd_len = cmdline->Length / sizeof(WCHAR);
++    if (!(ret = malloc( (cmd_len + strlen( args ) + 2) * sizeof(WCHAR) ))) { free( args ); return NULL; }
++    memcpy( ret, cmdline->Buffer, cmd_len * sizeof(WCHAR) );
++    pos = cmd_len;
++    for (arg = args; arg && *arg; arg = next)
++    {
++        size_t arg_len, i;
++        BOOL present = FALSE;
++        while (*arg == ' ') arg++;
++        if (!*arg) break;
++        next = strchr( arg, ' ' );
++        arg_len = next ? (size_t)(next - arg) : strlen( arg );
++        if (!(argw = malloc( (arg_len + 1) * sizeof(WCHAR) ))) break;
++        arg_len = ntdll_umbstowcs( arg, arg_len, argw, arg_len );
++        argw[arg_len] = 0;
++        /* already there as a whole word: leave it */
++        for (i = 0; i + arg_len <= cmd_len && !present; i++)
++            present = !wcsnicmp( ret + i, argw, arg_len ) && (i == 0 || ret[i - 1] == ' ' || ret[i - 1] == '"')
++                      && (i + arg_len == cmd_len || ret[i + arg_len] == ' ' || ret[i + arg_len] == '"');
++        if (!present)
++        {
++            ret[pos++] = ' ';
++            memcpy( ret + pos, argw, arg_len * sizeof(WCHAR) );
++            pos += arg_len;
++        }
++        free( argw );
++    }
++    ret[pos] = 0;
++    free( args );
++    return ret;
++}
+ 
+ /* Sommelier: the environment programs from one folder get, so a game runs with its own graphics (DXMT or D3DMetal,
+  * Turbo, SDR) without restarting the store that starts it: Steam's own environment stays as it is. The table named by
+@@ -1379,6 +1444,8 @@
+     HANDLE parent = 0, debug = 0, token = 0;
+     UNICODE_STRING nt_name, path = {0};
+     WCHAR *redirected = NULL, *redirected_dir = NULL, *sommelier_env = NULL, *original_env = NULL;  /* Sommelier */
++    WCHAR *sommelier_cmdline = NULL;
++    UNICODE_STRING original_cmdline = {0};
+     OBJECT_ATTRIBUTES attr, empty_attr = { sizeof(empty_attr) };
+     SIZE_T i, attr_count = (ps_attr->TotalLength - sizeof(ps_attr->TotalLength)) / sizeof(PS_ATTRIBUTE);
+     const PS_ATTRIBUTE *handles_attr = NULL, *jobs_attr = NULL;
+@@ -1454,6 +1521,16 @@
+             params->CurrentDirectory.DosPath.MaximumLength = (len + 1) * sizeof(WCHAR);
+         }
+         TRACE( "Sommelier: redirected to %s in %s\n", debugstr_us( &path ), debugstr_us( &params->CurrentDirectory.DosPath ) );
++    }
++
++    /* Sommelier: arguments the store couldn't give the program (sommelier_arguments). */
++    if ((sommelier_cmdline = sommelier_arguments( &path, &params->CommandLine )))
++    {
++        original_cmdline = params->CommandLine;
++        params->CommandLine.Buffer = sommelier_cmdline;
++        params->CommandLine.Length = wcslen( sommelier_cmdline ) * sizeof(WCHAR);
++        params->CommandLine.MaximumLength = params->CommandLine.Length + sizeof(WCHAR);
++        TRACE( "Sommelier: command line %s\n", debugstr_us( &params->CommandLine ) );
+     }
+ 
+     /* Sommelier: the folder's own environment for this program (sommelier_environment). */
+@@ -1655,6 +1732,7 @@
+     free( redirected );  /* Sommelier */
+     free( redirected_dir );
+     if (sommelier_env) { params->Environment = original_env; free( sommelier_env ); }
++    if (sommelier_cmdline) { params->CommandLine = original_cmdline; free( sommelier_cmdline ); }
+     if (file_handle) NtClose( file_handle );
+     if (process_info) NtClose( process_info );
+     if (process_handle) NtClose( process_handle );

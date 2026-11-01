@@ -1,0 +1,23 @@
+.build/
+.swiftpm/
+.DS_Store
+engine/.cache/
+engine/dist/
+.idea/
+Sommelier.xcodeproj/
+App/Sommelier/Info.plist
+build/
+server/decanter/.wrangler/
+server/decanter/node_modules/
+server/api/.wrangler/
+server/api/node_modules/
+dist/
+backups/
+server/saves/saves.json
+.wrangler/
+
+# Research notes and plans: kept on this Mac, never in the repository.
+docs/research/
+
+# The project's own signing identity (Config/Sommelier.xcconfig) and private assets: never in the repository.
+Config/Signing.local.xcconfig

@@ -1,0 +1,39 @@
+--- a/dlls/winegstreamer/wg_parser.c
++++ b/dlls/winegstreamer/wg_parser.c
+@@ -1029,7 +1029,11 @@
+ 
+     if (!(stream = create_stream(parser)))
+         return;
+-    stream->codec_caps = gst_pad_query_caps(pad, NULL);
++    /* Modified by the Sommelier project, 2026: with GStreamer 1.28 a decoder's pad is exposed before its caps are
++     * set, and a caps query then answers with the template (every format): take the current caps when there are
++     * any, and leave an unfixed answer to the caps event. */
++    if (!(stream->codec_caps = gst_pad_get_current_caps(pad)))
++        stream->codec_caps = gst_pad_query_caps(pad, NULL);
+ 
+     /* For compressed stream, create an extra decodebin to decode it. */
+     if (!parser->output_compressed && caps_is_compressed(stream->codec_caps))
+--- a/dlls/winegstreamer/wg_format.c
++++ b/dlls/winegstreamer/wg_format.c
+@@ -620,18 +620,19 @@
+ 
+     memset(format, 0, sizeof(*format));
+ 
++    /* Modified by the Sommelier project, 2026: unfixed raw caps (a pad template) carry no format. */
+     if (!strcmp(name, "audio/x-raw"))
+     {
+         GstAudioInfo info;
+ 
+-        if (gst_audio_info_from_caps(&info, caps))
++        if (gst_caps_is_fixed(caps) && gst_audio_info_from_caps(&info, caps))
+             wg_format_from_audio_info(format, &info);
+     }
+     else if (!strcmp(name, "video/x-raw"))
+     {
+         GstVideoInfo info;
+ 
+-        if (gst_video_info_from_caps(&info, caps))
++        if (gst_caps_is_fixed(caps) && gst_video_info_from_caps(&info, caps))
+             wg_format_from_video_info(format, &info);
+     }
+     else if (!strcmp(name, "audio/mpeg") && gst_structure_get_boolean(structure, "parsed", &parsed) && parsed)

@@ -1,0 +1,32 @@
+name = "sommelier-decanter"
+main = "src/index.js"
+compatibility_date = "2026-10-01"
+compatibility_flags = ["nodejs_compat"]
+
+[[r2_buckets]]
+binding = "PACKS"
+bucket_name = "sommelier-decanter"
+preview_bucket_name = "sommelier-decanter-dev"
+
+[vars]
+# Production sets these as secrets (`wrangler secret put SALT|ADMIN_TOKEN --env production`).
+SALT = "dev-only-salt"
+ADMIN_TOKEN = "dev-only-admin"
+
+[observability]
+enabled = true
+
+[env.production]
+name = "sommelier-decanter"
+routes = [{ pattern = "decanter.playsommelier.com", custom_domain = true }]
+workers_dev = false
+preview_urls = false
+vars = { ENVIRONMENT = "production", LIST_PUBLIC_KEY = "Arew6CWJjp7cUWoAO+JR05TRe5snh+jSXGqFDTl3eEY=" }   # the update key's public half (project.yml SUPublicEDKey)
+r2_buckets = [{ binding = "PACKS", bucket_name = "sommelier-decanter" }]
+
+[env.staging]
+name = "sommelier-decanter-staging"
+workers_dev = true
+vars = { ENVIRONMENT = "staging", LIST_PUBLIC_KEY = "Arew6CWJjp7cUWoAO+JR05TRe5snh+jSXGqFDTl3eEY=" }
+r2_buckets = [{ binding = "PACKS", bucket_name = "sommelier-decanter-staging" }]
+

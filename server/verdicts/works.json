@@ -1,0 +1,102 @@
+{
+  "version": 1,
+  "verdicts": [
+    {
+      "store": "steam",
+      "id": "3643170",
+      "title": "Roadside Research",
+      "verdict": "works"
+    },
+    {
+      "store": "steam",
+      "id": "648800",
+      "title": "Raft",
+      "verdict": "works"
+    },
+    {
+      "store": "steam",
+      "id": "1538550",
+      "title": "LEGO Voyagers",
+      "verdict": "works"
+    },
+    {
+      "store": "steam",
+      "id": "1903340",
+      "title": "Clair Obscur: Expedition 33",
+      "verdict": "works"
+    },
+    {
+      "store": "steam",
+      "id": "292030",
+      "title": "The Witcher 3: Wild Hunt",
+      "verdict": "works"
+    },
+    {
+      "store": "steam",
+      "id": "2592160",
+      "title": "Dispatch",
+      "verdict": "works"
+    },
+    {
+      "store": "steam",
+      "id": "1593500",
+      "title": "God of War",
+      "verdict": "works"
+    },
+    {
+      "store": "steam",
+      "id": "548430",
+      "title": "Deep Rock Galactic",
+      "verdict": "works"
+    },
+    {
+      "store": "steam",
+      "id": "323190",
+      "title": "Frostpunk",
+      "verdict": "works"
+    },
+    {
+      "store": "steam",
+      "id": "990080",
+      "title": "Hogwarts Legacy",
+      "verdict": "works"
+    },
+    {
+      "store": "steam",
+      "id": "49520",
+      "title": "Borderlands 2",
+      "verdict": "works"
+    },
+    {
+      "store": "steam",
+      "id": "1715130",
+      "title": "Crysis Remastered",
+      "verdict": "works"
+    },
+    {
+      "store": "steam",
+      "id": "588430",
+      "title": "Fallout Shelter",
+      "verdict": "works"
+    },
+    {
+      "store": "steam",
+      "id": "1262560",
+      "title": "Need for Speed Most Wanted",
+      "verdict": "works"
+    },
+    {
+      "store": "steam",
+      "id": "617290",
+      "title": "Remnant: From the Ashes",
+      "verdict": "works"
+    },
+    {
+      "store": "epic",
+      "id": "Sage",
+      "steamAppID": "448510",
+      "title": "Enter the Gungeon (Epic)",
+      "verdict": "works"
+    }
+  ]
+}
