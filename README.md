@@ -2,6 +2,9 @@
 
 A Mac app that plays Windows games from Steam, Epic, GOG and other stores on Apple Silicon.
 
+**[Download Sommelier](https://playsommelier.com/download)**, signed and notarized by Apple, or read more at
+[playsommelier.com](https://playsommelier.com). Which games run: [playsommelier.com/games](https://playsommelier.com/games/).
+
 This repository holds the core that decides *how* a game runs: the Wine engines, the graphics backends (DXVK,
 D3DMetal, WineD3D, DXMT), the environment each game gets, the store integrations, saves and controllers.
 
