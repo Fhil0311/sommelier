@@ -1,6 +1,6 @@
 # Sommelier
 
-A Mac app that plays Windows games from Steam, Epic, GOG and other stores on Apple Silicon.
+A Mac app that plays Windows games from Steam, Epic, GOG and other stores on Apple Silicon and Intel Macs.
 
 **[Download Sommelier](https://playsommelier.com/download)**, signed and notarized by Apple, or read more at
 [playsommelier.com](https://playsommelier.com). Which games run: [playsommelier.com/games](https://playsommelier.com/games/).
