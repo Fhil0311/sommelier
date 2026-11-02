@@ -46,6 +46,7 @@ providing it: email the support address given in the engine's NOTICE.txt.
 | libogg, libvorbis, libtheora, Opus | 2.x (from 2.3) | BSD-3-Clause | gstreamer/libogg/, gstreamer/libvorbis/, gstreamer/libtheora/, gstreamer/opus/ |
 | mpg123 | 2.x (from 2.3) | LGPL-2.1-or-later | gstreamer/mpg123/ |
 | PCRE2 | 2.x (from 2.3) | BSD-3-Clause | gstreamer/pcre2/ |
+| MacGameFix Rosetta patches 0017 (by Hrava), 0019, by Mathias Kowoll (in ntdll.so; https://github.com/MathiasKowoll/MacGameFix) | 2.x (from 2.2.5) | GPL-3.0-or-later (ntdll.so as a whole then GPL-3.0) | GPL-3.0.txt |
 
 ### Runtime libraries (both engines)
 

@@ -1,0 +1,53 @@
+--- a/dlls/winegstreamer/video_decoder.c
++++ b/dlls/winegstreamer/video_decoder.c
+@@ -592,6 +592,20 @@
+     return !strcmp( sysname, "Darwin" );
+ }
+ 
++/* Modified by the Sommelier project, 2026: with SOMMELIER_VIDEO_SYSMEM set, the decoder on macOS is not D3D
++ * aware and decodes into system memory, offering NV12 there. No macOS graphics backend makes NV12 textures,
++ * and a caller such as Unreal's Electra player takes NV12 only, so it gets no frames otherwise. */
++static BOOL system_memory_video(void)
++{
++    static LONG cached = -1;
++    char value[2];
++
++    if (cached == -1)
++        cached = is_macos() && GetEnvironmentVariableA( "SOMMELIER_VIDEO_SYSMEM", value, sizeof(value) )
++                && value[0] != '0';
++    return cached;
++}
++
+ static HRESULT WINAPI transform_GetOutputAvailableType(IMFTransform *iface, DWORD id,
+         DWORD index, IMFMediaType **type)
+ {
+@@ -606,7 +620,7 @@
+         return MF_E_NO_MORE_TYPES;
+ 
+     /* CW HACK 26265 */
+-    if (is_macos() && IsEqualGUID(decoder->output_types[index], &MFVideoFormat_NV12))
++    if (is_macos() && !system_memory_video() && IsEqualGUID(decoder->output_types[index], &MFVideoFormat_NV12))
+     {
+         WARN("Skipping NV12 output format\n");
+         index++;
+@@ -863,6 +877,9 @@
+     switch (message)
+     {
+     case MFT_MESSAGE_SET_D3D_MANAGER:
++        /* Modified by the Sommelier project, 2026: refused, as by a decoder that is not D3D aware. */
++        if (param && system_memory_video())
++            return E_NOTIMPL;
+         if (FAILED(hr = IMFVideoSampleAllocatorEx_SetDirectXManager(decoder->allocator, (IUnknown *)param)))
+             return hr;
+ 
+@@ -1673,8 +1690,8 @@
+     if (FAILED(hr = MFCreateAttributes(&decoder->attributes, 16)))
+         goto failed;
+     if (FAILED(hr = IMFAttributes_SetUINT32(decoder->attributes, &MF_LOW_LATENCY, FALSE))
+-            || FAILED(hr = IMFAttributes_SetUINT32(decoder->attributes, &MF_SA_D3D_AWARE, TRUE))
+-            || FAILED(hr = IMFAttributes_SetUINT32(decoder->attributes, &MF_SA_D3D11_AWARE, TRUE))
++            || FAILED(hr = IMFAttributes_SetUINT32(decoder->attributes, &MF_SA_D3D_AWARE, !system_memory_video()))
++            || FAILED(hr = IMFAttributes_SetUINT32(decoder->attributes, &MF_SA_D3D11_AWARE, !system_memory_video()))
+             || FAILED(hr = IMFAttributes_SetUINT32(decoder->attributes,
+                     &MFT_DECODER_EXPOSE_OUTPUT_TYPES_IN_NATIVE_ORDER, FALSE)))
+         goto failed;

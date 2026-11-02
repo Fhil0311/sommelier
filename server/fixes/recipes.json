@@ -6296,7 +6296,9 @@
         {
           "setEnvironment": {
             "_0": {
-              "D3DM_SUPPORT_DXR": "0"
+              "D3DM_SUPPORT_DXR": "0",
+              "SOMMELIER_VIDEO_SYSMEM": "1",
+              "WINE_ROSETTA_CPUID7_OR": "01800000,00400000"
             }
           }
         },
@@ -6335,7 +6337,7 @@
         }
       ],
       "source": "team",
-      "note": "Phantom Blade Zero: Unreal Engine 5, DirectX 12 only, so D3DMetal, without ray tracing (D3DMetal stops on the first opacity micromap as a level loads). The launcher (steam/PBZ.exe) reads the Visual C++ 2015-2022 runtime's version from msvcp140_2.dll and vcruntime140_1.dll in system32, and Wine maps its own builtin copies there, older than the 14.44 it wants: 'Visual C++ 2015-2022 is required'. The real runtime, loaded native first, passes (checked with the launcher alone, 02.11)."
+      "note": "Phantom Blade Zero: Unreal Engine 5, DirectX 12 only, so D3DMetal, without ray tracing (D3DMetal stops on the first opacity micromap as a level loads). The launcher (steam/PBZ.exe) reads the Visual C++ 2015-2022 runtime's version from msvcp140_2.dll and vcruntime140_1.dll in system32, and Wine maps its own builtin copies there, older than the 14.44 it wants: 'Visual C++ 2015-2022 is required'. The real runtime, loaded native first, passes (checked with the launcher alone, 02.11). Needs engine 2.2.5: WINE_ROSETTA_CPUID7_OR gives the copy protection the leaf-7 CPUID bits it checks (MacGameFix's Rosetta patches), SOMMELIER_VIDEO_SYSMEM lets the Electra player get NV12 frames for the menu videos; 2.2.5 also stops the hang on the logo, where a thread the game suspended held the raw input lock. Played to the game, 02.11."
     }
   ]
 }

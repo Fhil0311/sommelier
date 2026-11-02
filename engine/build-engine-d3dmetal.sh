@@ -392,6 +392,16 @@ Wine (LGPL-2.1+), built from CodeWeavers' CrossOver $CROSSOVER_RELEASE source: $
   clients, so macOS asks for the microphone only when a game opens it).
   winegstreamer-sommelier.patch - with GStreamer 1.28 a decoder's pad appears before its caps are set; the parser
   takes the pad's current caps when there are any and treats unfixed raw caps as "no format yet".
+  winegstreamer-video-sysmem.patch - with SOMMELIER_VIDEO_SYSMEM=1 the H.264 decoder isn't D3D aware and offers
+  NV12 in system memory, which callers that take NV12 only (Unreal's Electra player) need for menu videos. The
+  idea comes from winevideo (https://github.com/Jfishin/winevideo); the code is ours.
+  win32u-rawinput-unlocked-enum.patch - the raw input device list is rebuilt without holding its lock, so a thread
+  suspended while it asks a device (Wine can suspend one inside a system call) no longer stops every other thread.
+  ntdll-rosetta-cpu-fidelity.patch, ntdll-rosetta-smc-cpuid.patch - from MacGameFix by Mathias Kowoll
+  (https://github.com/MathiasKowoll/MacGameFix, patches 0017 and 0019; 0017 written by Hrava, as MacGameFix
+  credits), unchanged, under the GPL-3.0-or-later: Rosetta 2
+  behaving as an x86 CPU does for copy protection (CPUID, debug registers, faults, a CPUID skipped after
+  self-modifying code). With them, ntdll.so as a whole is under the GPL-3.0 (licenses/GPL-3.0.txt).
 GStreamer $GSTREAMER_RELEASE (LGPL-2.1+), from the project's macOS packages: $GST_RUNTIME_URL (sha256 $GST_RUNTIME_SHA256),
   $GST_DEVEL_URL (sha256 $GST_DEVEL_SHA256). The engine carries the plugins Wine's Media Foundation uses, the libraries
   they need (GLib, FFmpeg's libav* built LGPL, Orc, Ogg/Vorbis/Theora/Opus, mpg123, PCRE2) and the plugin scanner,

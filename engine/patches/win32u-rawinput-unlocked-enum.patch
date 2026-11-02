@@ -1,0 +1,105 @@
+--- a/dlls/win32u/rawinput.c
++++ b/dlls/win32u/rawinput.c
+@@ -67,7 +67,7 @@
+ static struct list devices = LIST_INIT( devices );
+ static pthread_mutex_t rawinput_mutex = PTHREAD_MUTEX_INITIALIZER;
+ 
+-static struct device *add_device( HKEY key, DWORD type )
++static struct device *add_device( struct list *list, HKEY key, DWORD type )
+ {
+     static const WCHAR symbolic_linkW[] = {'S','y','m','b','o','l','i','c','L','i','n','k',0};
+     char value_buffer[offsetof(KEY_VALUE_PARTIAL_INFORMATION, Data[MAX_PATH * sizeof(WCHAR)])];
+@@ -126,7 +126,7 @@
+         goto fail;
+     }
+ 
+-    LIST_FOR_EACH_ENTRY( device, &devices, struct device, entry )
++    LIST_FOR_EACH_ENTRY( device, list, struct device, entry )
+     {
+         if (device->handle == UlongToHandle( handle ))
+         {
+@@ -208,7 +208,7 @@
+     device->handle = ULongToHandle(handle);
+     device->info = info;
+     device->data = preparsed;
+-    list_add_tail( &devices, &device->entry );
++    list_add_tail( list, &device->entry );
+ 
+     return device;
+ 
+@@ -243,7 +243,7 @@
+     '-','b','c','8','c','-','0','0','a','0','c','9','1','4','0','5','d','d','}',0
+ };
+ 
+-static void enumerate_devices( DWORD type, const WCHAR *class )
++static void enumerate_devices( struct list *list, DWORD type, const WCHAR *class )
+ {
+     WCHAR buffer[1024];
+     KEY_NODE_INFORMATION *subkey_info = (void *)buffer;
+@@ -272,7 +272,7 @@
+                 continue;
+             }
+ 
+-            add_device( iface_key, type );
++            add_device( list, iface_key, type );
+             NtClose( iface_key );
+         }
+ 
+@@ -282,16 +282,26 @@
+     NtClose( class_key );
+ }
+ 
++/* Modified by the Sommelier project, 2026: called with rawinput_mutex held, which it releases while the devices
++ * are opened and asked. Wine can suspend a thread inside a system call, where Windows cannot: a program that
++ * suspends a thread while it asks a device left every other thread waiting for the lock until it resumed it. */
+ static void rawinput_update_device_list( BOOL force )
+ {
+     unsigned int ticks = NtGetTickCount();
+     static unsigned int last_check;
++    struct list found = LIST_INIT( found );
+     struct device *device, *next;
+ 
+     TRACE( "\n" );
+ 
+     if (ticks - last_check <= 2000 && !force) return;
+     last_check = ticks;
++
++    pthread_mutex_unlock( &rawinput_mutex );
++    enumerate_devices( &found, RIM_TYPEMOUSE, guid_devinterface_mouseW );
++    enumerate_devices( &found, RIM_TYPEKEYBOARD, guid_devinterface_keyboardW );
++    enumerate_devices( &found, RIM_TYPEHID, guid_devinterface_hidW );
++    pthread_mutex_lock( &rawinput_mutex );
+ 
+     LIST_FOR_EACH_ENTRY_SAFE( device, next, &devices, struct device, entry )
+     {
+@@ -300,10 +310,7 @@
+         free( device->data );
+         free( device );
+     }
+-
+-    enumerate_devices( RIM_TYPEMOUSE, guid_devinterface_mouseW );
+-    enumerate_devices( RIM_TYPEKEYBOARD, guid_devinterface_keyboardW );
+-    enumerate_devices( RIM_TYPEHID, guid_devinterface_hidW );
++    list_move_tail( &devices, &found );
+ }
+ 
+ static struct device *find_device_from_handle( HANDLE handle, BOOL refresh )
+@@ -697,6 +704,9 @@
+     }
+ 
+     pthread_mutex_lock( &rawinput_mutex );
++
++    /* Modified by the Sommelier project, 2026: before registered_devices is read, as this releases the lock */
++    rawinput_update_device_list( TRUE );
+ 
+     if (!registered_device_count && !device_count)
+     {
+@@ -712,8 +722,6 @@
+         return FALSE;
+     }
+ 
+-    rawinput_update_device_list( TRUE );
+-
+     registered_devices = new_registered_devices;
+     for (i = 0; i < device_count; ++i) register_rawinput_device( devices + i );
+ 
