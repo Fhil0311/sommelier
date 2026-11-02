@@ -65,7 +65,8 @@ public enum FixAction: Codable, Equatable, Sendable {
     public static func allowsEnvironment(_ key: String) -> Bool {
         let prefixes = ["DXMT_", "D3DM_", "MTL_", "DXVK_", "VKD3D_", "MVK_"]
         let names: Set<String> = ["SOMMELIER_HIDE_WINE", "SOMMELIER_FORCE_SDR", "SOMMELIER_NO_MIC",
-                                  "WINE_LARGE_ADDRESS_AWARE", "WINEESYNC", "WINEMSYNC", "WINEDEBUG"]
+                                  "WINE_LARGE_ADDRESS_AWARE", "WINEESYNC", "WINEMSYNC", "WINEDEBUG",
+                                  "SOMMELIER_VIDEO_SYSMEM", "WINE_ROSETTA_CPUID7_OR"]
         return names.contains(key) || prefixes.contains { key.hasPrefix($0) && key.count > $0.count }
     }
 

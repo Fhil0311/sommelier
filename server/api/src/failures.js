@@ -102,7 +102,8 @@ const ARGUMENT = /^[^\0\r\n]{1,200}$/;
 /** Problems with one action of a rule or recipe (Swift's Codable form), as strings; [] when it's fine. */
 /** The variables a rule or recipe may set (the app keeps to the same list, FixAction.allowsEnvironment). */
 export function allowsEnvironment(key) {
-  const names = new Set(["SOMMELIER_HIDE_WINE", "SOMMELIER_FORCE_SDR", "SOMMELIER_NO_MIC", "WINE_LARGE_ADDRESS_AWARE", "WINEESYNC", "WINEMSYNC", "WINEDEBUG"]);
+  const names = new Set(["SOMMELIER_HIDE_WINE", "SOMMELIER_FORCE_SDR", "SOMMELIER_NO_MIC", "WINE_LARGE_ADDRESS_AWARE", "WINEESYNC", "WINEMSYNC", "WINEDEBUG",
+    "SOMMELIER_VIDEO_SYSMEM", "WINE_ROSETTA_CPUID7_OR"]);
   return names.has(key) || /^(DXMT|D3DM|MTL|DXVK|VKD3D|MVK)_[A-Z0-9_]{1,60}$/.test(key);
 }
 
