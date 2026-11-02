@@ -6284,6 +6284,58 @@
         }
       ],
       "source": "team"
+    },
+    {
+      "game": "steam:4115450",
+      "actions": [
+        {
+          "switchGraphics": {
+            "_0": "d3dMetal"
+          }
+        },
+        {
+          "setEnvironment": {
+            "_0": {
+              "D3DM_SUPPORT_DXR": "0"
+            }
+          }
+        },
+        {
+          "installVCRuntime": {}
+        },
+        {
+          "overrideDLL": {
+            "_0": "msvcp140",
+            "_1": "n,b"
+          }
+        },
+        {
+          "overrideDLL": {
+            "_0": "msvcp140_1",
+            "_1": "n,b"
+          }
+        },
+        {
+          "overrideDLL": {
+            "_0": "msvcp140_2",
+            "_1": "n,b"
+          }
+        },
+        {
+          "overrideDLL": {
+            "_0": "vcruntime140",
+            "_1": "n,b"
+          }
+        },
+        {
+          "overrideDLL": {
+            "_0": "vcruntime140_1",
+            "_1": "n,b"
+          }
+        }
+      ],
+      "source": "team",
+      "note": "Phantom Blade Zero: Unreal Engine 5, DirectX 12 only, so D3DMetal, without ray tracing (D3DMetal stops on the first opacity micromap as a level loads). The launcher (steam/PBZ.exe) reads the Visual C++ 2015-2022 runtime's version from msvcp140_2.dll and vcruntime140_1.dll in system32, and Wine maps its own builtin copies there, older than the 14.44 it wants: 'Visual C++ 2015-2022 is required'. The real runtime, loaded native first, passes (checked with the launcher alone, 02.11)."
     }
   ]
 }
